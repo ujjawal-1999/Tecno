@@ -108,7 +108,7 @@
   cursor: pointer;
   border-bottom: 1px solid;
 }
-.socialLinks a{
+.socialLinks a, .footerLinks a{
   color: #ffffff;
 }
 
