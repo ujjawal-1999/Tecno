@@ -599,7 +599,7 @@
 	</audio>
 
 	<div id="scene" >
-
+		<img src="./images/astroid.png" alt="asteroid" class="asteroid" id="asteroid">
 		<div id="stars">
 			<div id="nebula">
 				<img src="./optimized/neb-web-web.png" id="nebweb" >
@@ -730,10 +730,11 @@
 				<a href="http://www.instagram.com/tecnoesis.nits" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
 		</div>
 		<div class="footerLinks">
-				<a href="./TeamPage-beta/teampage.html">
+				<!-- <a href="./TeamPage-beta/teampage.html"> -->
 			<span style="margin-top: 7vh;border-bottom: 0;">
 			Meet The Team	
-			</span></a>
+			</span>
+		<!-- </a> -->
 			<br>
 			<a href="./campus ambassdor/index.html"><span>
 				Become our Campus Ambassdor
@@ -743,9 +744,6 @@
 <!-- .........ARYAN CODE END............ -->
 	</div>
 
-	<script src="./libs/p5.js"></script>
-	<script src="./libs/p5_dom.js"></script>
-	<script src="./libs/glitcher.js"></script>
 	<script type="text/javascript">
 
 		if(window.innerWidth<window.innerHeight)
@@ -755,13 +753,8 @@
 			document.getElementById('teclogoonly').src="logoonly.png";
 
 		}
-
 		const windowHeight=document.documentElement.clientHeight;
 		const windowWidth=document.documentElement.clientWidth;
-		let firstModule = new p5((sketch)=>{
-			glitcher(sketch, 'module1', ['./robotron.png', './ff2.png']  , ((1511/4350)*windowHeight)-(274.798), (-(1047/28300)*windowWidth)+(98.0734), '0', '30%' );
-		},'firstModule' );
-
 		var vid=document.getElementById('iframe');
 		let play=0;
 
@@ -822,7 +815,23 @@ document.addEventListener("scroll",()=>{
 
 })
 
-	</script>
+setInterval(()=>{
+		const box=document.getElementById('asteroid');
+		box.classList.add('asteroid-animate');
+		setTimeout(()=>{
+			box.classList.remove('asteroid-animate');
+		}, 650);
+	}, 5000);
 
+	</script>
+	<script src="./libs/p5.js"></script>
+	<script src="./libs/p5_dom.js"></script>
+	<script src="./libs/glitcher.js"></script>
+	<script>
+		let firstModule = new p5((sketch)=>{
+			glitcher(sketch, 'module1', ['./robotron.png', './ff2.png']  , ((1511/4350)*windowHeight)-(274.798), (-(1047/28300)*windowWidth)+(98.0734), '0', '30%' );
+		},'firstModule' );
+
+	</script>
 </body>
 </html>
