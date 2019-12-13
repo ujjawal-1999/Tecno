@@ -414,7 +414,7 @@
 			height: auto;
 			width: 94vw;
 			top: 40vh;
-			left: auto;
+			left: 51vw;
 		}
 
 		#tecTheme{
@@ -541,16 +541,16 @@
 			margin: 0;
 		}
 		#hacksImg1{
-			width: 85vw;
-			left: 1vw;
+			width: 100vw;
+			left: -11vw;
 			position: relative;
-			top: 101px;
+			top: 20vh;
 		}
 		#hacksImg2{
-			width: 33vw;
-			top: 26vh;
-			left: 25vh;
-			height: 11vh;
+			width: 35vw;
+			top: 35vh;
+			left: 30vh;
+			height: auto;
 		}
 		#hacksImg3{
 			width: 96vw;
@@ -646,7 +646,7 @@
 					</span>
 					<br>
 				<p class="sectionContentRight">
-				<span style="color: #9e3e9e;font-weight: bold;">
+				<span style="color: #00d2ff;font-weight: bold;">
 					TECNOESIS</span> is the annual techno-management of NIT Silchar. Started with the aim of providing a platform for the student community to develop and showcase their technical prowess, Tecnoesis has expanded it’s horizon to become one of India’s prominent Techno-management Festival.
 				</p>
 				</div>
@@ -780,49 +780,67 @@
 				play=0;
 			}
 
-			// var symbol = document.getElementById('iframe').src.indexOf("?") > -1 ? "&" : "?";
-			// document.getElementById('iframe').src += symbol + "autoplay=1";
-			// console.log(document.getElementById('iframe').src);
-			// var vid = 0;
-
-			// if(vid===0)
-			// {
-			// 	document.getElementById('iframe').src += symbol + "autoplay=0";
-			// 	console.log(document.getElementById('iframe').src);
-			// 	vid=1;
-			// }
-			// else
-			// {
-			// 	document.getElementById('iframe').src += symbol + "autoplay=0";
-			// 	vid=0;
-			// }
-
 
 		});
 		
 		const nebula=document.getElementById("nebula");
 const mars=document.getElementById("mars");
-const hackImg1=document.getElementById('hacksImg1');
-const hackImg2=document.getElementById('hacksImg2');
-const hackImg3=document.getElementById('hacksImg3');
+const hacksImg1=document.getElementById('hacksImg1');
+const hacksImg2=document.getElementById('hacksImg2');
+const hacksImg3=document.getElementById('hacksImg3');
 
 document.addEventListener("scroll",()=>{
 	let x=nebula.offsetTop;
 	let top=window.pageYOffset;
-	let y=hackImg1.offsetTop;
-	let z=hackImg2.offsetTop;
-	let q=hackImg3.offsetTop;
-
-	console.log("img1",y);
-	console.log(z);
-	console.log(q);
-	console.log(x);
-	console.log("top",top);
+	
 	// hackImg1.style.top=(-0.017*top+35.4)+"px";
 	mars.style.top=(-0.16118633*top)+'px';
 	nebula.style.top=(-0.019342236*top)+'px';
 
 })
+
+
+if(window.innerWidth>window.innerHeight)
+
+{	
+
+	// hacks image parallex
+    let Otop=hacksImg1.offsetTop;
+	let Otop2=hacksImg2.offsetTop;
+	let Otop3=hacksImg3.offsetTop;
+
+	// first spark img top is denoted as sImg1Top
+	let sImg1=document.getElementById("sparkTunes");
+	let sImg2=document.getElementById("sparkSaxo");
+	let sImg3=document.getElementById("sparkDrum");
+ 
+window.addEventListener("scroll",()=>{
+	
+	let scroll=window.pageYOffset;
+	let scrollVH=scroll*100/document.documentElement.clientHeight;
+	console.log('VHH', scrollVH);
+	if(scrollVH>=300 && scrollVH<=425){
+		hacksImg2.style.transform=`translateY(${(-8/23)*scrollVH + (2830/23)}vh)`;
+		hacksImg1.style.transform=`translateY(${(-5/23)*scrollVH + (1960/23)}vh)`;
+		hacksImg3.style.transform=`translateY(${(-2/23)*scrollVH + (715/23)}vh)`;
+	}
+	if(scrollVH>=400 && scrollVH<=550){
+		sImg2.style.transform=`translateY(${(-2/15)*scrollVH + (190/3)}vh)`;
+		sImg1.style.transform=`translateY(${(-2/15)*scrollVH + (205/3)}vh)`;
+		sImg3.style.transform=`translateY(${(-1/6)*scrollVH + (260/3)}vh)`;
+
+	}
+})
+
+// window.addEventListener('scroll',()=>{
+// 	let scroll=window.pageYOffset;
+// 	console.log("scroll",scroll);
+// 	sImg1.style.top=(-500/1400)*scroll+((3512*450)/1400)+sImg1Top+"px";
+// 	sImg2.style.top=(-430/1100)*scroll+((3812*430)/1400)+sImg2Top+"px";
+// 	sImg3.style.top=(-400/1150)*scroll+((4212*400)/1400)+sImg3Top+"px";
+// })
+
+}
 
 setInterval(()=>{
 		const box=document.getElementById('asteroid');
