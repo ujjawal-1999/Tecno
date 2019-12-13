@@ -235,6 +235,7 @@
     position: absolute;
     left: 9vw;
     top: 15vh;
+  	transition: all 0.2s ease;
 	}
 	#hacksImg2{
 		width: 19vw;
@@ -242,12 +243,14 @@
     top: 49vh;
     left: 34vw;
     height: 25vh;
+  	transition: all 0.2s ease;
 	}
 	#hacksImg3{
 		width: 50vw;
     position: absolute;
     left: 7vw;
     top: 13vh;
+  	transition: all 0.2s ease;
 	}
 	#teclogo{
 		opacity: 0;
@@ -761,6 +764,15 @@
 			document.getElementById('teclogo').classList.add('startFadeIn');
 			document.getElementById('teclogoonly').classList.add('startFadeIn');
 			document.getElementById('tecTheme').classList.add('startFastFadeIn');
+
+
+			setInterval(()=>{
+					const box=document.getElementById('asteroid');
+					box.classList.add('asteroid-animate');
+					setTimeout(()=>{
+						box.classList.remove('asteroid-animate');
+					}, 850);
+				}, 5000);
 		};
 		const windowHeight=document.documentElement.clientHeight;
 		const windowWidth=document.documentElement.clientWidth;
@@ -818,17 +830,15 @@ window.addEventListener("scroll",()=>{
 	
 	let scroll=window.pageYOffset;
 	let scrollVH=scroll*100/document.documentElement.clientHeight;
-	console.log('VHH', scrollVH);
 	if(scrollVH>=300 && scrollVH<=425){
-		hacksImg2.style.transform=`translateY(${(-8/23)*scrollVH + (2830/23)}vh)`;
-		hacksImg1.style.transform=`translateY(${(-5/23)*scrollVH + (1960/23)}vh)`;
+		hacksImg1.style.transform=`translateY(${(-16/75)*scrollVH + (286/3)}vh)`;
+		hacksImg2.style.transform=`translateY(${(-5/23)*scrollVH + (1960/23)}vh)`;
 		hacksImg3.style.transform=`translateY(${(-2/23)*scrollVH + (715/23)}vh)`;
 	}
 	if(scrollVH>=400 && scrollVH<=550){
 		sImg2.style.transform=`translateY(${(-2/15)*scrollVH + (190/3)}vh)`;
-		sImg1.style.transform=`translateY(${(-2/15)*scrollVH + (205/3)}vh)`;
-		sImg3.style.transform=`translateY(${(-1/6)*scrollVH + (260/3)}vh)`;
-
+		sImg1.style.transform=`translateY(${(-7/30)*scrollVH + (325/3)}vh)`;
+		sImg3.style.transform=`translateY(${(-3/10)*scrollVH + (140)}vh)`;
 	}
 })
 
@@ -841,14 +851,6 @@ window.addEventListener("scroll",()=>{
 // })
 
 }
-
-setInterval(()=>{
-		const box=document.getElementById('asteroid');
-		box.classList.add('asteroid-animate');
-		setTimeout(()=>{
-			box.classList.remove('asteroid-animate');
-		}, 650);
-	}, 5000);
 
 	</script>
 	<script src="./libs/p5.js"></script>
