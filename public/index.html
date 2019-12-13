@@ -51,8 +51,13 @@
 		left: 0;
 		z-index: -3;
 		width: 100vw;
+		filter: brightness(0);
 		height: calc(100% + 200px);
+		/* animation: brightness 2.5s; */
+	}
+	.incBright{
 		animation: brightness 2.5s;
+		animation-fill-mode: forwards;
 	}
 
 	@keyframes brightness{
@@ -76,7 +81,7 @@
 		position: relative;
 		left: 55%;
 		transform: translate(-50%, -50%);
-		animation: brightness 3s;
+		/* animation: brightness 3s; */
 		animation-delay: 1.5s;
 		filter: brightness(0%);
 		animation-fill-mode: forwards;
@@ -120,12 +125,6 @@
     font-family: Guardians;
     line-height: 7vh;
     opacity: 0;
-    -webkit-animation: fadein 2s 4s;
-    -moz-animation: fadein 2s 4s;
-    -ms-animation: fadein 2s 4s;
-    animation: fadein 2s 4s;
-    animation-fill-mode: forwards;
-}
 	}
 
 	#teclogo{
@@ -253,13 +252,8 @@
 	#teclogo{
 		opacity: 0;
     top: 25vh;
-    left: 15vw;
+    left: 52vw;
     width: 70vw;
-    -webkit-animation: fadein 5s 3s;
-    -moz-animation: fadein 5s 3s;
-    -ms-animation: fadein 5s 3s;
-    animation: fadein 5s 3s;
-    animation-fill-mode: forwards;
 	}
 
 	@keyframes fadein {
@@ -275,6 +269,22 @@
 	@-webkit-keyframes fadein {
 			from { opacity: 0; }
 			to   { opacity: 1; }
+	}
+
+	.startFadeIn{
+		-webkit-animation: fadein 5s 3s;
+    -moz-animation: fadein 5s 3s;
+    -ms-animation: fadein 5s 3s;
+    animation: fadein 5s 3s;
+    animation-fill-mode: forwards;
+	}
+	.startFastFadeIn{
+
+    -webkit-animation: fadein 2s 4s;
+    -moz-animation: fadein 2s 4s;
+    -ms-animation: fadein 2s 4s;
+    animation: fadein 2s 4s;
+    animation-fill-mode: forwards;
 	}
 	/* ------------------ARYAN CODE SECTION END---------------- */
 
@@ -501,11 +511,6 @@
 		    left: 50%;
 		    transform: translateX(-50%);
 		    opacity: 0;
-    -webkit-animation: fadein 5s 3s;
-    -moz-animation: fadein 5s 3s;
-    -ms-animation: fadein 5s 3s;
-    animation: fadein 5s 3s;
-		animation-fill-mode: forwards;
 		}
 
 		/* ------------------ARYAN CODE START---------------- */
@@ -745,14 +750,18 @@
 	</div>
 
 	<script type="text/javascript">
-
-		if(window.innerWidth<window.innerHeight)
+	if(window.innerWidth<window.innerHeight)
 		{
-
 			document.getElementById('teclogo').src="logotext.png";
 			document.getElementById('teclogoonly').src="logoonly.png";
-
 		}
+		window.onload=function(){
+			document.getElementById('stars').classList.add('incBright');
+			document.getElementById('marsplanet').classList.add('incBright');
+			document.getElementById('teclogo').classList.add('startFadeIn');
+			document.getElementById('teclogoonly').classList.add('startFadeIn');
+			document.getElementById('tecTheme').classList.add('startFastFadeIn');
+		};
 		const windowHeight=document.documentElement.clientHeight;
 		const windowWidth=document.documentElement.clientWidth;
 		var vid=document.getElementById('iframe');
