@@ -1,32 +1,7 @@
-// const glitch = function(sketch, customId){
-//   const
-//   let x = 551.9981925088341;
-//   let y = 659.286107586206;
-//   let scale=0.9;
-//   console.log('ABCD',document.documentElement.clientHeight);
-//   if(document.documentElement.clientHeight>document.documentElement.clientWidth){
-//     scale=0.7;
-//   }
-//   if(document.documentElement.clientHeight<=700){
-//       scale=0.5;
-//   }
-//   console.log(scale);
-//   console.log('x,y', x,y)
-let scale=0.6;
-console.log('ABCD',document.documentElement.clientHeight);
-if(document.documentElement.clientHeight>document.documentElement.clientWidth){
-  scale=0.6;
-}
-if(document.documentElement.clientHeight<=700){
-    scale=0.5;
-}
-
 let glitch=undefined;
 let isLoaded=false;
-let item=0;
 
 function setup() {
-  // background(0);
   const cnv=createCanvas(document.getElementById('modulesimg').clientWidth, document.getElementById('modulesimg').clientHeight);
   cnv.parent('modulesimg');
   window.loadImg = function(imgSrc){
@@ -41,16 +16,11 @@ function setup() {
 
 function draw() {
   clear();
-  // scale(0.9);
-  // background(0);
+  this.scale(1.4);
+  this.translate(-100,0);
   if (isLoaded) {
       glitch.show();
   }
-
-  // fill(255, 255, 255);
-  // textSize(14);
-  // text('FPS: ' + floor(frameRate()), 20, 30);
-
 }
 
 class Glitch {
@@ -238,7 +208,6 @@ class Glitch {
   }
 
   show() {
-    
       // restore the original state
       this.replaceData(this.imgOrigin, this.copyData);
 

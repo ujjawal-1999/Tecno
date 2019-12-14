@@ -54,13 +54,26 @@
 		background-position: center center; 
 	}
 	#modulesimg{
-		position: absolute;
-		width: 38vw;
+		position: fixed;
+		width: 30vw;
 		height: 50vh;
 		top: 35vh;
-		left: 50vw;
+		left: 40vw;
 		transform: translate(-50%,-50%);
 		transition: all ease 5s;
+		animation: float 1s infinite;
+	}
+
+	@keyframes float {
+		0%{
+			transform: translate(-50%,-50%);
+		}	
+		50%{
+			transform: translate(-50%,-49.5%);
+		}
+		100%{
+			transform: translate(-50%,-50.5%);
+		}
 	}
 
 	#ufo{
@@ -234,13 +247,13 @@
 		}
 
 		#modulesname{
-			top: 90vh;
-			left: 22vw;
+			top: 85vh;
+			left: 15vw;
 			font-size: 4em;
 		}
 
 		#ufo {
-			height: 66vh;
+			height: 55vh;
 			top: 54vh;
 			left: 14vw;
 			opacity: 90%;
@@ -420,42 +433,15 @@
 	</div>
 	<img id="ufo" src="./images/halo-other-small.png">
 	<span id="modulesname">ROBOTRON</span>
-
-	<!-- <div id="modules" >
-
-		<div id="moduletext">
-
-
-
-			
-
-			
-
-		
-
-			
-
-			
-
-		
-			
-		</div>
-
-		<div id="menuside" ></div>
-
-		<img id="ufo" src="ufo.png">
-		<span id="modulesname">ROBOTRON</span>
-		<div id="sidebarright">
-
-		</div>
-	</div> -->
-
-
-	<!-- <img  src="robotron.png"> -->
-
 </body>
-<!-- <script>
+
+<script src="./js/jquery-3.4.1.min.js"></script>
+<script src="./js/jquery.scrollify.js"></script>
+<script>
+	window.loadImg=function(imgSrc){
+	};
 	let isMobile=false;
+	let glitchModule=undefined;
 	const moduleSource=['./images/robotron.png', './images/vwarz.png', './images/showcase.png', './images/amazers.png', './images/conferanza.png', './images/cyberwarp.png', './images/cyberwarp.png', './images/cyberwarp.png'];
 	// const moduleHDSource=['./images/robotron.png', './vwarz.png', './showcase.png', './amazers.png', './conferanza.png', './cyberwarp.png'];
 	(function(){
@@ -471,57 +457,25 @@
 		}
 		else{
 			let script=document.createElement('script');
+			script.onload=function(){
+				let script2=document.createElement('script');
+				script2.onload=function(){
+					let script3=document.createElement('script');
+					script3.onload=function(){
+						// changeImage=loadImg;
+						// console.log(changeImage);
+					}
+					script3.src="./js/glitch.js";
+					document.body.appendChild(script3);
+				}
+				script2.src="../libs/p5_dom.js";
+				document.body.appendChild(script2);
+			};
 			script.src="../libs/p5.js";
-			document.body.appendChild(script);
-			script=document.createElement('script');
-			script.src="../libs/p5_dom.js";
-			document.body.appendChild(script);
-			script=document.createElement('script');
-			script.src="./js/glitch.js";
 			document.body.appendChild(script);
 		}
 	})();
 </script>
-<script type="text/javascript">
-	
-	var moduleIndex = 0;
-	let lastScroll=document.body.scrollTop;
-	var modulesName= ['ROBOTRON' , 'VWARZ','SHOWCASE', ' AMAZERS' , 'CONFERANZA', 'CYBERWARP', 'MYNDSNARE' ,'ASME'];
-
-	var sideLeft = document.getElementById('sidebarleft').children;
-	var moduletext = document.getElementById('moduletext').children;
-
-	var toggle=1;
-
-	document.getElementById('menu').addEventListener("click",function(){
-
-		if(toggle===1)
-		{
-			document.getElementById('sidebarleft').style.left=2+"vw";
-			document.getElementById('menuside').style.left=0+"vw";
-			document.getElementById('menu').src="btn-close.svg";
-			toggle=0;
-			console.log(toggle);
-		}
-		else{
-
-			document.getElementById('sidebarleft').style.left=-35+"vw";
-			document.getElementById('menuside').style.left=-110+"vw";
-			document.getElementById('menu').src="btn-menu.svg";
-			toggle=1;
-		}
-		
-	});
-
-	
-
-
-
-
-</script> -->
-
-<script src="./js/jquery-3.4.1.min.js"></script>
-<script src="./js/jquery.scrollify.js"></script>
 <script>
 	let curr_index=0;
 	$(function(){
@@ -531,9 +485,17 @@
 				$("#sidebarleft span").removeClass("active");
 				$("#" + $.scrollify.current().data('section-name')+'Bar').addClass("active");
 				curr_index = $.scrollify.currentIndex();
-				$('#modulesname').text($.scrollify.current().data('section-name').toUpperCase())
+				$('#modulesname').text($.scrollify.current().data('section-name').toUpperCase());
+				if(isMobile){
+					// console.log(moduleSource[curr_index])
+					$('#mobileModuleImg').attr('src',moduleSource[curr_index]);
+					// document.getElementById('mobileModuleImg').src=moduleSource[curr_index];
+				}
+				else{
+					loadImg(moduleSource[curr_index]);
+				}
 			}
-		})
+		});
 	});
 	$("#sidebarleft span").on('click', function(){
 		console.log($(this).data('name'))
