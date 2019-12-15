@@ -40,6 +40,15 @@
 		font-family: 'Electrolize', sans-serif;
 	}
 
+	.preloader{
+		height: 100vh;
+		position: fixed;
+		width: 100vw;
+		top: 0;
+		left: 0;
+		background-color: #000;
+		z-index: 100;
+	}
 
 	#stars{
 		position: fixed;
@@ -616,6 +625,10 @@
 		<source src="tune.mp3" type="audio/mpeg">
 	</audio>
 
+	<div class="preloader">
+
+	</div>
+
 	<div id="scene" >
 		<img src="./images/astroid.png" alt="asteroid" class="asteroid" id="asteroid">
 		<div id="stars">
@@ -649,7 +662,7 @@
 			<!-- <img src="astro.png" id="astro"> -->
 			<img src="./optimized/astro.png" id="astro">
 			<div id="videoContainer">
-				<video id="iframe" src="aftermovie.mp4" type="video/mp4" controls ></video>
+				<video id="iframe" src="aftermovie.mp4" type="video/mp4" controls preload="metadata"></video>
 
 			</div>
 			<!-- <video id="iframe" controls >
@@ -772,6 +785,7 @@
 			document.getElementById('teclogoonly').src="logoonly.png";
 		}
 		window.onload=function(){
+			document.getElementsByClassName('preloader')[0].style.width='0vw';
 			document.getElementById('stars').classList.add('incBright');
 			document.getElementById('marsplanet').classList.add('incBright');
 			document.getElementById('teclogo').classList.add('startFadeIn');
