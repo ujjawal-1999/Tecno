@@ -247,21 +247,21 @@
 		}
 
 		#modulesname{
-			top: 85vh;
-			left: 15vw;
+			top: 95vh;
+			left: 50vw;
 			font-size: 4em;
 		}
 
 		#ufo {
-			height: 55vh;
-			top: 54vh;
-			left: 14vw;
+			height: 40vh;
+			top: 70vh;
+			left: 50vw;
 			opacity: 90%;
 		}	
 		#modulesimg {
 			width: 100vw;
-			top: 38vh;
-			left: 14vw;
+			top: 50vh;
+			left: 50vw;
 			opacity: 90%;
 		}
 
@@ -404,6 +404,62 @@
 			</div>
 	</section>
 
+	<section class="navSection" data-section-name="sae">
+		<div id="saetext" class="modtext">
+				<p>
+						Does the showcase of
+						automotive engineering prowess fill you with sheer wonder? Do you watch endless episodes of Top
+						Gear and The Grand Tour at one go? If yes, then this is it.
+				</p>
+				<div class="eventButtons">
+					<div>Cycle Assembly</div>
+					<div>Automobile Quiz</div>
+				</div>
+			</div>
+	</section>
+	
+	<section class="navSection" data-section-name="archinova">
+			<div id="archinovatext" class="modtext">
+					<p>
+							Tecnoesis’20 presents Archinova, the event which develops a significant channel between construction and tackling nature’s worst behaviour.
+					</p>
+					<div class="eventButtons">
+						<div>Smart City</div>
+						<div>My City My Dream</div>
+					</div>
+				</div>
+		</section>
+		
+		<section class="navSection" data-section-name="empresaario">
+				<div id="empresaariotext" class="modtext">
+						<p>
+								Empessario is a relatively new module that aims to put forth one’s management and
+								entrepreneurship skills into action.
+						</p>
+						<div class="eventButtons">
+							<div>If I were the CEO</div>
+							<div>Pitch Please</div>
+							<div>Bech Ke Dikhao</div>
+							<div>Ad-Ovation</div>
+							<div>Taglore</div>
+						</div>
+					</div>
+			</section>
+			
+		<section class="navSection" data-section-name="psychewizard">
+				<div id="psychewizardtext" class="modtext">
+						<p>
+								Empessario is a relatively new module that aims to put forth one’s management and
+								entrepreneurship skills into action.
+						</p>
+						<div class="eventButtons">
+							<div>Psyche Attacks</div>
+							<div>Web Doors</div>
+							<div>True And False</div>
+						</div>
+					</div>
+			</section>
+
 	<div id="sidebarleft">
 		<span id="robotronBar" class="active" data-name="robotron">ROBOTRON</span>
 		<br><br>
@@ -425,6 +481,14 @@
 		<span id="myndsnareBar" class="" data-name="myndsnare">MYNDSNARE</span>
 		<br><br>
 		<span id="asmeBar" class="" data-name="asme">ASME</span>
+		<br><br>
+		<span id="saeBar" class="" data-name="sae">SAE</span>
+		<br><br>
+		<span id="archinovaBar" class="" data-name="archinova">ARCHINOVA</span>
+		<br><br>
+		<span id="empresaarioBar" class="" data-name="empresaario">EMPRESAARIO</span>
+		<br><br>
+		<span id="psychewizardBar" class="" data-name="psychewizard">PSYCHE WIZARD</span>
 	</div>
 	
 	<!-- <img src="btn-menu.svg" id="menu"> -->
@@ -442,7 +506,7 @@
 	};
 	let isMobile=false;
 	let glitchModule=undefined;
-	const moduleSource=['./images/robotron.png', './images/vwarz.png', './images/showcase.png', './images/amazers.png', './images/conferanza.png', './images/cyberwarp.png', './images/cyberwarp.png', './images/cyberwarp.png'];
+	const moduleSource=['./images/robotron.png', './images/vwarz.png', './images/showcase.png', './images/amazers.png', './images/conferanza.png', './images/cyberwarp.png', './images/myndsnare.png', './images/asme.png', './images/sae.png', './images/archinova.png', './images/empresaario.png', './images/psyche.png'];
 	// const moduleHDSource=['./images/robotron.png', './vwarz.png', './showcase.png', './amazers.png', './conferanza.png', './cyberwarp.png'];
 	(function(){
 		if(document.documentElement.clientHeight>document.documentElement.clientWidth){
@@ -457,22 +521,14 @@
 		}
 		else{
 			let script=document.createElement('script');
-			script.onload=function(){
-				let script2=document.createElement('script');
-				script2.onload=function(){
-					let script3=document.createElement('script');
-					script3.onload=function(){
-						// changeImage=loadImg;
-						// console.log(changeImage);
-					}
-					script3.src="./js/glitch.js";
-					document.body.appendChild(script3);
-				}
-				script2.src="../libs/p5_dom.js";
-				document.body.appendChild(script2);
-			};
 			script.src="../libs/p5.js";
 			document.body.appendChild(script);
+			let script2=document.createElement('script');
+			script2.src="../libs/p5_dom.js";
+			document.body.appendChild(script2);
+			let script3=document.createElement('script');
+			script3.src="./js/glitch.js";
+			document.body.appendChild(script3);
 		}
 	})();
 </script>
@@ -490,6 +546,12 @@
 					// console.log(moduleSource[curr_index])
 					$('#mobileModuleImg').attr('src',moduleSource[curr_index]);
 					// document.getElementById('mobileModuleImg').src=moduleSource[curr_index];
+					if(curr_index===4){
+						$('#modulesimg').css("top", "25vh");
+					}
+					else{
+						$('#modulesimg').css("top", "");
+					}
 				}
 				else{
 					loadImg(moduleSource[curr_index]);
