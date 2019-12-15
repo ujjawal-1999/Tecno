@@ -126,6 +126,14 @@
     line-height: 7vh;
     opacity: 0;
 	}
+	#videoContainer{
+		position: absolute;
+    left: 14vw;
+    top: 15vh;
+    height: 36vh;
+    width: 23vw;
+    overflow: hidden;
+	}
 
 	#teclogo{
 		height: auto;
@@ -303,15 +311,12 @@
 	}
 
 	#astro{
-
-		width: 65vw;
-		height: auto;
-		position: absolute;
-		left: -13vw;
-		top: -6vh;
-		z-index: 5;
-
-
+    width: 50vw;
+    height: auto;
+    position: absolute;
+    left: 0vw;
+    top: 5vh;
+    z-index: 5;
 	}
 
 	#black{
@@ -331,12 +336,12 @@
 	}
 
 	#iframe{
-		width: 25vw;
-		/* height: 65vh; */
-		position: absolute;
-		left: 9vw;
-		top: 18vh;
-		z-index: 1;
+		width: 100%;
+    height: auto;
+    /* position: relative; */
+    /* left: 9vw; */
+    /* top: 18vh; */
+    z-index: 1;
 
 	}
 
@@ -447,13 +452,18 @@
 		#astro{
 
 			width: auto;
-			height: 80vh;
+			height: 70vh;
 			position: absolute;
 			left: 48%;
 			top: -6vh;
 			transform: translateX(-50%);
 		}
-
+		#videoContainer{
+			left: 4vw;
+			top: -9vh;
+			height: 55vh;
+			width: 82vw;
+		}
 		#black{
 			width: 48vw;
 		    height: 50vh;
@@ -637,8 +647,11 @@
 		<div style="display: inline-block;" id="frame">
 			<img src="black.jpeg" id="black">
 			<!-- <img src="astro.png" id="astro"> -->
-			<img src="./astro.png" id="astro">
-			<video id="iframe" src="aftermovie.mp4" type="video/mp4" controls ></video>
+			<img src="./optimized/astro.png" id="astro">
+			<div id="videoContainer">
+				<video id="iframe" src="aftermovie.mp4" type="video/mp4" controls ></video>
+
+			</div>
 			<!-- <video id="iframe" controls >
 					<source src="aftermovie.webm" type='video/webm; codecs="vp8, vorbis"'>
 					</video> -->
@@ -858,7 +871,7 @@ window.addEventListener("scroll",()=>{
 	<script src="./libs/glitcher.js"></script>
 	<script>
 		let firstModule = new p5((sketch)=>{
-			glitcher(sketch, 'module1', ['./robotron.png', './ff2.png']  , ((1511/4350)*windowHeight)-(274.798), (-(1047/28300)*windowWidth)+(98.0734), '0', '30%' );
+			glitcher(sketch, 'module1', ['./modules/images/robotron.png', './modules/images/sae.png']  , ((1511/4350)*windowHeight)-(274.798), (-(1047/28300)*windowWidth)+(98.0734), '0', '30%' );
 		},'firstModule' );
 
 	</script>
