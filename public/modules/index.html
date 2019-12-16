@@ -229,7 +229,17 @@
 		color: #000;
 		cursor: pointer;
 	}
-
+	#tecLogo{
+		position: fixed;
+		top: 0;
+		left: 1vw;
+		width: 30vw;
+	}
+	#pnrcontainer{
+		position: fixed;
+		top: 0;
+		z-index: -1;
+	}
 	/* ARYAN CODE */
 
 	@media(orientation:portrait)
@@ -483,6 +493,9 @@
 	</div>
 	<img id="ufo" src="./images/halo-other-small.png">
 	<span id="modulesname">ROBOTRON</span>
+	<img src="./images/logo white.png" alt="Tecnoesis’20" id="tecLogo">
+	<div id="pnrcontainer"></div>
+	<script src="./js/paronama.js" type="module"></script>
 </body>
 
 <script src="./js/jquery-3.4.1.min.js"></script>

@@ -16,8 +16,8 @@ function setup() {
 
 function draw() {
   clear();
-  this.scale(1.4);
-  this.translate(-100,0);
+  this.scale(1.2);
+  this.translate(-50,0);
   if (isLoaded) {
       glitch.show();
   }
