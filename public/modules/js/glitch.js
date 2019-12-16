@@ -5,7 +5,7 @@ function setup() {
   const cnv=createCanvas(document.getElementById('modulesimg').clientWidth, document.getElementById('modulesimg').clientHeight);
   cnv.parent('modulesimg');
   window.loadImg = function(imgSrc){
-    console.log(imgSrc);
+    // console.log(imgSrc);
     loadImage(imgSrc, function(img) {
         glitch = new Glitch(img);
         isLoaded = true;
