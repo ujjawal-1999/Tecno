@@ -3,6 +3,8 @@
 <head>
 	<title>Modules | Tecnoesis 2020</title>
 	<link rel="icon" href="../images/icon.png">
+	<script src="./js/files.js">
+	</script>
 </head>
 
 <style type="text/css">
@@ -13,18 +15,19 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #f1f1f1; 
+  background: transparent; 
 }
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #463e3e;   
+  /* background: #463e3e;    */
+  background: #00d2ff;   
   border-radius: 8px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555; 
+  background: #0092b3; 
 }
 
 	@font-face{
@@ -154,6 +157,7 @@
 		max-width: 50vw;
     position: absolute;
     left: 45vw;
+		margin-top: 25vh;
 	}
 	.navSection div.modtext p{
 		font-size: 2vh;
@@ -225,7 +229,17 @@
 		color: #000;
 		cursor: pointer;
 	}
-
+	#tecLogo{
+		position: fixed;
+		top: 0;
+		left: 1vw;
+		width: 30vw;
+	}
+	#pnrcontainer{
+		position: fixed;
+		top: 0;
+		z-index: -1;
+	}
 	/* ARYAN CODE */
 
 	@media(orientation:portrait)
@@ -234,6 +248,7 @@
 		.navSection div.modtext{
 			max-width: 80vw;
 			left: 10vw;
+			margin-top: 0vh;
 		}
 		#menuside{
 			display: block;
@@ -291,7 +306,8 @@
 	<section class="navSection" data-section-name="robotron">
 		<div id="robtext" class="modtext">
 				<p>
-				Robotron, as the name suggests revolves around the fascinating world of robots and has successfully managed to incorporate the ideals of various fields of engineering to tackle the ever evolving innovative challenges. The event has always been a crowd favourite and the tally of its enormity rises every year, thereby providing a great opportunity for the sponsors to get maximum exposure
+						Robotron, revolves around the fascinating world of robots and has
+						successfully managed to incorporate the ideals of engineering to tackle the ever evolving innovative challenges.
 				</p>
 				<div class="eventButtons">
 					<div>Robowars</div>
@@ -308,8 +324,9 @@
 	<section class="navSection"  data-section-name="vwarz">
 		<div id="vwarztext" class="modtext">
 				<p>
-					As the world leaps forward to a new era of gaming, humans get to witness jaw-dropping skills and take perilous decisions. Get ready for an amaranthine adrenaline rush and a steampunk chaos as Tecnoesis brings you the ultimate gaming battle : V-Warz. Join hands with your allies and face the most formidable foes. Prepare your game-plan as the most lethal gaming battle awaits the best gamers fighting for glory. Every second matters! Wage a war against fate,  turn the tables and be the last one standing!
-				</p>
+						Tecnoesis brings you the ultimate gaming battle : V-Warz. 
+						V-warz not only offers you incredible competition but shows you where you stand.
+					</p>
 				
 			</div>
 	</section>
@@ -335,11 +352,10 @@
 	<section class="navSection" data-section-name="amazers">
 		<div id="amazerstext" class="modtext">
 				<p>
-					This Tecnoesis, prepare yourselves to get marvelled by the charisma of various mind-numbing events that will 
-					be organized by ASME, Nit Silchar. The events organized under this module will definitely force you to don your 
-					thinking cap and put your logical  skills to test. Be it designing or simulation or making simple automobile objects
-						and much more, ASME will provide you a chance to prove your matte in the prominent aspects of Mechanical engineering. 
-						So, do participate and avail this opportunity for yourselves.
+						How can an event be a festival if there's 
+						no fun? Amazers module provides you 
+						the incredible opportunity to bring out 
+						the child inside you.
 				</p>
 				<div class="eventButtons">
 					<div>The Paintball Battle</div>
@@ -354,14 +370,15 @@
 	<section class="navSection" data-section-name="conferanza">
 		<div id="conferanzatext" class="modtext">
 				<p>
-					This Tecnoesis, prepare yourselves to get marvelled by the charisma of various mind-numbing events that will be organized by ASME, Nit Silchar. The events organized under this module will definitely force you to don your thinking cap and put your logical  skills to test. Be it designing or simulation or making simple automobile objects and much more, ASME will provide you a chance to prove your matte in the prominent aspects of Mechanical engineering. So, do participate and avail this opportunity for yourselves.
-				</p>
+						Conferenza is the guest lecture series where achievers across various fields share their experiences. It has been blessed with the presence of
+						personalities like Padma Shri Uddhab Bharali, Balaji Vishwanathan, Ex-IAS Vivek Atray				</p>
 			</div>
 	</section>
 	<section class="navSection" data-section-name="cyberwarp">
 		<div id="cyberwarptext" class="modtext">
 				<p>
-					This Tecnoesis, prepare yourselves to get marvelled by the charisma of various mind-numbing events that will be organized by ASME, Nit Silchar. The events organized under this module will definitely force you to don your thinking cap and put your logical  skills to test. Be it designing or simulation or making simple automobile objects and much more, ASME will provide you a chance to prove your matte in the prominent aspects of Mechanical engineering. So, do participate and avail this opportunity for yourselves.
+						Cyberwarp brings to you a manifold of invigorating events ranging from puzzles, riddles and mind boggling stuff.
+						So, dive straight into the diverse world of Cyberwarp and ignite the spark of creativity inside you
 				</p>
 				<div class="eventButtons">
 					<div>Cyberbot</div>
@@ -375,10 +392,8 @@
 	<section class="navSection" data-section-name="myndsnare">
 		<div id="myndsnaretext" class="modtext">
 				<p>
-					What has racing hearts, clicking pens and genius minds pitted against each other? The only
-					answer fit will be ‘Mindsnrae’. ‘Mindsnare’ is the inter-college quizzing event where
-					students from across the country compete for exciting prizes. Watch in awe as the quizzers
-					battle it out in a bid for the ultimate glory.
+						‘Myndsnare’ is the quizzing module of
+						Tecnoesis conducted by reknowned Quizmasters, Students from across the country compete for exciting prizes. 
 				</p>
 				<div class="eventButtons">
 					<div>The Sound And The Fury</div>
@@ -391,9 +406,8 @@
 	<section class="navSection" data-section-name="asme">
 		<div id="asmetext" class="modtext">
 				<p>
-					Here you will be given a random item and you have to convince the judges to buy it.
-					As the saying goes “Item doesn't get sold, emotions and stories does”,
-						so how well can you connect emotions and stories to get your Product sold will be checked.
+						Organized by ASME, NIT Silchar, the events under this module will definitely force you to don your thinking cap and
+						put your logical skills to test. Be it designing or simulation or making simple automobile objects and much more.
 				</p>
 				<div class="eventButtons">
 					<div>Draft Ritz</div>
@@ -432,8 +446,7 @@
 		<section class="navSection" data-section-name="empresaario">
 				<div id="empresaariotext" class="modtext">
 						<p>
-								Empessario is a relatively new module that aims to put forth one’s management and
-								entrepreneurship skills into action.
+								Empresaario is the business module that aims to put forth one’s management and entrepreneurship skills into action.
 						</p>
 						<div class="eventButtons">
 							<div>If I were the CEO</div>
@@ -480,6 +493,9 @@
 	</div>
 	<img id="ufo" src="./images/halo-other-small.png">
 	<span id="modulesname">ROBOTRON</span>
+	<img src="./images/logo white.png" alt="Tecnoesis’20" id="tecLogo">
+	<div id="pnrcontainer"></div>
+	<script src="./js/paronama.js" type="module"></script>
 </body>
 
 <script src="./js/jquery-3.4.1.min.js"></script>
@@ -489,8 +505,6 @@
 	};
 	let isMobile=false;
 	let glitchModule=undefined;
-	const moduleSource=['./images/robotron.png', './images/vwarz.png', './images/showcase.png', './images/amazers.png', './images/conferanza.png', './images/cyberwarp.png', './images/myndsnare.png', './images/asme.png', './images/sae.png', './images/archinova.png', './images/empresaario.png'];
-	// const moduleHDSource=['./images/robotron.png', './vwarz.png', './showcase.png', './amazers.png', './conferanza.png', './cyberwarp.png'];
 	(function(){
 		if(document.documentElement.clientHeight>document.documentElement.clientWidth){
 			isMobile=true;
@@ -518,6 +532,7 @@
 <script>
 	let curr_index=0;
 	$(function(){
+		curr_index = $.scrollify.currentIndex();
 		$.scrollify({
 			section: ".navSection",
 			before: function (i) {
@@ -539,6 +554,10 @@
 				else{
 					loadImg(moduleSource[curr_index]);
 				}
+			},
+			afterRender: function(){
+				curr_index = $.scrollify.currentIndex();
+				$.scrollify.instantMove('#robotron');
 			}
 		});
 	});

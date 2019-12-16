@@ -7,7 +7,7 @@ const glitcher = function(sketch, customId,imgSrcArr, height, width, top, left){
   let xtrans=-80;
   console.log('ABCD',document.documentElement.clientHeight);
   if(document.documentElement.clientHeight>document.documentElement.clientWidth){
-    scale=1.2;
+    scale=1.05;
     xtrans=-100;
   }
   if(document.documentElement.clientHeight<=700){
