@@ -11,10 +11,11 @@ body {
   /*background: #060c21;  /* fallback for old browsers */
   /*background: -webkit-linear-gradient(to left, #060c21, #000428);  /* Chrome 10-25, Safari 5.1-6 */
  /*background: linear-gradient(to left,#060c21, #000428); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
- background:url(photos/bg-dark.jpg);
+ /* background:url(photos/bg-dark.jpg); */
  background-repeat:no-repeat;
  background-attachment: fixed;
  background-size:auto;
+ background-color: #000;
 
 }
 
@@ -32,6 +33,7 @@ body{
 
 img {
   object-fit: cover;
+  border-radius: 28%;
 }
 
 .column1 {
@@ -48,7 +50,7 @@ img {
 /*updated code*/
 section {
   width: 80vw;
-  height: 120vh;
+  height: 100vh;
   margin:auto;
 }
 
@@ -59,7 +61,7 @@ section {
   }
 	
   section {
-    width: 100%;
+    width: 90%;
     justify-content: center;
     display: block;
   }
@@ -88,9 +90,10 @@ section {
 }
  h1 {
     color: #fff;
-    padding-top: 5%;
+    padding-top: 0%;
     text-align: center;
-    font-size: 2rem;
+    margin:4.3% 0px;
+    font-size: 2.3rem;
     font-family: 'guardiansregular', serif;
     
   }
@@ -141,10 +144,10 @@ section {
 
     position: relative;
     width: 22px;
-    height: 22px;
+    height: 26px;
     background: #060c21;
     margin: 10px;
-    border-radius: 50%;
+    border-radius: 40%;
    } 
   
   
@@ -219,7 +222,7 @@ section {
   
   #boxshadow::before, 
   #boxshadow::after {
-    background: linear-gradient(235deg,#89ff00,#060c21,#00bcd4);
+    background: linear-gradient(235deg,#66ff00be,#060c21be,#00aad4bd);
   } 
 
 
@@ -240,7 +243,7 @@ section {
     display: flex;
     justify-content: center;
     height: 0;
-    transition: all 0.3s cubic-bezier(0.68, -0.13, 0.265, 1.13);
+    transition: all 0.8s cubic-bezier(0.68, -0.13, 0.265, 1.13);
   }
   .team-avatar-round {
     height: 140px;
@@ -251,7 +254,7 @@ section {
     background-size: cover;
     opacity: 1;
     transform: scale(0, 0);
-    transition: all 0.3s cubic-bezier(0.68, -0.13, 0.265, 1.13);
+    transition: all 0.8s cubic-bezier(0.68, -0.13, 0.265, 1.13);
   }
   .team-description {
   	font-family: 'Roboto', san-serif;
@@ -262,23 +265,23 @@ section {
     top: 300px;
     width: 100%;
     height: 100%;
-    transition: all 0.3s cubic-bezier(0.68, 0, 0.265, 1);
+    transition: all 0.8s cubic-bezier(0.68, 0, 0.265, 1);
     
   }
   .team-name {
     display: inline-block;
     color: #fff;
-    font-family: 'Roboto', san-serif;
+    font-family: Helvetica, Arial sans-serif;
     font-weight: bold;
     font-size: 1.25rem;
 
   }
   .team-position {
     display: inline-block;
-  /*   background: #e9e9e9; */
-    padding: 1px 8px;
+    padding: 4px 8px;
     border-radius: 100px;
     font-size: .98rem;
+    font-family: Helvetica, Arial sans-serif;
     font-style: italic;
     color: #fff;
     line-height: -100px;
@@ -354,9 +357,11 @@ section {
     color: #fff;
     text-decoration: none;
     transition: all 0.1s ease-in;
-    font-size:16px;
+    font-size:17px;
     margin-left: 5px;
     text-align: center;
+    position: relative;
+    top:3px;
    }
 
  
