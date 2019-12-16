@@ -2,13 +2,17 @@ const glitcher = function(sketch, customId,imgSrcArr, height, width, top, left){
 
   let x = 551.9981925088341;
   let y = 659.286107586206;
-  let scale=0.9;
+  let scale=1.5;
+  let ytrans=-200;
+  let xtrans=-80;
   console.log('ABCD',document.documentElement.clientHeight);
   if(document.documentElement.clientHeight>document.documentElement.clientWidth){
-    scale=0.7;
+    scale=1.2;
+    xtrans=-100;
   }
   if(document.documentElement.clientHeight<=700){
-      scale=0.5;
+      scale=1.0;
+      xtrans=-120;
   }
   console.log(scale);
   
@@ -45,7 +49,7 @@ const glitcher = function(sketch, customId,imgSrcArr, height, width, top, left){
     sketch.clear();
     // sketch.background(0);
     sketch.scale(scale);
-    sketch.translate(0,-100)
+    sketch.translate(xtrans, ytrans);
     if (isLoaded) {
         glitch.show();
         

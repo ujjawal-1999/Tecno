@@ -40,6 +40,15 @@
 		font-family: 'Electrolize', sans-serif;
 	}
 
+	.preloader{
+		height: 100vh;
+		position: fixed;
+		width: 100vw;
+		top: 0;
+		left: 0;
+		background-color: #000;
+		z-index: 100;
+	}
 
 	#stars{
 		position: fixed;
@@ -51,8 +60,13 @@
 		left: 0;
 		z-index: -3;
 		width: 100vw;
+		filter: brightness(0);
 		height: calc(100% + 200px);
+		/* animation: brightness 2.5s; */
+	}
+	.incBright{
 		animation: brightness 2.5s;
+		animation-fill-mode: forwards;
 	}
 
 	@keyframes brightness{
@@ -76,7 +90,7 @@
 		position: relative;
 		left: 55%;
 		transform: translate(-50%, -50%);
-		animation: brightness 3s;
+		/* animation: brightness 3s; */
 		animation-delay: 1.5s;
 		filter: brightness(0%);
 		animation-fill-mode: forwards;
@@ -120,12 +134,14 @@
     font-family: Guardians;
     line-height: 7vh;
     opacity: 0;
-    -webkit-animation: fadein 2s 4s;
-    -moz-animation: fadein 2s 4s;
-    -ms-animation: fadein 2s 4s;
-    animation: fadein 2s 4s;
-    animation-fill-mode: forwards;
-}
+	}
+	#videoContainer{
+		position: absolute;
+    left: 14vw;
+    top: 15vh;
+    height: 36vh;
+    width: 23vw;
+    overflow: hidden;
 	}
 
 	#teclogo{
@@ -236,6 +252,7 @@
     position: absolute;
     left: 9vw;
     top: 15vh;
+  	transition: all 0.2s ease;
 	}
 	#hacksImg2{
 		width: 19vw;
@@ -243,23 +260,20 @@
     top: 49vh;
     left: 34vw;
     height: 25vh;
+  	transition: all 0.2s ease;
 	}
 	#hacksImg3{
 		width: 50vw;
     position: absolute;
     left: 7vw;
     top: 13vh;
+  	transition: all 0.2s ease;
 	}
 	#teclogo{
 		opacity: 0;
     top: 25vh;
-    left: 15vw;
+    left: 52vw;
     width: 70vw;
-    -webkit-animation: fadein 5s 3s;
-    -moz-animation: fadein 5s 3s;
-    -ms-animation: fadein 5s 3s;
-    animation: fadein 5s 3s;
-    animation-fill-mode: forwards;
 	}
 
 	@keyframes fadein {
@@ -276,6 +290,22 @@
 			from { opacity: 0; }
 			to   { opacity: 1; }
 	}
+
+	.startFadeIn{
+		-webkit-animation: fadein 5s 3s;
+    -moz-animation: fadein 5s 3s;
+    -ms-animation: fadein 5s 3s;
+    animation: fadein 5s 3s;
+    animation-fill-mode: forwards;
+	}
+	.startFastFadeIn{
+
+    -webkit-animation: fadein 2s 4s;
+    -moz-animation: fadein 2s 4s;
+    -ms-animation: fadein 2s 4s;
+    animation: fadein 2s 4s;
+    animation-fill-mode: forwards;
+	}
 	/* ------------------ARYAN CODE SECTION END---------------- */
 
 
@@ -290,15 +320,12 @@
 	}
 
 	#astro{
-
-		width: 65vw;
-		height: auto;
-		position: absolute;
-		left: -13vw;
-		top: -6vh;
-		z-index: 5;
-
-
+    width: 50vw;
+    height: auto;
+    position: absolute;
+    left: 0vw;
+    top: 5vh;
+    z-index: 5;
 	}
 
 	#black{
@@ -318,12 +345,12 @@
 	}
 
 	#iframe{
-		width: 25vw;
-		/* height: 65vh; */
-		position: absolute;
-		left: 9vw;
-		top: 18vh;
-		z-index: 1;
+		width: 100%;
+    height: auto;
+    /* position: relative; */
+    /* left: 9vw; */
+    /* top: 18vh; */
+    z-index: 1;
 
 	}
 
@@ -404,7 +431,7 @@
 			height: auto;
 			width: 94vw;
 			top: 40vh;
-			left: auto;
+			left: 51vw;
 		}
 
 		#tecTheme{
@@ -434,13 +461,18 @@
 		#astro{
 
 			width: auto;
-			height: 80vh;
+			height: 70vh;
 			position: absolute;
 			left: 48%;
 			top: -6vh;
 			transform: translateX(-50%);
 		}
-
+		#videoContainer{
+			left: 4vw;
+			top: -9vh;
+			height: 55vh;
+			width: 82vw;
+		}
 		#black{
 			width: 48vw;
 		    height: 50vh;
@@ -501,11 +533,6 @@
 		    left: 50%;
 		    transform: translateX(-50%);
 		    opacity: 0;
-    -webkit-animation: fadein 5s 3s;
-    -moz-animation: fadein 5s 3s;
-    -ms-animation: fadein 5s 3s;
-    animation: fadein 5s 3s;
-		animation-fill-mode: forwards;
 		}
 
 		/* ------------------ARYAN CODE START---------------- */
@@ -536,16 +563,16 @@
 			margin: 0;
 		}
 		#hacksImg1{
-			width: 85vw;
-			left: 1vw;
+			width: 100vw;
+			left: -11vw;
 			position: relative;
-			top: 101px;
+			top: 20vh;
 		}
 		#hacksImg2{
-			width: 33vw;
-			top: 26vh;
-			left: 25vh;
-			height: 11vh;
+			width: 35vw;
+			top: 35vh;
+			left: 30vh;
+			height: auto;
 		}
 		#hacksImg3{
 			width: 96vw;
@@ -598,8 +625,12 @@
 		<source src="tune.mp3" type="audio/mpeg">
 	</audio>
 
-	<div id="scene" >
+	<div class="preloader">
 
+	</div>
+
+	<div id="scene" >
+		<img src="./images/astroid.png" alt="asteroid" class="asteroid" id="asteroid">
 		<div id="stars">
 			<div id="nebula">
 				<img src="./optimized/neb-web-web.png" id="nebweb" >
@@ -629,8 +660,11 @@
 		<div style="display: inline-block;" id="frame">
 			<img src="black.jpeg" id="black">
 			<!-- <img src="astro.png" id="astro"> -->
-			<img src="./astro.png" id="astro">
-			<video id="iframe" src="aftermovie.mp4" type="video/mp4" controls ></video>
+			<img src="./optimized/astro.png" id="astro">
+			<div id="videoContainer">
+				<video id="iframe" src="aftermovie.mp4" type="video/mp4" controls preload="metadata"></video>
+
+			</div>
 			<!-- <video id="iframe" controls >
 					<source src="aftermovie.webm" type='video/webm; codecs="vp8, vorbis"'>
 					</video> -->
@@ -641,7 +675,7 @@
 					</span>
 					<br>
 				<p class="sectionContentRight">
-				<span style="color: #9e3e9e;font-weight: bold;">
+				<span style="color: #00d2ff;font-weight: bold;">
 					TECNOESIS</span> is the annual techno-management of NIT Silchar. Started with the aim of providing a platform for the student community to develop and showcase their technical prowess, Tecnoesis has expanded it’s horizon to become one of India’s prominent Techno-management Festival.
 				</p>
 				</div>
@@ -730,10 +764,11 @@
 				<a href="http://www.instagram.com/tecnoesis.nits" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
 		</div>
 		<div class="footerLinks">
-				<a href="./TeamPage-beta/teampage.html">
+				<!-- <a href="./TeamPage-beta/teampage.html"> -->
 			<span style="margin-top: 7vh;border-bottom: 0;">
 			Meet The Team	
-			</span></a>
+			</span>
+		<!-- </a> -->
 			<br>
 			<a href="./campus ambassdor/index.html"><span>
 				Become our Campus Ambassdor
@@ -743,25 +778,31 @@
 <!-- .........ARYAN CODE END............ -->
 	</div>
 
-	<script src="./libs/p5.js"></script>
-	<script src="./libs/p5_dom.js"></script>
-	<script src="./libs/glitcher.js"></script>
 	<script type="text/javascript">
-
-		if(window.innerWidth<window.innerHeight)
+	if(window.innerWidth<window.innerHeight)
 		{
-
 			document.getElementById('teclogo').src="logotext.png";
 			document.getElementById('teclogoonly').src="logoonly.png";
-
 		}
+		window.onload=function(){
+			document.getElementsByClassName('preloader')[0].style.width='0vw';
+			document.getElementById('stars').classList.add('incBright');
+			document.getElementById('marsplanet').classList.add('incBright');
+			document.getElementById('teclogo').classList.add('startFadeIn');
+			document.getElementById('teclogoonly').classList.add('startFadeIn');
+			document.getElementById('tecTheme').classList.add('startFastFadeIn');
 
+
+			setInterval(()=>{
+					const box=document.getElementById('asteroid');
+					box.classList.add('asteroid-animate');
+					setTimeout(()=>{
+						box.classList.remove('asteroid-animate');
+					}, 850);
+				}, 5000);
+		};
 		const windowHeight=document.documentElement.clientHeight;
 		const windowWidth=document.documentElement.clientWidth;
-		let firstModule = new p5((sketch)=>{
-			glitcher(sketch, 'module1', ['./robotron.png', './ff2.png']  , ((1511/4350)*windowHeight)-(274.798), (-(1047/28300)*windowWidth)+(98.0734), '0', '30%' );
-		},'firstModule' );
-
 		var vid=document.getElementById('iframe');
 		let play=0;
 
@@ -778,51 +819,75 @@
 				play=0;
 			}
 
-			// var symbol = document.getElementById('iframe').src.indexOf("?") > -1 ? "&" : "?";
-			// document.getElementById('iframe').src += symbol + "autoplay=1";
-			// console.log(document.getElementById('iframe').src);
-			// var vid = 0;
-
-			// if(vid===0)
-			// {
-			// 	document.getElementById('iframe').src += symbol + "autoplay=0";
-			// 	console.log(document.getElementById('iframe').src);
-			// 	vid=1;
-			// }
-			// else
-			// {
-			// 	document.getElementById('iframe').src += symbol + "autoplay=0";
-			// 	vid=0;
-			// }
-
 
 		});
 		
 		const nebula=document.getElementById("nebula");
 const mars=document.getElementById("mars");
-const hackImg1=document.getElementById('hacksImg1');
-const hackImg2=document.getElementById('hacksImg2');
-const hackImg3=document.getElementById('hacksImg3');
+const hacksImg1=document.getElementById('hacksImg1');
+const hacksImg2=document.getElementById('hacksImg2');
+const hacksImg3=document.getElementById('hacksImg3');
 
 document.addEventListener("scroll",()=>{
 	let x=nebula.offsetTop;
 	let top=window.pageYOffset;
-	let y=hackImg1.offsetTop;
-	let z=hackImg2.offsetTop;
-	let q=hackImg3.offsetTop;
-
-	console.log("img1",y);
-	console.log(z);
-	console.log(q);
-	console.log(x);
-	console.log("top",top);
+	
 	// hackImg1.style.top=(-0.017*top+35.4)+"px";
 	mars.style.top=(-0.16118633*top)+'px';
 	nebula.style.top=(-0.019342236*top)+'px';
 
 })
 
-	</script>
 
+if(window.innerWidth>window.innerHeight)
+
+{	
+
+	// hacks image parallex
+    let Otop=hacksImg1.offsetTop;
+	let Otop2=hacksImg2.offsetTop;
+	let Otop3=hacksImg3.offsetTop;
+
+	// first spark img top is denoted as sImg1Top
+	let sImg1=document.getElementById("sparkTunes");
+	let sImg2=document.getElementById("sparkSaxo");
+	let sImg3=document.getElementById("sparkDrum");
+ 
+window.addEventListener("scroll",()=>{
+	
+	let scroll=window.pageYOffset;
+	let scrollVH=scroll*100/document.documentElement.clientHeight;
+	if(scrollVH>=300 && scrollVH<=425){
+		hacksImg1.style.transform=`translateY(${(-16/75)*scrollVH + (286/3)}vh)`;
+		hacksImg2.style.transform=`translateY(${(-5/23)*scrollVH + (1960/23)}vh)`;
+		hacksImg3.style.transform=`translateY(${(-2/23)*scrollVH + (715/23)}vh)`;
+	}
+	if(scrollVH>=400 && scrollVH<=550){
+		sImg2.style.transform=`translateY(${(-2/15)*scrollVH + (190/3)}vh)`;
+		sImg1.style.transform=`translateY(${(-7/30)*scrollVH + (325/3)}vh)`;
+		sImg3.style.transform=`translateY(${(-3/10)*scrollVH + (140)}vh)`;
+	}
+})
+
+// window.addEventListener('scroll',()=>{
+// 	let scroll=window.pageYOffset;
+// 	console.log("scroll",scroll);
+// 	sImg1.style.top=(-500/1400)*scroll+((3512*450)/1400)+sImg1Top+"px";
+// 	sImg2.style.top=(-430/1100)*scroll+((3812*430)/1400)+sImg2Top+"px";
+// 	sImg3.style.top=(-400/1150)*scroll+((4212*400)/1400)+sImg3Top+"px";
+// })
+
+}
+
+	</script>
+	<script src="./libs/p5.js"></script>
+	<script src="./libs/p5_dom.js"></script>
+	<script src="./libs/glitcher.js"></script>
+	<script>
+		let firstModule = new p5((sketch)=>{
+			glitcher(sketch, 'module1', ['./modules/images/robotron.png', './modules/images/sae.png']  , ((1511/4350)*windowHeight)-(274.798), (-(1047/28300)*windowWidth)+(98.0734), '0', '30%' );
+		},'firstModule' );
+
+	</script>
 </body>
 </html>

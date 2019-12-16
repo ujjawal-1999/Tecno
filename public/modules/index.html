@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Modules | Tecnoesis 2020</title>
+	<link rel="icon" href="../images/icon.png">
+</head>
+
+<style type="text/css">
+
+	::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #463e3e;   
+  border-radius: 8px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+	@font-face{
+		font-family: 'century';
+		src: url(century.ttf);
+	}
+
+	
+	body{
+		margin: 0;
+		overflow-x: hidden;
+		width: 100vw;
+		height: 300vh;
+	}
+
+	#modules{
+
+		position: fixed;
+		top: 0;
+		margin: 0;
+		width: 100vw;
+		height: 100vh;
+		background-image: url('backweb.png');
+		background-repeat: no-repeat;
+		background-size: cover; 
+		background-position: center center; 
+	}
+	#modulesimg{
+		position: fixed;
+		width: 30vw;
+		height: 50vh;
+		top: 35vh;
+		left: 40vw;
+		transform: translate(-50%,-50%);
+		transition: all ease 5s;
+		animation: float 1s infinite;
+	}
+
+	@keyframes float {
+		0%{
+			transform: translate(-50%,-50%);
+		}	
+		50%{
+			transform: translate(-50%,-49.5%);
+		}
+		100%{
+			transform: translate(-50%,-50.5%);
+		}
+	}
+
+	#ufo{
+
+		position: fixed;
+		width: auto;
+		height: 52vh;
+		top: 55vh;
+		left: 40vw;
+		transform: translate(-50%,-50%);
+	}
+
+	#modulesname{
+		position: fixed;
+		width: auto;
+		/* height: 52vh; */
+		top: 88vh;
+		left: 40vw;
+		transform: translate(-50%,-50%);
+		color: white;
+		font-family: sans-serif;
+		font-size: 2em;
+
+	}
+
+	#sidebarleft{
+		position: fixed;
+		display: inline-block;
+		color: white;
+		font-family: sans-serif;
+		left: 2vw;
+		top: 50vh;
+		transform: translateY(-50%);
+		cursor: pointer;
+		transition: all ease 1s;
+
+	}
+
+	.active{
+		color: #45c2e6;
+	}
+
+	#moduletext{
+
+		width: 36vw;
+		height: 80vh;
+		position: fixed;
+		background-color: transparent;
+		left: 60vw;
+		top: 50vh;
+		transform: translateY(-50%);
+		overflow: hidden;
+		transition: all ease 1s;
+		color: white;
+		z-index: 5;
+		height: 100vh;
+
+	}
+
+	.modtext{
+		position: absolute;
+		color: white;
+		text-align: justify;
+		padding: 20px;
+		font-family: century;
+		z-index: 10;
+		height: 100vh;
+		/* transition: all ease 0.8s; */
+
+	}
+	body{
+		background-color: #000;;
+	}
+	.navSection{
+		height: 100vw;
+		background-color: transparent;
+	}
+	.navSection div.modtext{
+		max-width: 50vw;
+    position: absolute;
+    left: 45vw;
+	}
+	.navSection div.modtext p{
+		font-size: 2vh;
+	}
+	
+/* 
+	#robtext{
+		top: 20%;
+	}
+	#vwarztext{
+		top: 100%;
+	}
+	#showcasetext{
+		top: 100%;
+	}
+
+	#amazerstext{
+		top: 100%;
+	}
+
+	#conferanzatext{
+		top: 100%;
+	}
+
+	#cyberwarptext, #myndsnaretext, #asmetext{
+		top: 100%;
+	} */
+
+	#menu{
+		width: 18vw;
+		height: auto;
+		left: 78vw;
+		position: fixed;
+		top: 7vh;
+		display: none;
+		cursor: pointer;
+	}
+
+	#menuside{
+		width: 110vw;
+		height: 110vh;
+		position: fixed;
+		z-index: 30;
+		left: -110vw;
+		background-color: #000000;
+		display: none;
+		transition: all ease 1s;
+		opacity: 50%;
+	}
+
+	/* ARYAN CODE */
+
+	.eventButtons{
+		display: flex;
+    flex-flow: row wrap;
+    margin-top: 5vh;
+	}
+	.eventButtons div{
+		min-width: 6vw;
+    padding: 1vh;
+    border: 1px solid;
+    font-size: 2vh;
+		margin: 0vw 0.6vw 0.8vh 0vw;
+    text-align: center;
+	}
+
+	.eventButtons div:hover{
+		background-color: #fff;
+		color: #000;
+		cursor: pointer;
+	}
+
+	/* ARYAN CODE */
+
+	@media(orientation:portrait)
+	{
+
+		.navSection div.modtext{
+			max-width: 80vw;
+			left: 10vw;
+		}
+		#menuside{
+			display: block;
+		}
+
+		#sidebarleft{
+			font-size: 2.5em;
+			left: -35vw;
+			z-index: 40;
+		}
+
+		#modulesname{
+			top: 95vh;
+			left: 50vw;
+			font-size: 4em;
+		}
+
+		#ufo {
+			height: 40vh;
+			top: 70vh;
+			left: 50vw;
+			opacity: 90%;
+		}	
+		#modulesimg {
+			width: 100vw;
+			top: 45vh;
+			left: 50vw;
+			opacity: 90%;
+		}
+
+		#moduletext {
+			width: 75vw;
+			height: 74vh;
+			left: 22vw;
+			top: 53vh;
+			transition: all ease 1s; 
+			font-size: 2.3em;
+			/*font-weight: bold;*/
+			z-index: 10;
+
+		}
+
+		#menu{
+			display: block;
+		cursor: pointer;
+		z-index: 35;
+		}
+	}
+
+
+
+</style>
+<body>
+
+	<section class="navSection" data-section-name="robotron">
+		<div id="robtext" class="modtext">
+				<p>
+				Robotron, as the name suggests revolves around the fascinating world of robots and has successfully managed to incorporate the ideals of various fields of engineering to tackle the ever evolving innovative challenges. The event has always been a crowd favourite and the tally of its enormity rises every year, thereby providing a great opportunity for the sponsors to get maximum exposure
+				</p>
+				<div class="eventButtons">
+					<div>Robowars</div>
+					<div>Robosoccer 5.0</div>
+					<div>Terrain Treader</div>
+					<div>Sumowars</div>
+					<div>Robobuild</div>
+					<div>Roboart</div>
+				</div>
+				
+			</div>
+	</section>
+
+	<section class="navSection"  data-section-name="vwarz">
+		<div id="vwarztext" class="modtext">
+				<p>
+					As the world leaps forward to a new era of gaming, humans get to witness jaw-dropping skills and take perilous decisions. Get ready for an amaranthine adrenaline rush and a steampunk chaos as Tecnoesis brings you the ultimate gaming battle : V-Warz. Join hands with your allies and face the most formidable foes. Prepare your game-plan as the most lethal gaming battle awaits the best gamers fighting for glory. Every second matters! Wage a war against fate,  turn the tables and be the last one standing!
+				</p>
+				
+			</div>
+	</section>
+	
+	<section class="navSection" data-section-name="showcase">
+		<div id="showcasetext" class="modtext">
+				<p>
+					This Tecnoesis, prepare yourselves to get marvelled by the charisma of various mind-numbing events 
+					that will be organized by ASME, Nit Silchar. The events organized under this module 
+					will definitely force you to don your thinking cap and put your logical  skills to test. 
+					Be it designing or simulation or making simple automobile objects and much more, ASME will provide you 
+					a chance to prove your matte in the prominent aspects of Mechanical engineering. So, do participate and 
+					avail this opportunity for yourselves.
+				</p>
+				<div class="eventButtons">
+						<div>Auto Expo</div>
+						<div>Tech Expo</div>
+						<div>Army Expo</div>
+						<div>Foto Galleria</div>
+					</div>
+			</div>
+	</section>
+	<section class="navSection" data-section-name="amazers">
+		<div id="amazerstext" class="modtext">
+				<p>
+					This Tecnoesis, prepare yourselves to get marvelled by the charisma of various mind-numbing events that will 
+					be organized by ASME, Nit Silchar. The events organized under this module will definitely force you to don your 
+					thinking cap and put your logical  skills to test. Be it designing or simulation or making simple automobile objects
+						and much more, ASME will provide you a chance to prove your matte in the prominent aspects of Mechanical engineering. 
+						So, do participate and avail this opportunity for yourselves.
+				</p>
+				<div class="eventButtons">
+					<div>The Paintball Battle</div>
+					<div>Target Shooting</div>
+					<div>Cube Wizard</div>
+					<div>Treasure Hunt 2.0</div>
+					<div>Speed Skating</div>
+					<div>Stilt Football</div>
+				</div>
+			</div>
+	</section>
+	<section class="navSection" data-section-name="conferanza">
+		<div id="conferanzatext" class="modtext">
+				<p>
+					This Tecnoesis, prepare yourselves to get marvelled by the charisma of various mind-numbing events that will be organized by ASME, Nit Silchar. The events organized under this module will definitely force you to don your thinking cap and put your logical  skills to test. Be it designing or simulation or making simple automobile objects and much more, ASME will provide you a chance to prove your matte in the prominent aspects of Mechanical engineering. So, do participate and avail this opportunity for yourselves.
+				</p>
+			</div>
+	</section>
+	<section class="navSection" data-section-name="cyberwarp">
+		<div id="cyberwarptext" class="modtext">
+				<p>
+					This Tecnoesis, prepare yourselves to get marvelled by the charisma of various mind-numbing events that will be organized by ASME, Nit Silchar. The events organized under this module will definitely force you to don your thinking cap and put your logical  skills to test. Be it designing or simulation or making simple automobile objects and much more, ASME will provide you a chance to prove your matte in the prominent aspects of Mechanical engineering. So, do participate and avail this opportunity for yourselves.
+				</p>
+				<div class="eventButtons">
+					<div>Cyberbot</div>
+					<div>Nibble Code 3.0</div>
+					<div>Cyber Hunt</div>
+					<div>D.Art</div>
+				</div>
+			</div>
+	</section>
+	
+	<section class="navSection" data-section-name="myndsnare">
+		<div id="myndsnaretext" class="modtext">
+				<p>
+					What has racing hearts, clicking pens and genius minds pitted against each other? The only
+					answer fit will be ‘Mindsnrae’. ‘Mindsnare’ is the inter-college quizzing event where
+					students from across the country compete for exciting prizes. Watch in awe as the quizzers
+					battle it out in a bid for the ultimate glory.
+				</p>
+				<div class="eventButtons">
+					<div>The Sound And The Fury</div>
+					<div>Silicon Valley</div>
+					<div>Hunger Games</div>
+				</div>
+			</div>
+	</section>
+	
+	<section class="navSection" data-section-name="asme">
+		<div id="asmetext" class="modtext">
+				<p>
+					Here you will be given a random item and you have to convince the judges to buy it.
+					As the saying goes “Item doesn't get sold, emotions and stories does”,
+						so how well can you connect emotions and stories to get your Product sold will be checked.
+				</p>
+				<div class="eventButtons">
+					<div>Draft Ritz</div>
+					<div>Rocketo Polemos</div>
+					<div>Sailor Safari</div>
+				</div>
+			</div>
+	</section>
+
+	<section class="navSection" data-section-name="sae">
+		<div id="saetext" class="modtext">
+				<p>
+						Does the showcase of
+						automotive engineering prowess fill you with sheer wonder? Do you watch endless episodes of Top
+						Gear and The Grand Tour at one go? If yes, then this is it.
+				</p>
+				<div class="eventButtons">
+					<div>Cycle Assembly</div>
+					<div>Automobile Quiz</div>
+				</div>
+			</div>
+	</section>
+	
+	<section class="navSection" data-section-name="archinova">
+			<div id="archinovatext" class="modtext">
+					<p>
+							Tecnoesis’20 presents Archinova, the event which develops a significant channel between construction and tackling nature’s worst behaviour.
+					</p>
+					<div class="eventButtons">
+						<div>Smart City</div>
+						<div>My City My Dream</div>
+					</div>
+				</div>
+		</section>
+		
+		<section class="navSection" data-section-name="empresaario">
+				<div id="empresaariotext" class="modtext">
+						<p>
+								Empessario is a relatively new module that aims to put forth one’s management and
+								entrepreneurship skills into action.
+						</p>
+						<div class="eventButtons">
+							<div>If I were the CEO</div>
+							<div>Pitch Please</div>
+							<div>Bech Ke Dikhao</div>
+							<div>Ad-Ovation</div>
+							<div>Taglore</div>
+						</div>
+					</div>
+			</section>
+
+	<div id="sidebarleft">
+		<span id="robotronBar" class="active" data-name="robotron">ROBOTRON</span>
+		<br><br>
+		<span id="vwarzBar" class="" data-name="vwarz">V-WARZ</span>
+
+
+		<br><br>
+		<span id="showcaseBar" class="" data-name="showcase">SHOWCASE</span>
+
+		<br><br>
+		<span id="amazersBar" class="" data-name="amazers">AMAZERS</span>
+
+		<br><br>
+		<span id="conferanzaBar" class="" data-name="conferanza">CONFERANZA</span>
+
+		<br><br>
+		<span id="cyberwarpBar" class="" data-name="cyberwarp">CYBERWARP</span>
+		<br><br>
+		<span id="myndsnareBar" class="" data-name="myndsnare">MYNDSNARE</span>
+		<br><br>
+		<span id="asmeBar" class="" data-name="asme">ASME</span>
+		<br><br>
+		<span id="saeBar" class="" data-name="sae">SAE</span>
+		<br><br>
+		<span id="archinovaBar" class="" data-name="archinova">ARCHINOVA</span>
+		<br><br>
+		<span id="empresaarioBar" class="" data-name="empresaario">EMPRESAARIO</span>
+	</div>
+	
+	<!-- <img src="btn-menu.svg" id="menu"> -->
+	<div id="modulesimg">
+
+	</div>
+	<img id="ufo" src="./images/halo-other-small.png">
+	<span id="modulesname">ROBOTRON</span>
+</body>
+
+<script src="./js/jquery-3.4.1.min.js"></script>
+<script src="./js/jquery.scrollify.js"></script>
+<script>
+	window.loadImg=function(imgSrc){
+	};
+	let isMobile=false;
+	let glitchModule=undefined;
+	const moduleSource=['./images/robotron.png', './images/vwarz.png', './images/showcase.png', './images/amazers.png', './images/conferanza.png', './images/cyberwarp.png', './images/myndsnare.png', './images/asme.png', './images/sae.png', './images/archinova.png', './images/empresaario.png'];
+	// const moduleHDSource=['./images/robotron.png', './vwarz.png', './showcase.png', './amazers.png', './conferanza.png', './cyberwarp.png'];
+	(function(){
+		if(document.documentElement.clientHeight>document.documentElement.clientWidth){
+			isMobile=true;
+			console.log('Mobile Version');
+			let moduleImg = document.createElement('img');
+			moduleImg.src=moduleSource[0];
+			moduleImg.style.width="100%";
+			moduleImg.style.height='auto';
+			moduleImg.id='mobileModuleImg';
+			document.getElementById('modulesimg').appendChild(moduleImg);
+		}
+		else{
+			let script=document.createElement('script');
+			script.src="../libs/p5.js";
+			document.body.appendChild(script);
+			let script2=document.createElement('script');
+			script2.src="../libs/p5_dom.js";
+			document.body.appendChild(script2);
+			let script3=document.createElement('script');
+			script3.src="./js/glitch.js";
+			document.body.appendChild(script3);
+		}
+	})();
+</script>
+<script>
+	let curr_index=0;
+	$(function(){
+		$.scrollify({
+			section: ".navSection",
+			before: function (i) {
+				$("#sidebarleft span").removeClass("active");
+				$("#" + $.scrollify.current().data('section-name')+'Bar').addClass("active");
+				curr_index = $.scrollify.currentIndex();
+				$('#modulesname').text($.scrollify.current().data('section-name').toUpperCase());
+				if(isMobile){
+					// console.log(moduleSource[curr_index])
+					$('#mobileModuleImg').attr('src',moduleSource[curr_index]);
+					// document.getElementById('mobileModuleImg').src=moduleSource[curr_index];
+					if(curr_index===4){
+						$('#modulesimg').css("top", "25vh");
+					}
+					else{
+						$('#modulesimg').css("top", "");
+					}
+				}
+				else{
+					loadImg(moduleSource[curr_index]);
+				}
+			}
+		});
+	});
+	$("#sidebarleft span").on('click', function(){
+		console.log($(this).data('name'))
+		$.scrollify.move('#'+ $(this).data("name"));
+	});
+</script>
+</html>
