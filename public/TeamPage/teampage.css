@@ -1,0 +1,381 @@
+@font-face {
+    font-family: 'guardiansregular';
+    src: url('fonts/guardians-webfont.woff2') format('woff2'),
+         url('fonts/guardians-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+  
+  /*background: #060c21;  /* fallback for old browsers */
+  /*background: -webkit-linear-gradient(to left, #060c21, #000428);  /* Chrome 10-25, Safari 5.1-6 */
+ /*background: linear-gradient(to left,#060c21, #000428); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ background:url(photos/bg-dark.jpg);
+ background-repeat:no-repeat;
+ background-attachment: fixed;
+ background-size:auto;
+
+}
+
+body{
+  width: 100%;
+  height:100%;
+}
+.row1 {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  height: 100%;
+
+}
+
+img {
+  object-fit: cover;
+}
+
+.column1 {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.column2 {
+  display: flex;
+  flex-flow: column wrap;
+  width: 85%;
+}
+/*updated code*/
+section {
+  width: 80vw;
+  height: 120vh;
+  margin:auto;
+}
+
+@media only screen and (max-width: 850px) {
+  /* For mobile phones: */
+[class*="column2"] {
+    display: block;
+  }
+	
+  section {
+    width: 100%;
+    justify-content: center;
+    display: block;
+  }
+
+  [class*="single"] {
+    height: 90vh;
+  }
+  [class*="double"] {
+    height: 140vh;
+  }
+  [class*="triple"] {
+    height: 200vh;
+  }
+
+  [class*="column1"] {
+    display: none;
+  }
+  
+    
+} 
+
+.flex-container{
+  display: flex;
+  justify-content:center;
+  flex-flow:row wrap;
+}
+ h1 {
+    color: #fff;
+    padding-top: 5%;
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'guardiansregular', serif;
+    
+  }
+  #title {
+    margin-left: 20%;
+  }
+ 
+  
+  .team-card {
+    cursor: pointer;
+    display: inline-block;
+    margin: 40px 40px;
+    height: 400px;
+    width: 300px;
+   
+    
+  }
+  .left{
+    margin: 30px 30px;
+  }
+
+  h4 {
+    padding: 3px;
+    color: #fff;
+    font-family: 'Manjari', sans-serif;
+    font-size:.85em;
+
+  }
+
+  #box {
+
+    position: relative;
+    width: 40px;
+    /* left: 15px;
+    top: 55px; one half of the remaining 30% */
+    height: 0px;
+    background: #060c21;
+    margin: 10px;
+    border-radius: 50%;
+    border-width: 0 25px 25px 25px;
+    box-sizing: content-box;
+    position: relative;
+    margin: 20px 0 50px 0;
+   }
+
+ 
+  #box {
+
+    position: relative;
+    width: 22px;
+    height: 22px;
+    background: #060c21;
+    margin: 10px;
+    border-radius: 50%;
+   } 
+  
+  
+   #box::before {
+     content: "";
+     position: absolute;
+     top: -2px;
+     bottom: -2px;
+     left: -2px;
+     right: -2px;
+     background: #fff;
+     z-index: -1;
+   }
+    #box::after {
+      content: '';
+      position: absolute;
+      top: -2px;
+     bottom: -2px;
+     left: -2px;
+     right: -2px;
+      z-index: -2; /* hide shadow behind image */
+      background: #fff;
+      
+      filter: blur(80px);
+      
+    }
+    
+    #box::before, 
+    #box::after {
+      background: linear-gradient(235deg,#89ff00,#060c21,#00bcd4);
+    }
+  
+
+
+ #boxshadow {
+
+  position: relative;
+  width: 280px;
+  /* left: 15px;
+  top: 55px; one half of the remaining 30% */
+  height: 380px;
+  margin:3%;
+  background: #060c21;
+
+
+
+ }
+
+ #boxshadow::before {
+   content: "";
+   position: absolute;
+   top: -2px;
+   bottom: -2px;
+   left: -2px;
+   right: -2px;
+   background: #fff;
+   z-index: -1;
+ }
+  #boxshadow::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+   bottom: -2px;
+   left: -2px;
+   right: -2px;
+    z-index: -2; /* hide shadow behind image */
+    background: #fff;
+    
+    filter: blur(40px);
+    
+  }
+  
+  #boxshadow::before, 
+  #boxshadow::after {
+    background: linear-gradient(235deg,#89ff00,#060c21,#00bcd4);
+  } 
+
+
+  
+  .team-avatar {
+    position: relative;
+    height: 380px;
+    width: 280px;
+    overflow: hidden;
+    border-radius: 0px;
+    text-align: center;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03);
+    background-position: center center;
+    background-size: cover;
+  }
+  .team-avatar-round-container {
+    display: flex;
+    justify-content: center;
+    height: 0;
+    transition: all 0.3s cubic-bezier(0.68, -0.13, 0.265, 1.13);
+  }
+  .team-avatar-round {
+    height: 140px;
+    width: 140px;
+    overflow: hidden;
+    border-radius: 100px;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    transform: scale(0, 0);
+    transition: all 0.3s cubic-bezier(0.68, -0.13, 0.265, 1.13);
+  }
+  .team-description {
+  	font-family: 'Roboto', san-serif;
+    position: absolute;
+    background: rgb(8, 7, 7);
+    opacity: 90%;
+    padding: 20px 2px;
+    top: 300px;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s cubic-bezier(0.68, 0, 0.265, 1);
+    
+  }
+  .team-name {
+    display: inline-block;
+    color: #fff;
+    font-family: 'Roboto', san-serif;
+    font-weight: bold;
+    font-size: 1.25rem;
+
+  }
+  .team-position {
+    display: inline-block;
+  /*   background: #e9e9e9; */
+    padding: 1px 8px;
+    border-radius: 100px;
+    font-size: .98rem;
+    font-style: italic;
+    color: #fff;
+    line-height: -100px;
+    margin-bottom: 15px;
+    
+  }
+
+  .team-card:hover .team-description {
+    top: 0 !important;
+    
+    
+  }
+  .team-card:hover .team-avatar-round-container {
+    display: flex;
+    justify-content: center;
+    height: 80px;
+    margin-bottom: 15px;
+    
+  }
+  .team-card:hover .team-avatar-round {
+    opacity: 1;
+    transform: scale(1, 1);
+    
+  }
+
+  .team-card:hover .team-position {
+    display: none;
+  }
+
+  .team-card:hover .team-button {
+    opacity: 1;
+    display: inline-block;
+   
+  }
+
+  .team-card:hover .team-name {
+    padding-top: 70px;
+    
+  }
+
+  .team-button {
+    display: block;
+    background: #00FFA4;
+    color: #000;
+    height: 40px;
+    width: 40px;
+    border-radius: 100px;
+    text-align: center;
+    opacity: 0;
+  }
+  .team-button .fa {
+    margin-top: 10px;
+
+  }
+
+  .column1{
+    height: 100vh;
+    width: 15%;
+    
+  }
+  
+  @media screen and (max-width: 100vw) and (min-width: 500px) {
+		.sticky {
+      position: fixed;
+      left: 8;
+      width: 15%;
+      height: 100%;
+    }
+	}
+
+  a {
+    
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.1s ease-in;
+    font-size:16px;
+    margin-left: 5px;
+    text-align: center;
+   }
+
+ 
+
+
+a:hover {
+  font-size: 25px;
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glow .1s ease-in-out infinite alternate;
+  -moz-animation: glow .1s ease-in-out infinite alternate;
+  animation: glow .1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px rgb(255, 255, 255), 0 0 20px #fff, 0 0 30px blue, 0 0 40px blue, 0 0 50px blue, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  to {
+    text-shadow: 0 0 20px rgb(255, 255, 255), 0 0 30px blue, 0 0 40px #ff4da6, 0 0 50px blue, 0 0 60px #ff4da6, 0 0 70px blue, 0 0 80px #ff4da6;
+  }
+}

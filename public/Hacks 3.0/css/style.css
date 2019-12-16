@@ -8188,10 +8188,13 @@ strong {
   right: 50px;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
-  transform: translateY(-50%); }
+  transform: translateY(-50%); 
+}
   @media (max-width: 767.98px) {
     .navbar {
-      right: 14vw; } }
+      right: 14vw; 
+    }
+   }
 
 .navbar .nav-menu {
   margin: 0;
@@ -10029,7 +10032,7 @@ textarea.form-control {
 -----------------------*/
 
 .work-section {
-  padding-top: 60px;
+  padding-top: 30px;
   padding-bottom: 35px;
   position: relative;
   margin: 0 52px;
@@ -10207,5 +10210,18 @@ textarea.form-control {
     height: 120px;
     width: 120px;
     border-radius: 50%;
+  }
+  
+}
+
+@media (min-width: 300px) and (max-width: 768px){
+  body{
+    overflow-x: hidden !important;
+    max-width:100% !important;
+    width:100% !important;
+  }
+  section{
+    max-width: 100% !important;
+    width:100% !important;
   }
 }
