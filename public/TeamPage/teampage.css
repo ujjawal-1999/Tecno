@@ -75,10 +75,20 @@ section {
   [class*="triple"] {
     height: 200vh;
   }
+  [class*="quard"] {
+    height: 260vh;
+  }
 
   [class*="column1"] {
     display: none;
   }
+
+  h1{
+    font-size: 1.6rem !important;
+    padding-bottom: 15%;
+  }
+
+  
   
     
 } 
@@ -382,5 +392,12 @@ a:hover {
   }
   to {
     text-shadow: 0 0 20px rgb(255, 255, 255), 0 0 30px blue, 0 0 40px #ff4da6, 0 0 50px blue, 0 0 60px #ff4da6, 0 0 70px blue, 0 0 80px #ff4da6;
+  }
+}
+
+@media (min-width:1000px)
+{
+  .change{
+    margin-top: 420px;
   }
 }
