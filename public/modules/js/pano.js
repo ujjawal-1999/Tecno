@@ -72,15 +72,15 @@ import * as THREE from './three.module.js';
 				document.body.appendChild( renderer.domElement );
 
 				//
-
-				document.addEventListener( 'mousedown', onDocumentMouseDown, false );
-				document.addEventListener( 'wheel', onDocumentMouseWheel, false );
-
-				document.addEventListener( 'touchstart', onDocumentTouchStart, false );
-				document.addEventListener( 'touchmove', onDocumentTouchMove, false );
-
+				if(document.documentElement.clientHeight<document.documentElement.clientWidth){
+					document.addEventListener( 'mousedown', onDocumentMouseDown, false );
+	
+					document.addEventListener( 'touchstart', onDocumentTouchStart, false );
+					document.addEventListener( 'touchmove', onDocumentTouchMove, false );
+	
+				}
 				window.addEventListener( 'resize', onWindowResize, false );
-
+				
 			}
 
 			function onWindowResize() {
@@ -115,16 +115,6 @@ import * as THREE from './three.module.js';
 
 				document.removeEventListener( 'mousemove', onDocumentMouseMove );
 				document.removeEventListener( 'mouseup', onDocumentMouseUp );
-
-			}
-
-			function onDocumentMouseWheel( event ) {
-
-				var fov = camera.fov + event.deltaY * 0.05;
-
-				camera.fov = THREE.Math.clamp( fov, 10, 75 );
-
-				camera.updateProjectionMatrix();
 
 			}
 

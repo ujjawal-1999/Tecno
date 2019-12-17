@@ -9,6 +9,8 @@
 
 <style type="text/css">
 
+@import url('https://fonts.googleapis.com/css?family=B612:400,700&display=swap');
+
 	::-webkit-scrollbar {
   width: 8px;
 }
@@ -29,12 +31,6 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #0092b3; 
 }
-
-	@font-face{
-		font-family: 'century';
-		src: url(century.ttf);
-	}
-
 	
 	body{
 		margin: 0;
@@ -42,6 +38,23 @@
 		width: 100vw;
 		height: 300vh;
 	}
+
+	@font-face {
+		font-family: Guardian;
+		src: url('../guardians/Guardians.ttf');
+	}
+
+
+	.preloader{
+		height: 100vh;
+		position: fixed;
+		width: 100vw;
+		top: 0;
+		left: 0;
+		background-color: #000;
+		z-index: 100;
+	}
+
 
 	#modules{
 
@@ -96,7 +109,7 @@
 		left: 40vw;
 		transform: translate(-50%,-50%);
 		color: white;
-		font-family: sans-serif;
+		font-family: 'Guardian', sans-serif;
 		font-size: 2em;
 
 	}
@@ -107,6 +120,8 @@
 		color: white;
 		font-family: sans-serif;
 		left: 2vw;
+		font-family: 'B612', sans-serif;
+		font-weight: 700;
 		top: 50vh;
 		transform: translateY(-50%);
 		cursor: pointer;
@@ -140,7 +155,7 @@
 		color: white;
 		text-align: justify;
 		padding: 20px;
-		font-family: century;
+		font-family: 'B612' , sans-serif;		
 		z-index: 10;
 		height: 100vh;
 		/* transition: all ease 0.8s; */
@@ -154,13 +169,14 @@
 		background-color: transparent;
 	}
 	.navSection div.modtext{
-		max-width: 50vw;
+		max-width: 40vw;
     position: absolute;
-    left: 45vw;
-		margin-top: 25vh;
+    left: 52vw;
+    margin-top: 25vh;
 	}
 	.navSection div.modtext p{
-		font-size: 2vh;
+		font-size: 2.7vh;
+		font-weight: 200;
 	}
 	
 /* 
@@ -307,6 +323,9 @@
 </style>
 <body>
 
+	<div class="preloader">
+
+	</div>
 	<section class="navSection" data-section-name="robotron">
 		<div id="robtext" class="modtext">
 				<p>
@@ -506,6 +525,9 @@
 <script src="./js/jquery-3.4.1.min.js"></script>
 <script src="./js/jquery.scrollify.js"></script>
 <script>
+	window.onload=function(){
+		document.getElementsByClassName('preloader')[0].style.width='0vw';
+	}
 	window.loadImg=function(imgSrc){
 	};
 	let isMobile=false;
