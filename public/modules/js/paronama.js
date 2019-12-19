@@ -1,5 +1,9 @@
 import * as THREE from './three.module.js';
 
+let isMobile=false;
+if(document.documentElement.clientHeight>document.documentElement.clientWidth){
+  isMobile=true;
+}
 var camera, scene, renderer;
 
 var isUserInteracting = false,
@@ -26,7 +30,7 @@ function init() {
   // invert the geometry on the x-axis so that all of the faces point inward
   geometry.scale( - 1, 1, 1 );
 
-  var texture = new THREE.TextureLoader().load( './images/panorama.v1.jpg' );
+  var texture = new THREE.TextureLoader().load( './images/p2.jpg' );
   var material = new THREE.MeshBasicMaterial( { map: texture } );
 
   mesh = new THREE.Mesh( geometry, material );
@@ -38,53 +42,38 @@ function init() {
   renderer.setSize( window.innerWidth, window.innerHeight );
   container.appendChild( renderer.domElement );
 
-  document.addEventListener( 'mousedown', onPointerStart, false );
-  document.addEventListener( 'mousemove', onPointerMove, false );
-  document.addEventListener( 'mouseup', onPointerUp, false );
-
-  // document.addEventListener( 'wheel', onDocumentMouseWheel, false );
-
-  document.addEventListener( 'touchstart', onPointerStart, false );
-  document.addEventListener( 'touchmove', onPointerMove, false );
-  document.addEventListener( 'touchend', onPointerUp, false );
-
-  //
-
-  document.addEventListener( 'dragover', function ( event ) {
-
-    event.preventDefault();
-    event.dataTransfer.dropEffect = 'copy';
-
-  }, false );
-
-  document.addEventListener( 'dragenter', function () {
-
-    document.body.style.opacity = 0.5;
-
-  }, false );
-
-  document.addEventListener( 'dragleave', function () {
-
-    document.body.style.opacity = 1;
-
-  }, false );
-
-  document.addEventListener( 'drop', function ( event ) {
-
-    event.preventDefault();
-
-    var reader = new FileReader();
-    reader.addEventListener( 'load', function ( event ) {
-
-      material.map.image.src = event.target.result;
-      material.map.needsUpdate = true;
-
+  if(!isMobile){
+    document.addEventListener( 'mousedown', onPointerStart, false );
+    document.addEventListener( 'mousemove', onPointerMove, false );
+    document.addEventListener( 'mouseup', onPointerUp, false );
+  
+    // document.addEventListener( 'wheel', onDocumentMouseWheel, false );
+  
+    document.addEventListener( 'touchstart', onPointerStart, false );
+    document.addEventListener( 'touchmove', onPointerMove, false );
+    document.addEventListener( 'touchend', onPointerUp, false );
+  
+    //
+  
+    document.addEventListener( 'dragover', function ( event ) {
+  
+      event.preventDefault();
+      event.dataTransfer.dropEffect = 'copy';
+  
     }, false );
-    reader.readAsDataURL( event.dataTransfer.files[ 0 ] );
+  
+    document.addEventListener( 'dragenter', function () {
+  
+      document.body.style.opacity = 0.5;
+  
+    }, false );
+    document.addEventListener( 'dragleave', function () {
+  
+      document.body.style.opacity = 1;
+  
+    }, false );
+  }
 
-    document.body.style.opacity = 1;
-
-  }, false );
 
   //
 
