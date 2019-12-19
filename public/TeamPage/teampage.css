@@ -15,8 +15,9 @@ body {
  background-repeat:no-repeat;
  background-attachment: fixed;
  background-size:auto;
- background-color: #000;
-
+ /* background-color: #041525; */
+ /* background-color: #000; */
+font-family: sans-serif;
 }
 
 body{
@@ -232,7 +233,7 @@ section {
   
   #boxshadow::before, 
   #boxshadow::after {
-    background: linear-gradient(235deg,#66ff00be,#060c21be,#00aad4bd);
+    background: linear-gradient(235deg,#86ec00f8,#060c21be,#0039d4c5);
   } 
 
 
