@@ -149,6 +149,29 @@
     opacity: 0;
   }
 }
+
+#footer div#contact{
+  position: relative;
+  top: 10vh;
+  font-size: 2.6vh;
+}
+
+#footer div#contact span.email{
+  margin: 1vh 0;
+  font-size: 2.2vh;
+}
+
+#footer div#contact span.email a:hover{
+  color: #00d2ff;
+  cursor: pointer;
+}
+
+
+#footer div#contact span.email a{
+  text-decoration: none;
+  color: #fff;
+}
+
 @media(orientation:portrait)
 {
   .contentLink{
