@@ -40,7 +40,7 @@
 		font-family: 'Electrolize', sans-serif;
 	}
 
-	.preloader{
+	.preloader, #videoPreload{
 		height: 100vh;
 		position: fixed;
 		width: 100vw;
@@ -48,6 +48,9 @@
 		left: 0;
 		background-color: #000;
 		z-index: 100;
+	}
+	#videoPreload{
+		z-index: 101;
 	}
 
 	#stars{
@@ -116,7 +119,7 @@
 
 	#logo{
 		position: absolute;
-		height: 100vh;
+		height: 150vh;
 		width: 100vw;
 		/* top: 11vh; */
 		/* left: 50%; */
@@ -611,6 +614,9 @@
 			font-family: century;
 
 		}
+		#videoPreload{
+			display: none;
+		}
 		/* ------------------ARYAN CODE END---------------- */
 
 	}
@@ -620,6 +626,10 @@
 
 </style>
 <body style="position:absolute;margin: 0; overflow-x: hidden!important;">
+	<div id="videoPreload">
+		<video muted autoplay="autoplay" id="prevideo" src="" type="video/webm" style="margin: 0 auto; width: 100vw;" >
+		</video>
+	</div>
 		
 	<audio loop autoplay>
 		<source src="tune.mp3" type="audio/mpeg">
@@ -783,6 +793,44 @@
 <!-- .........ARYAN CODE END............ -->
 	</div>
 
+	<script>
+		if(window.innerWidth>window.innerHeight)
+		{
+			const vPre=document.getElementById('videoPreload');
+			const prevideo = document.getElementById('prevideo');
+			var req = new XMLHttpRequest();
+			req.open('GET', './optimized/wormhole finalbetterquality 3.webm', true);
+			req.responseType = 'blob';
+
+			req.onload = function() {
+				// Onload is triggered even on 404
+				// so we need to check the status code
+				if (this.status === 200) {
+						var videoBlob = this.response;
+						var vid = URL.createObjectURL(videoBlob); // IE10+
+						// Video is now downloaded
+						// and we can set it as source on the video element
+						prevideo.src = vid;
+						prevideo.play();
+				}
+			}
+			req.onerror = function(err) {
+				// Error
+				console.log(err);
+			}
+
+			req.send();
+			prevideo.addEventListener('ended', function(){
+				vPre.style.display='none';
+				document.getElementById('stars').classList.add('incBright');
+				document.getElementById('marsplanet').classList.add('incBright');
+				document.getElementById('teclogo').classList.add('startFadeIn');
+				document.getElementById('teclogoonly').classList.add('startFadeIn');
+				document.getElementById('tecTheme').classList.add('startFastFadeIn');
+			}, false);
+		}
+		</script>
+
 	<script type="text/javascript">
 	if(window.innerWidth<window.innerHeight)
 		{
@@ -790,12 +838,15 @@
 			document.getElementById('teclogoonly').src="logoonly.png";
 		}
 		window.onload=function(){
-			document.getElementsByClassName('preloader')[0].style.width='0vw';
-			document.getElementById('stars').classList.add('incBright');
-			document.getElementById('marsplanet').classList.add('incBright');
-			document.getElementById('teclogo').classList.add('startFadeIn');
-			document.getElementById('teclogoonly').classList.add('startFadeIn');
-			document.getElementById('tecTheme').classList.add('startFastFadeIn');
+			document.getElementsByClassName('preloader')[0].style.display='none';
+			if(window.innerHeight> window.innerWidth){
+				document.getElementById('videoPreload').style.display='none';
+				document.getElementById('marsplanet').classList.add('incBright');
+				document.getElementById('teclogo').classList.add('startFadeIn');
+				document.getElementById('teclogoonly').classList.add('startFadeIn');
+				document.getElementById('stars').classList.add('incBright');
+				document.getElementById('tecTheme').classList.add('startFastFadeIn');
+			}
 
 
 			setInterval(()=>{
