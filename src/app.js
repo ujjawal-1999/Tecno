@@ -9,7 +9,8 @@ mongoose.connect('mongodb://localhost:27017/Tecnoesis',{
     useUnifiedTopology:true
 });
 
-const router = require('./routers/router')
+const router = require('./routers/router');
+const caRouter = require('./routers/caRoute');
 
 const app = express() 
 app.use(express.json())
@@ -19,7 +20,12 @@ app.use(bodyParser.urlencoded({
 }))
 app.use(bodyParser.json())
 
-const publicDirectoryPath = path.join(__dirname,'../public')
+const publicDirectoryPath = path.join(__dirname,'../public');
+app.use((req,res,next)=>{
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+});
 
 app.set('view engine','hbs');
 app.set('views',path.join(__dirname,'../template/views'));
@@ -28,7 +34,8 @@ app.use(express.static(publicDirectoryPath))
 
 const port = process.env.PORT || 3000
 
-app.use('/tecnoesis',router)
+app.use('/tecnoesis',router);
+app.use('/ca', caRouter);
 
 app.listen(port, () => {
     console.log('Server is up on port : '+ port)

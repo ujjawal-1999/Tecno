@@ -1,22 +1,23 @@
 const mongoose = require('mongoose');
 const validator = require('validator');
 
-const infoSchema = new mongoose.Schema({
+const caSchema = new mongoose.Schema({
     name: {
         type:String,
         trim:true,
         required:true
     },
-    emailId:{
+    email:{
         type:String,
         required:true,
+        unique: true,
         validate(value) {
             if(!validator.isEmail(value)){
                 throw new Error('Email is invalid')
             }
         }
     },
-    mobileNumber:{
+    mobile:{
         type:String,
         required:true,
         validate(value) {
@@ -25,8 +26,8 @@ const infoSchema = new mongoose.Schema({
             }
         }
     },
-    whatsAppNumber:{
-        type:Number,
+    whatsapp:{
+        type:String,
         required:true,
         validate(value) {
             if(!validator.isMobilePhone(value)){
@@ -34,27 +35,25 @@ const infoSchema = new mongoose.Schema({
             }
         }
     },
-    instituteName:{
+    institute:{
         type:String,
         required:true
-    },
-    address:{
-        type:String
     },
     city:{
         type:String,
         required:true
     },
     state:{
-        type:String
+        type:String,
+        required: true
     },
-    postalCode:{
+    zip:{
         type:Number,
         required:true
     }
-})
+});
 
 
-const Info = mongoose.model('Info',infoSchema);
+const CA = mongoose.model('CA',caSchema);
 
-module.exports = Info;
+module.exports = CA;
