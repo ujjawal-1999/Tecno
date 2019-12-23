@@ -238,7 +238,7 @@
 	}
 	#footer div.theme{
 		font-size: 2.5em;
-		margin-top: 2vh;
+		margin-top: 4vh;
 		font-family: Equinox;
 	}
 	#modules{
@@ -308,6 +308,22 @@
     -ms-animation: fadein 2s 4s;
     animation: fadein 2s 4s;
     animation-fill-mode: forwards;
+	}
+
+	#tecDate{
+		position: absolute;
+    font-family: Guardians;
+    color: #fff;
+    /* left: 42vw; */
+    font-size: 2vh;
+    width: 100vw;
+    text-align: center;
+		opacity: 0;
+    filter: brightness(0.75);
+    top: 55vh;
+	}
+	#footer div.heading span#date{
+		font-size: 3vh;
 	}
 	/* ------------------ARYAN CODE SECTION END---------------- */
 
@@ -471,10 +487,10 @@
 			transform: translateX(-50%);
 		}
 		#videoContainer{
-			left: 10vw;
-			top: -9vh;
-			height: 55vh;
-			width: 75vw;
+			left: 13vw;
+			top: -5vh;
+			height: 50vh;
+			width: 70vw;
 		}
 		#black{
 			width: 48vw;
@@ -543,6 +559,10 @@
 			top: 440vh;
 		}
 
+		#tecDate{
+			font-size: 1.6vh;
+		}
+
 		.slideshow-container {
 		    width: auto;
 		    height: auto;
@@ -598,6 +618,9 @@
 		#footer div.theme{
 			font-size: 1.8em;
 			margin-top: 2vh;
+		}
+		#footer div.heading span#date{
+			font-size: 2vh;
 		}
 		#spark{
 			top: 580vh;
@@ -657,6 +680,9 @@
 		<div id="logo">
 			<img src="" style="position: absolute;" id="teclogoonly">
 			<img src="./optimized/logo-web-final-final-web.png" style="position: absolute;" id="teclogo">
+			<div id="tecDate">
+					1 . 2 . 3 February 2020
+				</div>
 			<div id="tecTheme">
 				A saga of<br>intergalactic ventures
 			</div>
@@ -768,6 +794,10 @@
 		<div class="tecnoesis">
 			<div class="heading">
 				Tecnoesis 2020
+				<br>
+				<span id="date">
+					1.2.3 February 2020
+				</span>
 			</div>
 			<div class="theme">
 				A saga of intergalactic ventures
@@ -844,6 +874,7 @@
 				document.getElementById('stars').classList.add('incBright');
 				document.getElementById('marsplanet').classList.add('incBright');
 				document.getElementById('teclogo').classList.add('startFadeIn');
+				document.getElementById('tecDate').classList.add('startFadeIn');
 				document.getElementById('teclogoonly').classList.add('startFadeIn');
 				document.getElementById('tecTheme').classList.add('startFastFadeIn');
 			}, false);
@@ -862,6 +893,7 @@
 				document.getElementById('videoPreload').style.display='none';
 				document.getElementById('marsplanet').classList.add('incBright');
 				document.getElementById('teclogo').classList.add('startFadeIn');
+				document.getElementById('tecDate').classList.add('startFadeIn');
 				document.getElementById('teclogoonly').classList.add('startFadeIn');
 				document.getElementById('stars').classList.add('incBright');
 				document.getElementById('tecTheme').classList.add('startFastFadeIn');
