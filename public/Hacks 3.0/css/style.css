@@ -4734,7 +4734,10 @@ a.close.disabled {
   .modal.show .modal-dialog {
     -webkit-transform: none;
     -ms-transform: none;
-    transform: none; }
+    transform: none;
+    position: relative;
+    top: 20%;
+  }
 
 .modal-dialog-scrollable {
   display: -webkit-box;
@@ -4811,30 +4814,42 @@ a.close.disabled {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 16vh;
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding: 1rem 1rem;
+  padding: 2rem 1rem;
   border-bottom: 1px solid #dee2e6;
   border-top-left-radius: 0.3rem;
   border-top-right-radius: 0.3rem; }
   .modal-header .close {
-    padding: 1rem 1rem;
-    margin: -1rem -1rem -1rem auto; }
+    padding: 0rem 1rem;
+    margin: -1rem -1rem -1rem auto;
+    font-size:5.8vh;
+  }
 
 .modal-title {
   margin-bottom: 0;
-  line-height: 1.5; }
+  line-height: 1.5;
+  position: absolute;
+  font-size: 3.4vh;
+  text-align: center;
+  color: #080124;
+  padding-bottom: 1vh;
+  font-weight: bold;
+}
 
 .modal-body {
   position: relative;
   -webkit-box-flex: 1;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
-  padding: 1rem; }
+  padding: 1rem;
+color:#242424;
+ }
 
 .modal-footer {
   display: -webkit-box;
@@ -8441,7 +8456,8 @@ strong {
   border-radius: 0px;
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
-  border-radius: 30px; }
+  border-radius: 30px;
+font-size: large; }
   .btn:hover, .btn:active, .btn:focus {
     outline: none; }
   .btn.btn-primary {
@@ -9908,6 +9924,7 @@ textarea.form-control {
 
 .trend-item.nightlife .trend-text .open {
   background: #FF5581;
+  cursor: pointer;
 }
 
 .trend-item.hotels .tic-text {
@@ -9920,6 +9937,7 @@ textarea.form-control {
 
 .trend-item.events .trend-text .open {
   background: #FF5581;
+  cursor: pointer;
 }
 
 .trend-item .trend-pic {
@@ -9962,6 +9980,8 @@ textarea.form-control {
   color: #242424;
   font-size: 20px;
   font-weight: 700;
+  border-bottom: 1px solid lightgrey;
+  border-bottom:50%;
 }
 
 .trend-item .trend-text span {
@@ -9979,15 +9999,16 @@ textarea.form-control {
   margin-bottom: 20px;
 }
 
-.trend-item .trend-text .closed {
+.trend-item .closed {
   display: inline-block;
   padding: 7px 20px;
   background: #13185b;
   font-size: 14px;
   color: #fff;
   letter-spacing: 0.2px;
-  margin-right: 10px;
-  margin-bottom: 5px;
+  margin: 4.4vh 23% 4.4vh 41%;
+  
+  cursor: pointer;
 }
 
 .trend-item .trend-text .open {
@@ -9995,6 +10016,29 @@ textarea.form-control {
   padding: 7px 20px;
   background:#3c3838;
   font-size: 14px;
+  color: #fff;
+  letter-spacing: 0.1px;
+}
+.trend-item.events .open {
+  background: #FF5581;
+  cursor: pointer;
+  display: inline-block;
+  padding: 7px 20px;
+  background:#3c3838;
+  font-size: 14px;
+  margin: 4.4vh 23% 4.4vh 40%;
+  color: #fff;
+  letter-spacing: 0.1px;
+}
+
+.trend-item.nightlife .open {
+  background: #FF5581;
+  cursor: pointer;
+  display: inline-block;
+  padding: 7px 20px;
+  background:#3c3838;
+  font-size: 14px;
+  margin: 4.4vh 26% 4.4vh 39%;
   color: #fff;
   letter-spacing: 0.1px;
 }
@@ -10225,3 +10269,5 @@ textarea.form-control {
     width:100% !important;
   }
 }
+
+
