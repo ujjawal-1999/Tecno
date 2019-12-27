@@ -10079,7 +10079,7 @@ textarea.form-control {
   padding-top: 30px;
   padding-bottom: 35px;
   position: relative;
-  margin: 0 52px;
+  margin: 0 1vh;
 }
 
 .work-section .section-title {
@@ -10267,6 +10267,11 @@ textarea.form-control {
   section{
     max-width: 100% !important;
     width:100% !important;
+  }
+}
+@media(min-width: 778 px){
+  .trend-item.nightlife{
+    margin-left: 30% !important;
   }
 }
 
