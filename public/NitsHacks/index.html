@@ -84,6 +84,25 @@
 .images li{
 	margin-top:10px;
 }
+@media(orientation: portrait)
+{
+  nav#navbar{
+    display: none;
+  }
+  .mobile-padding{
+    padding-left:3vh !important;
+    padding-right: 3vh !important;
+  }
+  .trend-item.nightlife .open {
+    margin: 4.4vh 28% 4.4vh 30%
+  }
+  .trend-item .closed {
+    margin: 4.4vh 23% 4.4vh 34%;
+  }
+  .trend-item.events .open {
+    margin: 4.4vh 23% 4.4vh 33%;
+  }
+}
   </style>
 
   </head>
@@ -178,7 +197,7 @@
   <!-- End About Section -->
     
     <!--event section-->
-    <section class="trending-restaurant spad" id="events" style="margin-top:20vh">
+    <section class="trending-restaurant spad" id="events" style="margin-top:14vh">
       <div class="container">
           <div class="row">
               <div class="col-lg-12">
@@ -189,10 +208,10 @@
               </div>
           </div>
           <div class="row">
-            <div class="col-lg-4 col-sm-12 col-12">
+            <div class="col-lg-4 col-sm-12 col-12 mobile-padding">
               <div class="trend-item">
                   <div class="trend-pic">
-                      <img src="./images/NewLogo.png" alt="">
+                      <img src="./images/hacks-logo.png" alt="">
                       <div class="rating">Feb 2</div>
                   </div>
                   <div class="trend-text">
@@ -206,10 +225,10 @@
         </div>
           <div class="row">
               <!-- <div class="col-lg-4 cols-sm-12"></div> -->
-              <div class="col-lg-4 col-sm-12 col-12">
+              <div class="col-lg-4 col-sm-12 col-12 mobile-padding">
                   <div class="trend-item nightlife" style="height: 300px;">
                       <div class="trend-pic">
-                          <img src="./images/NewLogo.png" alt="" style="margin-left:20px;">
+                          <img src="./images/hacks-logo.png" alt="" style="margin-left:20px;">
                           <div class="rating">Feb 2</div>
                       </div>
                       <div class="trend-text" style="width: 150px;">
@@ -220,10 +239,10 @@
                       <div class="tic-text" style="background:#242424;">Software</div>
                   </div>
               </div>
-              <div class="col-lg-4 col-sm-12 col-12">
+              <div class="col-lg-4 col-sm-12 col-12 mobile-padding">
                   <div class="trend-item hotels" style="height: 300px;">
                       <div class="trend-pic">
-                          <img src="./images/NewLogo.png" alt="" style="margin-left:20px;">
+                          <img src="./images/hacks-logo.png" alt="" style="margin-left:20px;">
                           <div class="rating">Feb 2</div>
                       </div>
                       <div class="trend-text" style="width: 150px;">
@@ -234,10 +253,10 @@
                       <div class="tic-text" style="background:#242424;">Software</div>
                   </div>
               </div>
-              <div class="col-lg-4 col-sm-12 col-12">
+              <div class="col-lg-4 col-sm-12 col-12 mobile-padding">
                   <div class="trend-item events" style="height: 300px;">
                       <div class="trend-pic">
-                          <img src="./images/NewLogo.png" alt="" style="margin-left:20px;">
+                          <img src="./images/hacks-logo.png" alt="" style="margin-left:20px;">
                           <div class="rating">Feb 2</div>
                       </div>
                       <div class="trend-text" style="width: 150px;">
@@ -252,10 +271,10 @@
           </div>
 
           <div class="row">
-            <div class="col-lg-4 col-sm-12 col-12">
+            <div class="col-lg-4 col-sm-12 col-12 mobile-padding">
               <div class="trend-item">
                   <div class="trend-pic">
-                      <img src="./images/NewLogo.png" alt="">
+                      <img src="./images/hacks-logo.png" alt="">
                       <div class="rating">Feb 2</div>
                   </div>
                   <div class="trend-text">
@@ -402,7 +421,7 @@
           <h3 style="font-weight: bolder;color: #170368;text-align: center;font-size: 2.8vh;padding-bottom: 0.4vh;padding-top: 2.0vh;">INFO</h3>
           <p style="padding-top: 4px;padding-left:4px;text-align: justify;"><span style="font-weight: bolder;color:#131313">Problem Description :</span>Transportation has become a part of everyday life. To make transportation easy and more predictable X company is working on an app that would find the best route for a given vehicle type and preference between comfort and time. The company needs proper data for the app to work efficiently and accurately. Design an IoT based device with required sensors to precisely determine and update various data to the base station in order to analyse and characterise the road condition.</p>
           <h3 style="font-weight: bolder;color: #170368;text-align: center;font-size: 2.8vh;padding-bottom: 0.4vh;padding-top: 3.0vh;">PRIZES</h3>
-            <p style="padding-top: 4px;padding-left:4px;text-align: center;font-size: 16px;color: #131313;font-weight: bold;">Prizes worth 45K</p>
+            <p style="padding-top: 4px;padding-left:4px;text-align: center;font-size: 16px;color: #131313;font-weight: bold;">Prizes worth 20K</p>
           
         </div>
         <div class="modal-footer">
@@ -938,7 +957,8 @@
               </div>
               <div>
                 <h3 class="mb-4"  style="color: #FFFFFF;">Contact Number</h3>
-                <p><a href=""  style="color: #FFFFFF;"></a></p>
+                <p style="color: #fff;font-size: 16px;"><abbr title="Harsh Ganda">+91-7023422269</abbr></p>
+                <p style="color: #fff;font-size: 16px;"><abbr title="Khusbhu Maloo">+91-8876694671</abbr></p>
               </div>
             </div>
           </div>
@@ -949,7 +969,8 @@
               </div>
               <div>
                 <h3 class="mb-4"  style="color: #FFFFFF;">Email Address</h3>
-                <p><a href="mailto:info@yoursite.com"  style="color: #FFFFFF;">tecnoesis@support.com</a></p>
+                <p><a href="mailto://connect@tecnoesis.org"  style="color: #FFFFFF;">connect@tecnoesis.org</a></p>
+                <p><a href="mailto://tecnoesis@hacks.org"  style="color: #FFFFFF;">tecnoesis@hacks.org</a></p>
               </div>
             </div>
           </div>

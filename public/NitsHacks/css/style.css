@@ -594,7 +594,8 @@ pre {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 100%;
   flex: 0 0 100%;
-  max-width: 100%; }
+  max-width: 100%; 
+}
 
 .order-first {
   -webkit-box-ordinal-group: 0;
@@ -10254,8 +10255,8 @@ textarea.form-control {
     padding-top: 10%;
   }
   .trend-item .trend-pic img {
-    height: 120px;
-    width: 120px;
+    height: 90px;
+    width: 90px;
     border-radius: 50%;
   }
   
