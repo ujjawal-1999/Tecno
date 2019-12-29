@@ -12,9 +12,14 @@ caRouter.post('/register', (req, res)=>{
   })
 });
 
-caRouter.get('/register', (req, res)=>{
+caRouter.get('/fetchAll', (req, res)=>{
   // res.send(req.body);
-  res.send('Hi');
+  CA.find().then((cas)=>{
+    res.send(cas);
+  }).catch((err)=>{
+    console.log(err);
+    res.send(err);
+  });
 });
 
 module.exports = caRouter;
