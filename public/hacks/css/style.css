@@ -10243,6 +10243,7 @@ textarea.form-control {
 @media (max-width: 769px){
   .mobile-small{
     font-size:28px !important;
+    padding-top:4vh !important;
   }
   .line-small-justified{
     padding: 5px 20px !important;
