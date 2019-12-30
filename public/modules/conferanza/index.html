@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Conferenza | Tecnoesis</title>
+	<link rel="icon" href="images/icon.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style type="text/css">
+		#loader{position: fixed; top: 0; left: 0; z-index: 999; background: rgba(0,0,0, 0.9); width: 99.99vw; height: 99.99vh; overflow: hidden;}
+		#loaderCircle {
+  		position: absolute; left: 50%; top: 50%;
+  		transform: translate(-50%, -50%);
+	  	width: 80px; height: 80px;
+  		border: 10px solid #f3f3f3; border-radius: 50%; border-top: 10px solid rgb(254,0,0); border-left: 10px solid rgb(254,0,0); ;
+  		animation: spin 4s linear infinite;
+  		animation-fill-mode: forwards;
+		}
+				
+.spinner{
+  width: 80px;
+  height: 80px;
+  
+  border: 2px solid #38dbff;
+  border-top:3px solid #014b5c;
+  border-radius: 100%;
+  
+  position: absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right: 0;
+  margin: auto;
+  
+  animation: spin 1s infinite linear;
+}
+
+.img-inside{
+
+  position: absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right: 0;
+  margin: auto;
+}
+
+		@keyframes spin {
+  		0% { transform:rotate(0deg); }
+  		100% { transform:rotate(-360deg); }
+		}
+	</style>
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="stylesheet" type="text/css" href="style/w3.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-metro.css">
+	<link rel="stylesheet" type="text/css" href="https://www.w3schools.com/lib/w3-colors-highway.css">
+	<link href="https://fonts.googleapis.com/css?family=Cabin&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- 	<script src="https://unpkg.com/scrollreveal"></script>
+	<script type="text/javascript">
+		ScrollReveal({
+    	scale: 0.85,
+    	duration: 1000,
+		});
+	</script> -->
+</head>
+<body onload="stopLoader()">
+	<div id="loader">
+			<img src="../../optimized/logo white-small.png" style="height: 60px;" class="img-inside">
+		<div class="spinner">
+
+		</div>
+	</div>
+	<div class="container-home" id="home">
+		<!-- navbar start -->
+		<div class="nav-container w3-card-4">
+			<div class="bar-item" style="float: left;">
+				<a href="../../">
+				<img src="images/logo_white.png" height="60px" width="220px">
+			</a>
+			</div>
+			<div class="nav-bar w3-text-white">
+				<div class="bar-item"><a href="#home">Home</a></div>
+				<div class="bar-item"><a href="#about">About</a></div>
+				<div class="bar-item"><a href="#prev-speakers">Previous Speakers</a></div>
+				<div class="bar-item"><a href="#contact">Contact Us</a></div>	
+			</div>
+
+			<button id="hamburger-toggle" class="w3-button w3-xlarge w3-right w3-card-4" onclick="w3_open()" style="background: transparent; color: white;">&#9776;</button>
+			
+			<div class="w3-sidebar w3-bar-block w3-collaps w3-card w3-animate-right" style="width:200px;right:0;" id="mySidebar">
+				<button class="w3-bar-item w3-button w3-large" onclick="w3_close()" style="background: #cc1111; color: white;">Close &times;</button>
+				<a href="#home" class="w3-bar-item w3-button w3-hover-indigo" onclick="w3_close()">Home</a>
+				<a href="#about" class="w3-bar-item w3-button w3-hover-indigo" onclick="w3_close()">About</a>
+				<a href="#prev-speakers" class="w3-bar-item w3-button w3-hover-indigo" onclick="w3_close()">Previous Speakers</a>
+				<a href="#contact" class="w3-bar-item w3-button w3-hover-indigo" onclick="w3_close()">Contact</a>
+			</div>
+
+
+		</div>
+		<!-- navbar end -->
+		<div class="intro-heading">
+			<a href="http://tecnoesis.org/" target="_blank"><img id="intro-banner" src="images/logo_white.png"></a>
+			<h3>PRESENTS</h3>
+			<h1>CONFERENZA</h1>
+			<p>Glean wisdom from some of the most brilliant personalities of our time</p>
+		</div>
+	</div>
+
+	<div class="about" id="about">
+
+		<div class="main-header-container w3-padding w3-card">
+			<h2>ABOUT CONFERENZA</h2>
+		</div>
+
+		<div class="about-conferenza w3-row">
+			<!-- <div class="about-img w3-card w3-hover-shadow"></div> -->
+			<div class="about-text">
+				<div>
+					<p style="margin-top: 0px;">Conferenza is the Guest Lecture module of our grand annual techno-management fest Tecnoesis which aims at motivating and providing guidance to students by organizing a series of Guest Lectures by a variety of individuals who have achieved remarkable feats in their life and have struggled through with all their might to emerge as winners.
+					</p>
+					<p>
+						We have hosted various dignitaries in the past like:- IPS Abhyanand (co-founder of Super 30), Balaji Viswanathan (famous Quora writer), IAS Vivek Atray, Dr. Uddhabh Bharali (Inventor aka 'Real Life Phunsukh Wangdu'), IAS Chanchal Rana (AIR 7 UPSC Civil Services Examination), Jadav Payeng ('Forest Man of India'), Rahul Kaushik (Founder & Writer at 'The Melting Words') and the list goes on and on....
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--		 speakers start		 
+	<div class="speakers w3-center" id="speakers">
+
+		<div class="main-header-container w3-padding w3-black w3-card">
+			<h2>OUR SPEAKERS</h2>
+		</div>
+
+		<div class="row-container w3-container" style="margin-top: 0px!important;">
+
+			<div class="w3-quarter w3-padding">
+				<div class="card-container w3-card w3-hover-shadow">
+					<div class="card w3-card" style="background-image: url('images/Rahul-Kaushik.jpg');"></div>
+					<div class="w3-container">
+						<h3>RAHUL KAUSHIK</h3>
+						<p>Rahul kaushik lorem ipsum</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="w3-quarter w3-padding">
+				<div class="card-container w3-card w3-hover-shadow">
+					<div class="card w3-card" style="background-image: url('images/uddhabh-bharali.jpg');"></div>
+					<div class="w3-container">
+						<h3>UDDHAB BHARALI</h3>
+						<p>Rahul kaushik lorem ipsum</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="w3-quarter w3-padding">
+				<div class="card-container w3-card w3-hover-shadow">
+					<div class="card w3-card" style="background-image: url('images/vivek-atray.jpg');"></div>
+					<div class="w3-container">
+						<h3>VIVEK ATRAY</h3>
+						<p>Rahul kaushik lorem ipsum</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="w3-quarter w3-padding">
+				<div class="card-container w3-card w3-hover-shadow">
+					<div class="card w3-card" style="background-image: url('images/Chanchal-Rana.jpg');"></div>
+					<div class="w3-container">
+						<h3>CHANCHAL RANA</h3>
+						<p>Rahul kaushik lorem ipsum</p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="row-container w3-container" style="margin-top: 0px!important;">
+
+			<div class="w3-quarter w3-padding">
+				<div class="card-container w3-card w3-hover-shadow">
+					<div class="card w3-card" style="background-image: url('images/Abhayanand.jpg');"></div>
+					<div class="w3-container">
+						<h3>ABHAYANAND</h3>
+						<p>Rahul kaushik lorem ipsum</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="w3-quarter w3-padding">
+				<div class="card-container w3-card w3-hover-shadow">
+					<div class="card w3-card" style="background-image: url('images/balaji.png');"></div>
+					<div class="w3-container">
+						<h3>BALAJI</h3>
+						<p>Rahul kaushik lorem ipsum</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="w3-quarter w3-padding">
+				<div class="card-container w3-card w3-hover-shadow">
+					<div class="card w3-card" style="background-image: url('images/jadav-payeg.jpg');"></div>
+					<div class="w3-container">
+						<h3>JADAV PAYEG</h3>
+						<p>Rahul kaushik lorem ipsum</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="w3-quarter w3-padding">
+				<div class="card-container w3-card w3-hover-shadow">
+					<div class="card w3-card" style="background-image: url('images/abby-viral.jpg');"></div>
+					<div class="w3-container">
+						<h3>ABHINAV PRATEEK</h3>
+						<p>Rahul kaushik lorem ipsum</p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+			 speakers end		 -->
+
+
+	<!--		 prev speakers start		 -->
+	<div class="speakers w3-center w3-content" id="prev-speakers" style="max-width: 1200px;">
+
+		<div class="main-header-container w3-padding w3-card">
+			<h2>PREVIOUS SPEAKERS</h2>
+		</div>
+
+		<div class="row-container w3-container" style="margin-top: 0px!important;">
+
+			<div class="w3-quarter w3-padding">
+				<div class="card-container w3-card">
+					<div class="card w3-card" style="background-image: url('images/Rahul-Kaushik.jpg');"></div>
+					<div class="card-info-container">
+						<h3>RAHUL KAUSHIK</h3>
+						<p>Founder and writer at 'The Melting Words'</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="w3-quarter w3-padding">
+				<div class="card-container w3-card">
+					<div class="card w3-card" style="background-image: url('images/uddhabh-bharali.jpg');"></div>
+					<div class="card-info-container">
+						<h3>UDDHAB BHARALI</h3>
+						<p>Inventor aka 'Real Life Funsukh Wangdu'</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="w3-quarter w3-padding">
+				<div class="card-container w3-card">
+					<div class="card w3-card" style="background-image: url('images/vivek-atray.jpg');"></div>
+					<div class="card-info-container">
+						<h3>IAS VIVEK ATRAY</h3>
+						<p>Author, TEDx speaker and ex-IAS</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="w3-quarter w3-padding">
+				<div class="card-container w3-card">
+					<div class="card w3-card" style="background-image: url('images/Chanchal-Rana.jpg');"></div>
+					<div class="card-info-container">
+						<h3>IAS CHANCHAL RANA</h3>
+						<p>AIR 7 UPSC civil services examination</p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="row-container w3-container" style="margin-top: 0px!important;">
+
+			<div class="w3-quarter w3-padding">
+				<div class="card-container w3-card">
+					<div class="card w3-card" style="background-image: url('images/Abhayanand.jpg');"></div>
+					<div class="card-info-container">
+						<h3>IPS ABHAYANAND</h3>
+						<p>Co founder of Super 30</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="w3-quarter w3-padding">
+				<div class="card-container w3-card">
+					<div class="card w3-card" style="background-image: url('images/balaji.jpg');"></div>
+					<div class="card-info-container">
+						<h3>BALAJI VISHWANATHAN</h3>
+						<p>Renowned Quora writer</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="w3-quarter w3-padding">
+				<div class="card-container w3-card">
+					<div class="card w3-card" style="background-image: url('images/jadav-payeg.jpg');"></div>
+					<div class="card-info-container">
+						<h3>JADAV PAYENG</h3>
+						<p>aka Forest Man of India</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="w3-quarter w3-padding">
+				<div class="card-container w3-card">
+					<div class="card w3-card" style="background-image: url('images/abby-viral.jpg');"></div>
+					<div class="card-info-container">
+						<h3>ABHINAV PRATEEK</h3>
+						<p>Motivational speaker and entrepreneur</p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+	<!--		 prev speakers end		 -->
+
+	<div class="contact w3-center w3-content" id="contact" style="max-width: 1200px;">
+		<div class="main-header-container w3-padding w3-card">
+			<h2>CONTACT US</h2>
+		</div>
+
+		<div class="contact-container w3-row">
+			<div class="w3-third">
+				<h2>Address</h2>
+				<p>NIT Road, Fakiratilla, Silchar, Assam 788010</p>
+				<hr>
+			</div>
+			<div class="w3-third">
+				<h2>Contact</h2>
+				<img src="images/Apoorv.jpg" style="width: 170px; height: 170px; border-radius: 50%;">
+				<p>
+					Apoorv Singh <br/><br>
+					<!-- +91-xxxxxxxxxx <br/><br> -->
+					<a href="https://www.facebook.com/apoorvsingh1999"><i class="fa fa-facebook-square" style="font-size: 2.5em"></i></a>
+					<a href="https://www.linkedin.com/in/apoorvsingh1999/"><i class="fa fa-linkedin-square" style="font-size: 2.5em"></i></a>
+				</p>
+				<hr>
+			</div>
+			<div class="w3-third">
+				<h2>Website</h2>
+				<a href="https://www.tecnoesis.org/" target="_blank" style="text-decoration: none; "><p>www.tecnoesis.org</p></a>
+				<hr>
+			</div>
+		</div>
+	</div>
+
+
+	<footer class="w3-container w3-padding-48" style="margin-top: 40px;">
+		<p>TECNOESIS 2020</p>
+	</footer>
+
+<script>
+function w3_open() {
+	document.getElementById("mySidebar").style.display = "block";
+}
+
+function w3_close() {
+	document.getElementById("mySidebar").style.display = "none";
+}
+
+// ScrollReveal().reveal('.main-header-container');
+// ScrollReveal().reveal('.nav-container');
+// ScrollReveal().reveal('.intro-heading');
+// ScrollReveal().reveal('.about-img');
+// ScrollReveal().reveal('.about-text');
+// ScrollReveal().reveal('.card');
+// ScrollReveal().reveal('.w3-third');
+
+function stopLoader(){
+	document.getElementById("loader").style.display = "none";
+	document.getElementById("loaderCircle").style.display = "none";
+}
+
+</script>
+
+</body>
+</html>
