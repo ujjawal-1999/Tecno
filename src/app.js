@@ -37,6 +37,11 @@ const port = process.env.PORT || 3000
 app.use('/tecnoesis',router);
 app.use('/ca', caRouter);
 
+app.get('/*',(req,res)=>{
+    // res.redirect('/404/');
+    res.sendFile(path.join(__dirname,'/../public/404/index.html'));
+});
+
 app.listen(port, () => {
     console.log('Server is up on port : '+ port)
 })

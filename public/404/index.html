@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Error 404 | Tecnoesis 2020</title>
+<link rel="icon" href="/images/icon.png">
+	<style>
+	*{
+	margin:0;
+	padding:0;
+}
+
+body{
+	/*background:url('img/bg.png') no-repeat center center #1d1d1d;*/
+	background:#1d1d1d;
+	color:#eee;
+	font-family:Corbel,Arial,Helvetica,sans-serif;
+	font-size:13px;
+}
+
+#rocket{
+	width:275px;
+	height:375px;
+	background:url('/404/img/rocket.png') no-repeat;
+	margin:8% auto 0;
+	position:relative;
+}
+.steam1,
+.steam2{
+	position:absolute;
+	bottom:78px;
+	left:50px;
+	width:80px;
+	height:80px;
+	background:url('/404/img/steam.png') no-repeat;
+	opacity:0.8;
+}
+
+.steam2{
+	background-position:left bottom;
+}
+
+hgroup{
+	display:block;
+	margin:0 auto;
+	width:850px;
+	font-family:'Century Gothic',Calibri,'Myriad Pro',Arial,Helvetica,sans-serif;
+	text-align:center;
+}
+
+h1{
+	color:#76D7FB;
+	font-size:3rem;
+	text-shadow:2px 2px 0 #3D606D;
+	white-space:nowrap;
+	letter-spacing: 1px;
+}
+
+h2,h3{
+	color:#9FE3FC;
+	font-size:1.5rem;
+	font-weight:normal;
+	padding:20px 0 0 0;
+}
+h3{
+	font-size: 1.3rem;
+}
+	</style>
+</head>
+
+<body>
+<div id="rocket"></div>
+
+<hgroup>
+	<h1>Error 404</h1>
+    <h2>Page Not Found</h2>
+    <h3>We couldn't find what you were looking for.</h3>
+</hgroup>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script>
+	$(window).load(function(){
+	function animSteam(){	
+		$('<span>',{
+			className:'steam'+Math.floor(Math.random()*2 + 1),
+			css:{
+				marginLeft	: -10 + Math.floor(Math.random()*20)
+			}
+		}).appendTo('#rocket').animate({
+			left:'-=58',
+			bottom:'-=100'
+		}, 120,function(){
+			$(this).remove();
+			setTimeout(animSteam,10);
+		});
+	}
+	
+	function moveRocket(){
+		$('#rocket').animate({'left':'+=100'},5000).delay(1000)
+					.animate({'left':'-=100'},5000,function(){
+				setTimeout(moveRocket,1000);
+		});
+	}
+	moveRocket();
+	animSteam();
+});
+</script>
+</body>
+</html>
