@@ -6,6 +6,10 @@
       "src": "icon.png",
       "type": "image/png",
       "sizes": "192x192"
+    },
+    {
+      "src": "workshoplogo.jpg",
+      "type": "image/jpg"
     }
   ],
   "start_url": "./",

@@ -31,4 +31,14 @@ workshopRoute.get('/fetchAll', (req, res)=>{
   });
 });
 
+workshopRoute.get('/fetchWorkshop/:id', (req, res)=>{
+  // res.send(req.body);
+  Workshop.findById(req.params.id).then((wrks)=>{
+    res.send(wrks);
+  }).catch((err)=>{
+    console.log(err);
+    res.status(400).send(err);
+  });
+});
+
 module.exports = workshopRoute;

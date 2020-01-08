@@ -30,7 +30,7 @@ app.use((req,res,next)=>{
 });
 
 app.set('view engine','hbs');
-app.set('views',path.join(__dirname,'../template/views'));
+app.set('views',path.join(__dirname,'../template/'));
 
 app.use(express.static(publicDirectoryPath))
 
@@ -40,9 +40,10 @@ app.use('/tecnoesis',router);
 app.use('/ca', caRouter);
 app.use('/payment',paymentRoute);
 app.use('/workshop', workshopRoute);
+const root = require('path').join(__dirname, '../public/form');
 
 app.get('/form/*', (req,res)=>{
-    res.sendFile(path.join(__dirname,'/../public/form/index.html'));
+    res.sendFile('index.html', {root});
 })
 
 app.get('/*',(req,res)=>{

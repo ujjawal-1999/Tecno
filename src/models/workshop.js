@@ -10,7 +10,6 @@ const WorkshopSchema = new mongoose.Schema({
     email:{
         type:String,
         required:true,
-        unique: true,
         validate(value) {
             if(!validator.isEmail(value)){
                 throw new Error('Email is invalid')
@@ -41,9 +40,30 @@ const WorkshopSchema = new mongoose.Schema({
     zip:{
         type:Number,
         required:true
+    },
+    order_id:{
+        type: String,
+        required: true
+    },
+    payment_id:{
+        type: String,
+        default: null
+    },
+    payment_sign:{
+        type: String,
+        default: null
     }
 });
 
+WorkshopSchema.statics.updateTransactionId=function(order_id, payment_id, payment_sign){
+    if(payment_id && payment_sign){
+        return Workshop.findOneAndUpdate({order_id}, { $set: { payment_id,payment_sign  } }).then((workshop)=>{
+            return Promise.resolve(workshop);
+        }).catch((err)=>{
+            return Promise.reject(err);
+        });
+    }
+};
 
 const Workshop = mongoose.model('Workshop',WorkshopSchema);
 
