@@ -11,6 +11,7 @@ mongoose.connect('mongodb://localhost:27017/Tecnoesis',{
 
 const router = require('./routers/router');
 const caRouter = require('./routers/caRoute');
+const paymentRoute = require('./routers/paymentRoute');
 const workshopRoute = require('./routers/workshopRoute');
 
 const app = express() 
@@ -37,6 +38,7 @@ const port = process.env.PORT || 3000;
 
 app.use('/tecnoesis',router);
 app.use('/ca', caRouter);
+app.use('/payment',paymentRoute);
 app.use('/workshop', workshopRoute);
 
 app.get('/form/*', (req,res)=>{
