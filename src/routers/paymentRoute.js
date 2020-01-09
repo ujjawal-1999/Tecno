@@ -4,7 +4,8 @@ const Razorpay = require('razorpay');
 const crypto =require('crypto');
 const mongoose = require('mongoose');
 const Workshop = require('../models/workshop');
-
+const { sendMail } = require('../utils/mailer');
+const sgMail = require('@sendgrid/mail');
 const api_key='rzp_live_vSJo0A6arOnhAR';
 const secret_key='uBE8D5xm22xzHjXtHgUw73Um';
 
@@ -59,7 +60,6 @@ paymentRoute.post('/pay', (req, res)=>{
 });
 
 paymentRoute.post('/success', (req,res)=>{
-  console.log(req.param);
   console.log(req.body);
   const expectedHash= crypto.createHmac('sha256', secret_key)
     .update(req.body.razorpay_order_id + "|" + req.body.razorpay_payment_id)
@@ -67,16 +67,19 @@ paymentRoute.post('/success', (req,res)=>{
 
   if(expectedHash === req.body.razorpay_signature){
     Workshop.updateTransactionId(req.body.razorpay_order_id, req.body.razorpay_payment_id, req.body.razorpay_signature).then((workshop)=>{
+      sendMail(workshop.payment_id, '15 Jan - 19 January 2020', workshop.name, 'Drone Workshop' ,workshop.email);
       res.redirect('/form/workshop/success/'+workshop._id);
     }).catch((err)=>{
       res.status(500).send(err);
     });
   }
   else{
-    console.log('NOOOOOOOOOOOO')
     res.status(400).send();
   }
 });
 
+paymentRoute.get('/pp', (req,res)=>{
+  sendMail(12345, '1 Feb-3 Feb', 'Aryan Singh', 'Drone Workshop' ,'aryan.major@gmail.com');
+})
 
 module.exports = paymentRoute;
