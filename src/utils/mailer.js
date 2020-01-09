@@ -15,8 +15,11 @@ const sendMail = function(ID, date, name, event, tomail){
   });
   const msg = {
     to: tomail,
-    from: 'entries@tecnoesis.com',
-    fromName:'Tecnoesis',
+    from: {
+      email: 'entries@tecnoesis.org',
+      name: 'Tecnoesis 2020'
+    },
+    fromname:'Tecnoesis 2020',
     subject: 'Welcome To Tecnoesis 2020',
     text: 'Registered for Workshop.',
     html: output,
