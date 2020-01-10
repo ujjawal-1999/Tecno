@@ -21,7 +21,7 @@ workshopRoute.post('/register', (req, res)=>{
   })
 });
 
-workshopRoute.get('/fetchAll', (req, res)=>{
+workshopRoute.get('/fetchAllWorkshops', (req, res)=>{
   // res.send(req.body);
   Workshop.find().then((cas)=>{
     res.send(cas);

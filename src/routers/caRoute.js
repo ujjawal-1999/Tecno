@@ -12,7 +12,7 @@ caRouter.post('/register', (req, res)=>{
   })
 });
 
-caRouter.get('/fetchAll', (req, res)=>{
+caRouter.get('/fetchAllCAs', (req, res)=>{
   // res.send(req.body);
   CA.find().then((cas)=>{
     res.send(cas);

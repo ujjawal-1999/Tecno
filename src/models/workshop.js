@@ -41,6 +41,10 @@ const WorkshopSchema = new mongoose.Schema({
         type:Number,
         required:true
     },
+    workshop:{
+        type: String,
+        required: true,
+    },
     order_id:{
         type: String,
         required: true
