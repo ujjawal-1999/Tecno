@@ -9921,6 +9921,13 @@ textarea.form-control {
   padding: 18px 18px 18px 0;
   margin-bottom: 30px;
   position: relative;
+  border-radius: 10px;
+  box-shadow: 0 5px 25px 0 #0000004a;
+    transition: box-shadow .3s ease-out, transform .5s ease-out, opacity .2s ease-out;
+    transform: translateZ(0);
+}
+.trend-item:hover{
+  transform:scale(1.1);
 }
 
 .trend-item.nightlife .tic-text {
@@ -9960,17 +9967,17 @@ textarea.form-control {
 
 .trend-item .trend-pic .rating {
   position: absolute;
-  right: 0;
-  top: 0;
-  height: 50px;
-  width: 50px;
-  background: #13185b;
-  color: #fff;
-  font-size: 16px;
-  font-weight: 900;
-  text-align: center;
-  line-height: 50px;
-  border-radius: 50%;
+    right: -140px;
+    top: 0;
+    height: 100px;
+    width: 100px;
+    background: #13185b;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 900;
+    text-align: center;
+    line-height: 100px;
+    border-radius: 50%;
 }
 
 .trend-item .trend-text {
@@ -10074,7 +10081,6 @@ textarea.form-control {
   font-size: 18px;
   letter-spacing: 0.2px;
 }
-
 /*---------------------
   How It Work Section
 -----------------------*/
