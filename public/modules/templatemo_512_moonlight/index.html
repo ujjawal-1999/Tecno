@@ -3,11 +3,11 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Moonlight CSS Website Template</title>
+        <title>Robotron</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
-
+         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="css/fontAwesome.css">
@@ -17,6 +17,19 @@
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
 
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <style>
+        	@media (orientation:landscape){
+        		.img-responsive{
+        			width:75% !important;
+        			height:15vh;
+        			padding-bottom:3%;"
+        		}
+        		.img-gap{
+        			margin-right:-10%;
+        			padding-right:0%;
+        		}
+        	}
+        </style>
     </head>
 
 <body>
@@ -32,7 +45,7 @@
   
         <nav>
           <div class="logo">
-              <img src="img/logo white.png" alt="">
+              <img src="img/logo white.png" alt="" style="margin-top:-6%;">
           </div>
           <div class="mini-logo">
               <img src="img/mini_logo.png" alt="">
@@ -58,14 +71,14 @@
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="left-content">
-                                                <h2>Quisque commodo quam</h2>
+                                                <h2>Robowars</h2>
                                                 <p>Vestibulum augue ex, finibus sit amet nisi id, maximus ultrices ipsum. Maecenas rhoncus nibh in mauris lobortis, a maximus diam faucibus. In et eros urna. Suspendisse potenti. Pellentesque commodo, neque nec molestie tempus, purus ante feugiat augue.</p>
-                                                <div class="main-btn"><a href="#4">Continue Reading</a></div>
+                                               <!--  <div class="main-btn"><a href="#4">Continue Reading</a></div> -->
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="right-image">
-                                                <img src="img/first_service.jpg" alt="first service">
+                                                <img src="img/first_service.jpg" alt="first service" style="width:85%;">
                                             </div>
                                         </div>
                                     </div>
@@ -74,18 +87,48 @@
                             <div class="second-section">
                                 <div class="container-fluid">
                                     <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="left-image">
-                                                <img src="img/second_service.jpg" alt="second service">
-                                            </div>
+                                    	<div class="col-md-2"></div>
+                                        <div class="col-md-8">
+                                            <!-- <div class="left-image">
+                                                <img src="img/second_service.jpg" alt="second service" style="width:130%;">
+                                            </div> -->
+                                             <div class="single-footer-widget mb-60 wow fadeInUp" data-wow-delay="300ms">
+                            <!-- Widget Title -->
+                          <!--   <h5 class="widget-title">Gallery</h5> -->
+
+                            <!-- Footer Gallery -->
+                            <div class="footer-gallery">
+                                <div class="row">
+                                    <div class="col-6 img-gap">
+                                        <a href="img/image/background/1.jpg" class="single-gallery-item"><img class="img-responsive" src="img/image/background/1.jpg" alt=""></a>
+                                    </div>
+                                    <div class="col-6 img-gap">
+                                        <a href="img/image/background/8.jpg" class="single-gallery-item"><img class="img-responsive" src="img/image/background/8.jpg" alt=""></a>
+                                    </div>
+                                    <div class="col-6 img-gap">
+                                        <a href="img/image/background/10.jpg" class="single-gallery-item"><img class="img-responsive" src="img/image/background/10.jpg" alt=""></a>
+                                    </div>
+                                    <div class="col-6 img-gap">
+                                        <a href="img/image/background/3.jpg" class="single-gallery-item"><img class="img-responsive" src="img/image/background/3.jpg" alt=""></a>
+                                    </div>
+                                  <!--   <div class="col-6">
+                                        <a href="img/image/background/7.jpg" class="single-gallery-item"><img src="img/image/background/7.jpg" alt=""></a>
+                                    </div>
+                                    <div class="col-6">
+                                        <a href="img/image/background/9.jpg" class="single-gallery-item"><img src="img/image/background/9.jpg" alt=""></a>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
                                         </div>
-                                        <div class="col-md-6">
+                                        <div class="col-md-2"></div>
+                                   <!--      <div class="col-md-6">
                                             <div class="right-content">
                                                 <h2>Maecenas eu purus eu sapien</h2>
                                                 <p>Sed vitae felis in lorem mollis mollis eget in leo. Donec commodo, ex nec rutrum venenatis, nisi nisl malesuada magna, sed semper ipsum enim a ipsum. Aenean in ante vel mi molestie bibendum. Quisque sit amet lacus in diam pretium faucibus. Cras vel justo lorem.</p>
                                                 <div class="main-btn"><a href="#4">Continue Reading</a></div>
                                             </div>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
                             </div>
@@ -104,14 +147,14 @@
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="left-content">
-                                                <h2>Quisque commodo quam</h2>
+                                                <h2>Robowars</h2>
                                                 <p>Vestibulum augue ex, finibus sit amet nisi id, maximus ultrices ipsum. Maecenas rhoncus nibh in mauris lobortis, a maximus diam faucibus. In et eros urna. Suspendisse potenti. Pellentesque commodo, neque nec molestie tempus, purus ante feugiat augue.</p>
-                                                <div class="main-btn"><a href="#4">Continue Reading</a></div>
+                                               <!--  <div class="main-btn"><a href="#4">Continue Reading</a></div> -->
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="right-image">
-                                                <img src="img/first_service.jpg" alt="first service">
+                                                <img src="img/first_service.jpg" alt="first service" style="width:85%;">
                                             </div>
                                         </div>
                                     </div>
@@ -120,18 +163,48 @@
                             <div class="second-section">
                                 <div class="container-fluid">
                                     <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="left-image">
-                                                <img src="img/second_service.jpg" alt="second service">
-                                            </div>
+                                    	<div class="col-md-2"></div>
+                                        <div class="col-md-8">
+                                            <!-- <div class="left-image">
+                                                <img src="img/second_service.jpg" alt="second service" style="width:130%;">
+                                            </div> -->
+                                             <div class="single-footer-widget mb-60 wow fadeInUp" data-wow-delay="300ms">
+                            <!-- Widget Title -->
+                          <!--   <h5 class="widget-title">Gallery</h5> -->
+
+                            <!-- Footer Gallery -->
+                            <div class="footer-gallery">
+                                <div class="row">
+                                    <div class="col-6 img-gap">
+                                        <a href="img/image/background/1.jpg" class="single-gallery-item"><img class="img-responsive" src="img/image/background/1.jpg" alt=""></a>
+                                    </div>
+                                    <div class="col-6 img-gap">
+                                        <a href="img/image/background/8.jpg" class="single-gallery-item"><img class="img-responsive" src="img/image/background/8.jpg" alt=""></a>
+                                    </div>
+                                    <div class="col-6 img-gap">
+                                        <a href="img/image/background/10.jpg" class="single-gallery-item"><img class="img-responsive" src="img/image/background/10.jpg" alt=""></a>
+                                    </div>
+                                    <div class="col-6 img-gap">
+                                        <a href="img/image/background/3.jpg" class="single-gallery-item"><img class="img-responsive" src="img/image/background/3.jpg" alt=""></a>
+                                    </div>
+                                  <!--   <div class="col-6">
+                                        <a href="img/image/background/7.jpg" class="single-gallery-item"><img src="img/image/background/7.jpg" alt=""></a>
+                                    </div>
+                                    <div class="col-6">
+                                        <a href="img/image/background/9.jpg" class="single-gallery-item"><img src="img/image/background/9.jpg" alt=""></a>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
                                         </div>
-                                        <div class="col-md-6">
+                                        <div class="col-md-2"></div>
+                                   <!--      <div class="col-md-6">
                                             <div class="right-content">
                                                 <h2>Maecenas eu purus eu sapien</h2>
                                                 <p>Sed vitae felis in lorem mollis mollis eget in leo. Donec commodo, ex nec rutrum venenatis, nisi nisl malesuada magna, sed semper ipsum enim a ipsum. Aenean in ante vel mi molestie bibendum. Quisque sit amet lacus in diam pretium faucibus. Cras vel justo lorem.</p>
                                                 <div class="main-btn"><a href="#4">Continue Reading</a></div>
                                             </div>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
                             </div>
@@ -140,7 +213,7 @@
                 </div>
             </div>
           </div>
-          <div class="slide" id="3">
+                   <div class="slide" id="3">
             <div class="content third-content">
                 <div class="container-fluid">
                     <div class="col-md-12">
@@ -150,14 +223,14 @@
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="left-content">
-                                                <h2>Quisque commodo quam</h2>
+                                                <h2>Robowars</h2>
                                                 <p>Vestibulum augue ex, finibus sit amet nisi id, maximus ultrices ipsum. Maecenas rhoncus nibh in mauris lobortis, a maximus diam faucibus. In et eros urna. Suspendisse potenti. Pellentesque commodo, neque nec molestie tempus, purus ante feugiat augue.</p>
-                                                <div class="main-btn"><a href="#4">Continue Reading</a></div>
+                                               <!--  <div class="main-btn"><a href="#4">Continue Reading</a></div> -->
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="right-image">
-                                                <img src="img/first_service.jpg" alt="first service">
+                                                <img src="img/first_service.jpg" alt="first service" style="width:85%;">
                                             </div>
                                         </div>
                                     </div>
@@ -166,18 +239,48 @@
                             <div class="second-section">
                                 <div class="container-fluid">
                                     <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="left-image">
-                                                <img src="img/second_service.jpg" alt="second service">
-                                            </div>
+                                    	<div class="col-md-2"></div>
+                                        <div class="col-md-8">
+                                            <!-- <div class="left-image">
+                                                <img src="img/second_service.jpg" alt="second service" style="width:130%;">
+                                            </div> -->
+                                             <div class="single-footer-widget mb-60 wow fadeInUp" data-wow-delay="300ms">
+                            <!-- Widget Title -->
+                          <!--   <h5 class="widget-title">Gallery</h5> -->
+
+                            <!-- Footer Gallery -->
+                            <div class="footer-gallery">
+                                <div class="row">
+                                    <div class="col-6 img-gap">
+                                        <a href="img/image/background/1.jpg" class="single-gallery-item"><img class="img-responsive" src="img/image/background/1.jpg" alt=""></a>
+                                    </div>
+                                    <div class="col-6 img-gap">
+                                        <a href="img/image/background/8.jpg" class="single-gallery-item"><img class="img-responsive" src="img/image/background/8.jpg" alt=""></a>
+                                    </div>
+                                    <div class="col-6 img-gap">
+                                        <a href="img/image/background/10.jpg" class="single-gallery-item"><img class="img-responsive" src="img/image/background/10.jpg" alt=""></a>
+                                    </div>
+                                    <div class="col-6 img-gap">
+                                        <a href="img/image/background/3.jpg" class="single-gallery-item"><img class="img-responsive" src="img/image/background/3.jpg" alt=""></a>
+                                    </div>
+                                  <!--   <div class="col-6">
+                                        <a href="img/image/background/7.jpg" class="single-gallery-item"><img src="img/image/background/7.jpg" alt=""></a>
+                                    </div>
+                                    <div class="col-6">
+                                        <a href="img/image/background/9.jpg" class="single-gallery-item"><img src="img/image/background/9.jpg" alt=""></a>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
                                         </div>
-                                        <div class="col-md-6">
+                                        <div class="col-md-2"></div>
+                                   <!--      <div class="col-md-6">
                                             <div class="right-content">
                                                 <h2>Maecenas eu purus eu sapien</h2>
                                                 <p>Sed vitae felis in lorem mollis mollis eget in leo. Donec commodo, ex nec rutrum venenatis, nisi nisl malesuada magna, sed semper ipsum enim a ipsum. Aenean in ante vel mi molestie bibendum. Quisque sit amet lacus in diam pretium faucibus. Cras vel justo lorem.</p>
                                                 <div class="main-btn"><a href="#4">Continue Reading</a></div>
                                             </div>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
                             </div>
@@ -186,7 +289,7 @@
                 </div>
             </div>
           </div>
-          <div class="slide" id="4">
+                   <div class="slide" id="4">
             <div class="content third-content">
                 <div class="container-fluid">
                     <div class="col-md-12">
@@ -196,14 +299,14 @@
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="left-content">
-                                                <h2>Quisque commodo quam</h2>
+                                                <h2>Robowars</h2>
                                                 <p>Vestibulum augue ex, finibus sit amet nisi id, maximus ultrices ipsum. Maecenas rhoncus nibh in mauris lobortis, a maximus diam faucibus. In et eros urna. Suspendisse potenti. Pellentesque commodo, neque nec molestie tempus, purus ante feugiat augue.</p>
-                                                <div class="main-btn"><a href="#4">Continue Reading</a></div>
+                                               <!--  <div class="main-btn"><a href="#4">Continue Reading</a></div> -->
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="right-image">
-                                                <img src="img/first_service.jpg" alt="first service">
+                                                <img src="img/first_service.jpg" alt="first service" style="width:85%;">
                                             </div>
                                         </div>
                                     </div>
@@ -212,18 +315,48 @@
                             <div class="second-section">
                                 <div class="container-fluid">
                                     <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="left-image">
-                                                <img src="img/second_service.jpg" alt="second service">
-                                            </div>
+                                    	<div class="col-md-2"></div>
+                                        <div class="col-md-8">
+                                            <!-- <div class="left-image">
+                                                <img src="img/second_service.jpg" alt="second service" style="width:130%;">
+                                            </div> -->
+                                             <div class="single-footer-widget mb-60 wow fadeInUp" data-wow-delay="300ms">
+                            <!-- Widget Title -->
+                          <!--   <h5 class="widget-title">Gallery</h5> -->
+
+                            <!-- Footer Gallery -->
+                            <div class="footer-gallery">
+                                <div class="row">
+                                    <div class="col-6 img-gap">
+                                        <a href="img/image/background/1.jpg" class="single-gallery-item"><img class="img-responsive" src="img/image/background/1.jpg" alt=""></a>
+                                    </div>
+                                    <div class="col-6 img-gap">
+                                        <a href="img/image/background/8.jpg" class="single-gallery-item"><img class="img-responsive" src="img/image/background/8.jpg" alt=""></a>
+                                    </div>
+                                    <div class="col-6 img-gap">
+                                        <a href="img/image/background/10.jpg" class="single-gallery-item"><img class="img-responsive" src="img/image/background/10.jpg" alt=""></a>
+                                    </div>
+                                    <div class="col-6 img-gap">
+                                        <a href="img/image/background/3.jpg" class="single-gallery-item"><img class="img-responsive" src="img/image/background/3.jpg" alt=""></a>
+                                    </div>
+                                  <!--   <div class="col-6">
+                                        <a href="img/image/background/7.jpg" class="single-gallery-item"><img src="img/image/background/7.jpg" alt=""></a>
+                                    </div>
+                                    <div class="col-6">
+                                        <a href="img/image/background/9.jpg" class="single-gallery-item"><img src="img/image/background/9.jpg" alt=""></a>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
                                         </div>
-                                        <div class="col-md-6">
+                                        <div class="col-md-2"></div>
+                                   <!--      <div class="col-md-6">
                                             <div class="right-content">
                                                 <h2>Maecenas eu purus eu sapien</h2>
                                                 <p>Sed vitae felis in lorem mollis mollis eget in leo. Donec commodo, ex nec rutrum venenatis, nisi nisl malesuada magna, sed semper ipsum enim a ipsum. Aenean in ante vel mi molestie bibendum. Quisque sit amet lacus in diam pretium faucibus. Cras vel justo lorem.</p>
                                                 <div class="main-btn"><a href="#4">Continue Reading</a></div>
                                             </div>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
                             </div>
@@ -232,7 +365,7 @@
                 </div>
             </div>
           </div>
-          <div class="slide" id="5">
+                  <div class="slide" id="5">
             <div class="content third-content">
                 <div class="container-fluid">
                     <div class="col-md-12">
@@ -242,14 +375,14 @@
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="left-content">
-                                                <h2>Quisque commodo quam</h2>
+                                                <h2>Robowars</h2>
                                                 <p>Vestibulum augue ex, finibus sit amet nisi id, maximus ultrices ipsum. Maecenas rhoncus nibh in mauris lobortis, a maximus diam faucibus. In et eros urna. Suspendisse potenti. Pellentesque commodo, neque nec molestie tempus, purus ante feugiat augue.</p>
-                                                <div class="main-btn"><a href="#4">Continue Reading</a></div>
+                                               <!--  <div class="main-btn"><a href="#4">Continue Reading</a></div> -->
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="right-image">
-                                                <img src="img/first_service.jpg" alt="first service">
+                                                <img src="img/first_service.jpg" alt="first service" style="width:85%;">
                                             </div>
                                         </div>
                                     </div>
@@ -258,18 +391,48 @@
                             <div class="second-section">
                                 <div class="container-fluid">
                                     <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="left-image">
-                                                <img src="img/second_service.jpg" alt="second service">
-                                            </div>
+                                    	<div class="col-md-2"></div>
+                                        <div class="col-md-8">
+                                            <!-- <div class="left-image">
+                                                <img src="img/second_service.jpg" alt="second service" style="width:130%;">
+                                            </div> -->
+                                             <div class="single-footer-widget mb-60 wow fadeInUp" data-wow-delay="300ms">
+                            <!-- Widget Title -->
+                          <!--   <h5 class="widget-title">Gallery</h5> -->
+
+                            <!-- Footer Gallery -->
+                            <div class="footer-gallery">
+                                <div class="row">
+                                    <div class="col-6 img-gap">
+                                        <a href="img/image/background/1.jpg" class="single-gallery-item"><img class="img-responsive" src="img/image/background/1.jpg" alt=""></a>
+                                    </div>
+                                    <div class="col-6 img-gap">
+                                        <a href="img/image/background/8.jpg" class="single-gallery-item"><img class="img-responsive" src="img/image/background/8.jpg" alt=""></a>
+                                    </div>
+                                    <div class="col-6 img-gap">
+                                        <a href="img/image/background/10.jpg" class="single-gallery-item"><img class="img-responsive" src="img/image/background/10.jpg" alt=""></a>
+                                    </div>
+                                    <div class="col-6 img-gap">
+                                        <a href="img/image/background/3.jpg" class="single-gallery-item"><img class="img-responsive" src="img/image/background/3.jpg" alt=""></a>
+                                    </div>
+                                  <!--   <div class="col-6">
+                                        <a href="img/image/background/7.jpg" class="single-gallery-item"><img src="img/image/background/7.jpg" alt=""></a>
+                                    </div>
+                                    <div class="col-6">
+                                        <a href="img/image/background/9.jpg" class="single-gallery-item"><img src="img/image/background/9.jpg" alt=""></a>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
                                         </div>
-                                        <div class="col-md-6">
+                                        <div class="col-md-2"></div>
+                                   <!--      <div class="col-md-6">
                                             <div class="right-content">
                                                 <h2>Maecenas eu purus eu sapien</h2>
                                                 <p>Sed vitae felis in lorem mollis mollis eget in leo. Donec commodo, ex nec rutrum venenatis, nisi nisl malesuada magna, sed semper ipsum enim a ipsum. Aenean in ante vel mi molestie bibendum. Quisque sit amet lacus in diam pretium faucibus. Cras vel justo lorem.</p>
                                                 <div class="main-btn"><a href="#4">Continue Reading</a></div>
                                             </div>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
                             </div>
@@ -288,14 +451,14 @@
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="left-content">
-                                                <h2>Quisque commodo quam</h2>
+                                                <h2>Robowars</h2>
                                                 <p>Vestibulum augue ex, finibus sit amet nisi id, maximus ultrices ipsum. Maecenas rhoncus nibh in mauris lobortis, a maximus diam faucibus. In et eros urna. Suspendisse potenti. Pellentesque commodo, neque nec molestie tempus, purus ante feugiat augue.</p>
-                                                <div class="main-btn"><a href="#4">Continue Reading</a></div>
+                                               <!--  <div class="main-btn"><a href="#4">Continue Reading</a></div> -->
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="right-image">
-                                                <img src="img/first_service.jpg" alt="first service">
+                                                <img src="img/first_service.jpg" alt="first service" style="width:85%;">
                                             </div>
                                         </div>
                                     </div>
@@ -304,18 +467,48 @@
                             <div class="second-section">
                                 <div class="container-fluid">
                                     <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="left-image">
-                                                <img src="img/second_service.jpg" alt="second service">
-                                            </div>
+                                    	<div class="col-md-2"></div>
+                                        <div class="col-md-8">
+                                            <!-- <div class="left-image">
+                                                <img src="img/second_service.jpg" alt="second service" style="width:130%;">
+                                            </div> -->
+                                             <div class="single-footer-widget mb-60 wow fadeInUp" data-wow-delay="300ms">
+                            <!-- Widget Title -->
+                          <!--   <h5 class="widget-title">Gallery</h5> -->
+
+                            <!-- Footer Gallery -->
+                            <div class="footer-gallery">
+                                <div class="row">
+                                    <div class="col-6 img-gap">
+                                        <a href="img/image/background/1.jpg" class="single-gallery-item"><img class="img-responsive" src="img/image/background/1.jpg" alt=""></a>
+                                    </div>
+                                    <div class="col-6 img-gap">
+                                        <a href="img/image/background/8.jpg" class="single-gallery-item"><img class="img-responsive" src="img/image/background/8.jpg" alt=""></a>
+                                    </div>
+                                    <div class="col-6 img-gap">
+                                        <a href="img/image/background/10.jpg" class="single-gallery-item"><img class="img-responsive" src="img/image/background/10.jpg" alt=""></a>
+                                    </div>
+                                    <div class="col-6 img-gap">
+                                        <a href="img/image/background/3.jpg" class="single-gallery-item"><img class="img-responsive" src="img/image/background/3.jpg" alt=""></a>
+                                    </div>
+                                  <!--   <div class="col-6">
+                                        <a href="img/image/background/7.jpg" class="single-gallery-item"><img src="img/image/background/7.jpg" alt=""></a>
+                                    </div>
+                                    <div class="col-6">
+                                        <a href="img/image/background/9.jpg" class="single-gallery-item"><img src="img/image/background/9.jpg" alt=""></a>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
                                         </div>
-                                        <div class="col-md-6">
+                                        <div class="col-md-2"></div>
+                                   <!--      <div class="col-md-6">
                                             <div class="right-content">
                                                 <h2>Maecenas eu purus eu sapien</h2>
                                                 <p>Sed vitae felis in lorem mollis mollis eget in leo. Donec commodo, ex nec rutrum venenatis, nisi nisl malesuada magna, sed semper ipsum enim a ipsum. Aenean in ante vel mi molestie bibendum. Quisque sit amet lacus in diam pretium faucibus. Cras vel justo lorem.</p>
                                                 <div class="main-btn"><a href="#4">Continue Reading</a></div>
                                             </div>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
                             </div>
@@ -324,12 +517,19 @@
                 </div>
             </div>
           </div>
-        </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 
     <script src="js/vendor/bootstrap.min.js"></script>
-    
+    <script src="js/jquery.min.js"></script>
+    <!-- Popper -->
+    <script src="js/popper.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- All Plugins -->
+    <script src="js/confer.bundle.js"></script>
+    <!-- Active -->
+    <script src="js/default-assets/active.js"></script> 
     <script src="js/datepicker.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
