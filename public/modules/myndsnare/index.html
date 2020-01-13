@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Conferenza | Tecnoesis</title>
+	<title>Myndsnare | Tecnoesis</title>
 	<link rel="icon" href="images/icon.png">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -42,6 +42,14 @@
   
   animation: spin 1s infinite linear;
 }
+img.masterImage{
+	width: 20vw;
+	border-radius: 15%;
+}
+div.masterDesc{
+	text-align: center;
+  padding: 2% 10%;
+}
 
 .img-inside{
 
@@ -61,6 +69,9 @@
 	.grid-item{
 		margin-left:5%;
 	}
+	img.masterImage{
+	width: 50vw;
+}
 }
 		@keyframes spin {
   		0% { transform:rotate(0deg); }
@@ -102,6 +113,7 @@
 				<div class="bar-item"><a href="#home">Home</a></div>
 				<div class="bar-item"><a href="#about">About</a></div>
 				<div class="bar-item"><a href="#prev-speakers">Events</a></div>
+				<div class="bar-item"><a href="#quizmasters">Quiz Masters</a></div>
 				<div class="bar-item"><a href="#contact">Contact Us</a></div>	
 			</div>
 
@@ -160,11 +172,15 @@
                     </strong>
                 </h2>
                 <div class="mc-content">
-                   <!--  <div class="img-container">
-                        <img class="img-responsive" src="https://dl.dropboxusercontent.com/u/2691310/github/material-card/thumb-christopher-walken.jpg">
-                    </div> -->
+                    <div class="img-container">
+                        <!-- <img class="img-responsive" src="./images/AbhinavDhar.jpg"> -->
+                    </div>
                     <div class="mc-description">
-                        <!-- ‘The Sound and The Fury: The General Quiz’ is Myndsnare’s main crowd attraction, which is conducted by the most eminent quizmasters of the country. Last year, NIT Silchar Quiz Club made a benchmark in its history by having Late Vikram Joshi as the quizmaster for this event. This edition is being conducted by Kushal Patel. He has conducted many reputable quizzing events under the banners of IIM and many more. -->
+                        <!-- <img class="" src="./images/AbhinavDhar.jpg"> -->
+												The flagship General Quiz under Myndsnare, The Sound and the Fury has seen its fare share of prolific quizmasters
+												including Late Vikram Joshi and Kushan Patel.
+												This year, with Abhinav Dhar at the helm, the quiz promises to be an exciting affair.
+                        
                     </div>
                 </div>
                 <!-- <a class="mc-btn-action">
@@ -187,7 +203,7 @@
                     <span>Silicon Valley</span>
                     <strong>
                         <i class="fa fa-fw fa-star"></i>
-                        Biztech Quiz
+                        Biz-Tech Quiz
                     </strong>
                 </h2>
                 <div class="mc-content">
@@ -195,7 +211,8 @@
                         <!-- <img class="img-responsive" src="https://dl.dropboxusercontent.com/u/2691310/github/material-card/thumb-sean-penn.jpg"> -->
                     </div>
                     <div class="mc-description">
-                        <!-- This year Myndsnare brings “Silicon Valley:The Biz-Sci-Tech quiz”, to be conducted by Bedanga Das, alumnus of NIT Silchar, who is a prominent quizzer in the North Eastern quizzing circuit. From being one of the founding members of NIT Silchar Quiz Club to coming back to the college as a quiz master is always fascinating. -->
+											Hosted by Bhushan Patel, Silicon Valley is the Biz-Tech quiz under Myndsnare. So, if you follow
+											the stock market like a daily soap, or if corporate deals are all you think about, this is the quiz for you.
                     </div>
                 </div>
                 <!-- <a class="mc-btn-action">
@@ -226,7 +243,8 @@
                        <!--  <img class="img-responsive" src="https://dl.dropboxusercontent.com/u/2691310/github/material-card/thumb-clint-eastwood.jpg"> -->
                     </div>
                     <div class="mc-description">
-                        <!-- ‘Hunger Games: The Sports and Entertainment Quiz’ shall also be conducted by Kushan Patel. Be there to bring out the Sports and Entermainment geek within you, and partake in the most brilliant fundas and trivias in the genre. From sports to movies lets see who cracks the most out of it! -->
+											Inside Edge is the Sports and Entertainment quiz of this edition of Myndsnare.
+											Conducted by Abhinav Dhar, this is a must do for all sports fans and entertainment geeks.
                     </div>
                 </div>
                 <!-- <a class="mc-btn-action">
@@ -247,13 +265,41 @@
 </div>
 	<!--		 prev speakers end		 -->
 
+	<div class="container prevMaster w3-center w3-content" id="quizmasters" style="max-width: 1200px;">
+
+		<div class="main-header-container w3-padding w3-card">
+			<h2>Quiz Masters</h2>
+		</div>
+<div class="row active-with-click grid" >
+      <div class="w3-half"style="margin-top: 5vh;">
+				<img src="./images/AbhinavDhar.jpg" alt="" class="masterImage"><br>
+				<h3>Abhinav Dhar</h3>
+				<div class="masterDesc">
+					One of the most prolific quiz master of the Ahmedabad Quizzing circle, Abhinav Dhar is a veteran of dozens of national quizzes.
+					This year, we are happy to announce that this young master of quizzing is conducting not
+					one but two quizzes under Myndsnare, The Sound and the Fury – General Quiz and Inside Edge – SpEnt Quiz.
+				</div>
+			</div>
+			<div class="w3-half" style="margin-top: 5vh;">
+				<img src="./images/BhusanPatel.jpg" alt="" class="masterImage"><br>
+				<h3>Bhusan Patel</h3>
+				<div class="masterDesc">
+					To anyone involved in the Business Quizzing circles, Bhushan Patel is a well-known name.
+					His accomplishments include being the winner of the Mumbai Zonal Round of TATA Crucible, along with a slew of
+					successful quizzes conducted under his belt.
+					This year he will be conducting Silcon Valley – Biz-Tech Quiz under Myndsnare.
+				</div>
+			</div>
+    </div>
+</div>
+
 	<div class="contact w3-center w3-content" id="contact" style="max-width: 1200px;">
 		<div class="main-header-container w3-padding w3-card">
 			<h2>CONTACT US</h2>
 		</div>
 
 		<div class="contact-container w3-row">
-			<div class="w3-third">
+			<div class="w3-half">
 				<!-- <h2>Contact</h2> -->
 				<img src="images/rishwagnik.jpg" style="width: 130px; height: 130px; border-radius: 33%;">
 				<p>
@@ -264,7 +310,7 @@
 				</p>
 				<hr>
 			</div>
-			<div class="w3-third">
+			<div class="w3-half">
 				<img src="images/ShivamSingh.jpg" style="width: 130px; height: 130px; border-radius: 33%;">
 				<p>
 					<h4>Shivam Singh</h4><br/>
@@ -274,12 +320,12 @@
 				</p>
 				<hr>
 			</div>
-			<div class="w3-third">
+			<!-- <div class="w3-third"> -->
 			<!-- 	<h2>Address</h2> -->
-				<p>NIT Silchar<br>NIT Road<br>Fakiratilla, Silchar<br> Assam 788010</p>
+				<!-- <p>NIT Silchar<br>NIT Road<br>Fakiratilla, Silchar<br> Assam 788010</p>
 				<a href="https://www.tecnoesis.org/" target="_blank" style="text-decoration: none; "><p>www.tecnoesis.org</p></a>
 				<hr>
-			</div>
+			</div> -->
 		</div>
 	</div>
 
