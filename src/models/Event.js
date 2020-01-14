@@ -48,7 +48,7 @@ const EventSchema = new mongoose.Schema({
       type: String,
       required: true,
     },
-    amount:{
+    fee:{
       type: Number,
       required: true,
       default: 0

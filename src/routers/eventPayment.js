@@ -13,9 +13,10 @@ const instance = new Razorpay({
   key_secret: secret_key
 });
 
+
 eventPayment.post('/pay', (req, res)=>{
   const {body} = req;
-  console.log(body);
+
   Event.findOne({ email: body.email, module: body.module, event: body.event, payment_id:{$ne: null} }).then((event)=>{
     if(event){
       res.status(400).send({
@@ -25,38 +26,29 @@ eventPayment.post('/pay', (req, res)=>{
       });
     }
     else{
-      let event = new Event({
-        ...body,
-        order_id: '12345'
-      });
-      event.save().catch((err)=>{
+      instance.orders.create({
+        amount: body.fee*100,
+        currency: 'INR',
+        receipt: Date.now()/1000,
+        payment_capture: 1
+      }).then((response)=>{
+        console.log('RESPONSE', response);
+        let event = new Event({
+          ...body,
+          order_id: response.id
+        });
+        event.save().catch((err)=>{
+          console.log(err);
+        });
+        res.send({
+          orderID: response.id,
+          amount: body.fee*100,
+          key: api_key
+        });
+      }).catch((err)=>{
         console.log(err);
+        res.send(err);
       });
-      // instance.orders.create({
-      //   amount: body.fee*100,
-      //   currency: 'INR',
-      //   receipt: Date.now()/1000,
-      //   notes:{
-      //     ...body
-      //   },
-      //   payment_capture: 1
-      // }).then((response)=>{
-      //   console.log('RESPONSE', response);
-      //   let event = new Event({
-      //     ...body,
-      //     order_id: response.id
-      //   });
-      //   event.save().catch((err)=>{
-      //     console.log(err);
-      //   });
-      //   res.send({
-      //     orderID: response.id,
-      //     key: api_key
-      //   });
-      // }).catch((err)=>{
-      //   console.log(err);
-      //   res.send(err);
-      // });
     }
   }).catch((err)=>{
     console.log(err);
@@ -73,9 +65,10 @@ eventPayment.post('/success', (req,res)=>{
     .digest('hex');
 
   if(expectedHash === req.body.razorpay_signature){
+
     Event.updateTransactionId(req.body.razorpay_order_id, req.body.razorpay_payment_id, req.body.razorpay_signature).then((event)=>{
-      sendMail(event.payment_id, '15 Jan - 19 January 2020', event.name, event.event ,event.email);
-      res.redirect('/form/workshop/success/'+workshop._id);
+      sendMail(event.payment_id, '1 Feb - 2 Feb 2020', event.teamName ||event.member[0]  , event.event.toUpperCase() ,event.email);
+      res.redirect('/form/event/success/'+event._id);
     }).catch((err)=>{
       res.status(500).send(err);
     });
