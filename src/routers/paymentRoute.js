@@ -15,6 +15,7 @@ const instance = new Razorpay({
 });
 
 paymentRoute.post('/pay', (req, res)=>{
+  return res.status(400).send();
   const {body} = req;
   Workshop.findOne({ email: body.email, payment_id:{$ne: null} }).then((wrks)=>{
     if(wrks){
