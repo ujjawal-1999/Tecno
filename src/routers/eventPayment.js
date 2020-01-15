@@ -26,29 +26,54 @@ eventPayment.post('/pay', (req, res)=>{
       });
     }
     else{
-      instance.orders.create({
-        amount: body.fee*100,
-        currency: 'INR',
-        receipt: Date.now()/1000,
-        payment_capture: 1
-      }).then((response)=>{
-        console.log('RESPONSE', response);
-        let event = new Event({
+      if(body.fee==="0" || body.fee===0){
+        console.log('0fee')
+        const event= new Event({
           ...body,
-          order_id: response.id
+          order_id: Date.now()/100,
+          payment_id: 'NULL (No Kit)',
+          payment_sign: 'paid_rs_0'
         });
-        event.save().catch((err)=>{
+        event.save().then((event)=>{
+          sendMail('NULL (No Kit)', '1 Feb - 3 Feb 2020', event.teamName ||event.member[0]  , event.event.toUpperCase() ,event.email);
+          res.send({
+            amount: 0,
+            paid: true,
+            id: event._id
+          })
+        }).catch((err)=>{
           console.log(err);
+          res.status(500).send({
+            message: 'Unable To Process Request'
+          });
         });
-        res.send({
-          orderID: response.id,
+      }
+      else{
+        console.log('non0fee')
+        instance.orders.create({
           amount: body.fee*100,
-          key: api_key
+          currency: 'INR',
+          receipt: Date.now()/1000,
+          payment_capture: 1
+        }).then((response)=>{
+          console.log('RESPONSE', response);
+          let event = new Event({
+            ...body,
+            order_id: response.id
+          });
+          event.save().catch((err)=>{
+            console.log(err);
+          });
+          res.send({
+            orderID: response.id,
+            amount: body.fee*100,
+            key: api_key
+          });
+        }).catch((err)=>{
+          console.log(err);
+          res.send(err);
         });
-      }).catch((err)=>{
-        console.log(err);
-        res.send(err);
-      });
+      }
     }
   }).catch((err)=>{
     console.log(err);
@@ -67,7 +92,7 @@ eventPayment.post('/success', (req,res)=>{
   if(expectedHash === req.body.razorpay_signature){
 
     Event.updateTransactionId(req.body.razorpay_order_id, req.body.razorpay_payment_id, req.body.razorpay_signature).then((event)=>{
-      sendMail(event.payment_id, '1 Feb - 2 Feb 2020', event.teamName ||event.member[0]  , event.event.toUpperCase() ,event.email);
+      sendMail(event.payment_id, '1 Feb - 3 Feb 2020', event.teamName ||event.member[0]  , event.event.toUpperCase() ,event.email);
       res.redirect('/form/event/success/'+event._id);
     }).catch((err)=>{
       res.status(500).send(err);
