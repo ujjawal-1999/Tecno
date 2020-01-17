@@ -288,13 +288,13 @@
   }
   
   .slides .slide:nth-child(1) {
-	background-image: url(../img/first_bg.jpg);
+	background-image: url(../img/background1.jpg);
   }
   .slides .slide:nth-child(2) {
-	background-image: url(../img/third_bg.jpg);
+	background-image: url(../img/background2.png);
   }
   .slides .slide:nth-child(3) {
-	background-image: url(../img/second_bg.jpg);
+	background-image: url(../img/background3.png);
   }
   .slides .slide:nth-child(4) {
 	background-image: url(../img/image1.png);
