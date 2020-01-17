@@ -43,8 +43,13 @@ workshopRoute.get('/fetchAllEvents', (req, res)=>{
 });
 
 workshopRoute.post('/fetchEvent', (req, res)=>{
-  
-  Event.find({ module: req.body.module, event: req.body.event }).then((event)=>{
+  const query={
+    module: req.body.module
+  };
+  if(req.body.event){
+    query.event=req.body.event;
+  }
+  Event.find(query).then((event)=>{
     res.send(event);
   }).catch((err)=>{
     console.log(err);
