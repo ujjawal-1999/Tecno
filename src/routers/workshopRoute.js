@@ -42,6 +42,16 @@ workshopRoute.get('/fetchAllEvents', (req, res)=>{
   });
 });
 
+workshopRoute.post('/fetchEvent', (req, res)=>{
+  
+  Event.find({ module: req.body.module, event: req.body.event }).then((event)=>{
+    res.send(event);
+  }).catch((err)=>{
+    console.log(err);
+    res.send(err);
+  });
+});
+
 workshopRoute.get('/fetchEvent/:id', (req, res)=>{
   // res.send(req.body);
   Event.findById(req.params.id).then((wrks)=>{
