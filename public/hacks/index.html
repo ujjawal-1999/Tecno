@@ -84,6 +84,33 @@
 .images li{
 	margin-top:10px;
 }
+#resultBox{
+  position: relative;
+  left: 30vw;
+  top: 5vh;
+  display: inline-block;
+  padding: .5vh 1vw;
+  border: 5px solid #fff;
+  font-size: 3vh;
+  cursor: pointer;
+}
+#resultBox:hover{
+  color: #000;
+  background-color:#fff;
+}
+#resultBoxDown{
+  display: inline-block;
+  padding: .5vh 1vw;
+  color: #13185b;
+  border: 5px solid #13185b;
+  font-size: 3vh;
+  cursor: pointer;
+  margin-bottom: 2vh;
+}
+#resultBoxDown:hover{
+  color: #fff;
+  background-color:#13185b;
+}
 @media(orientation: portrait)
 {
   nav#navbar{
@@ -158,6 +185,9 @@
         </div>
         <div class="center-hacks-img">
           <img class="responsive" src="./images/nitsHacks3.0.2.png">
+          <a href="./NITS HACKS RESULT.pdf" target="_blank">
+            <div class="closed" id="resultBox">Hackathon Results</div>
+          </a>
         </div>
 
         
@@ -197,6 +227,13 @@
                       <p>Check out the events being organized under NITS Hacks 3.0</p>
                   </div>
               </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-4 col-sm-12 col-12 mobile-padding">
+                <a href="./NITS HACKS RESULT.pdf" target="_blank">
+                  <div class="closed" id="resultBoxDown">Hackathon Results</div>
+                </a>
+            </div>
           </div>
           <div class="row">
             <div class="col-lg-4 col-sm-12 col-12 mobile-padding" >
