@@ -21,7 +21,7 @@ const sendMail = function(ID, date, name, event, tomail){
     },
     fromname:'Tecnoesis 2020',
     subject: 'Welcome To Tecnoesis 2020',
-    text: 'Registered for Workshop.',
+    text: 'Registered for Event.',
     html: output,
   };
   sgMail.send(msg);
