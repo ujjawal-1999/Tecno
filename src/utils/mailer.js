@@ -7,12 +7,16 @@ var content = fs.readFileSync(path.join(__dirname, "../../public/misc/mail.html"
   
 sgMail.setApiKey('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');
 const sendMail = function(ID, date, name, event, tomail){
-  const output = mustache.render(content, {
+  const data={
     ID,
     date,
     event,
     name
-  });
+  };
+  if(ID==="NULL (No Kit)"){
+    data.ID="Free Event";
+  }
+  const output = mustache.render(content, data);
   const msg = {
     to: tomail,
     from: {
