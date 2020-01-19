@@ -7,18 +7,70 @@
 	<link rel="stylesheet" type="text/css" href="assets/archinova.css">
 	<!-- <link rel="stylesheet" type="text/css" href="assets/fullpage.css"> -->
 	<link rel="stylesheet" type="text/css" href="assets/w3.css">
-</head>
-<body>
+	<style type="text/css">
 
+		 #loader{position: fixed; top: 0; left: 0; z-index: 999; background: rgba(0,0,0, 0.9); width: 99.99vw; height: 99.99vh; overflow: hidden;}
+        #loaderCircle {
+        position: absolute; left: 50%; top: 50%;
+        transform: translate(-50%, -50%);
+        width: 80px; height: 80px;
+        border: 10px solid #f3f3f3; border-radius: 50%; border-top: 10px solid rgb(254,0,0); border-left: 10px solid rgb(254,0,0); ;
+        animation: spin 4s linear infinite;
+        animation-fill-mode: forwards;
+        }
+        a:hover{
+            text-decoration: none;
+            color:inherit;
+        }       
+.spinner{
+  width: 80px;
+  height: 80px;
+  
+  border: 2px solid #38dbff;
+  border-top:3px solid #014b5c;
+  border-radius: 100%;
+  
+  position: absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right: 0;
+  margin: auto;
+  
+  animation: spin 1s infinite linear;
+}
+.img-inside{
+
+  position: absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right: 0;
+  margin: auto;
+}
+@keyframes spin {
+        0% { transform:rotate(0deg); }
+        100% { transform:rotate(-360deg); }
+        }
+</style>
+</head>
+<body onload="stopLoader()">
+ <div id="loader">
+            <img src="../../optimized/logo white-small.png" style="height: 60px;" class="img-inside">
+        <div class="spinner">
+
+        </div>
+    </div>
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
 	<div class="w3-bar w3-white w3-wide w3-card" style="line-height: 50px;">
 		<a href="http://tecnoesis.org" class="w3-bar-item w3-button"><img src="images/logo_white.png" height="50px"></a>
 		
 		<div class="w3-right w3-hide-small">
-			<a href="#home1" class="w3-bar-item w3-button">Home</a>
-			<a href="#smartcity" class="w3-bar-item w3-button">My City My Dreams</a>
-			<a href="#archinova" class="w3-bar-item w3-button">Archinova</a>
+			<a href="#home1" class="w3-bar-item w3-button" style="font-family:Poppins, sans-serif">Home</a>
+			<a href="#smartcity" class="w3-bar-item w3-button" style="font-family:Poppins, sans-serif">My City My Dreams</a>
+			<a href="#archinova" class="w3-bar-item w3-button" style="font-family:Poppins, sans-serif">Archinova</a>
+			<a href="#cadecore" class="w3-bar-item w3-button" style="font-family:Poppins, sans-serif">CADecore</a>
 		</div>
 	</div>
 </div>
@@ -32,9 +84,8 @@
 			<a href="http://tecnoesis.org"><h1 class="w3-xxxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-mi"><b>TECNOESIS'20</b></span></h1></a>
 			<h3><b>presents</b></h3>
 			<h1 class="w3-xxxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-mi"><b>SMART CITY</b></span></h1>
-			<!-- <p class="w3-large w3-text-white"><b>An event which develops a significant channel between construction and tackling nature's worst behaviour.</b></p> -->
 		</div>
-		<a class="w3-right" href="http://www.freepik.com">Designed by pikisuperstar / Freepik</a>
+
 	</div>
 
 	<!-- my city my dreams wrapper -->
@@ -46,7 +97,7 @@
 			</p>
 
 			<button class="w3-button w3-black w3-margin-bottom w3-margin-top w3-hover-shadow" onclick="document.getElementById('myCityModal').style.display='block'">Read More..</button>
-			<a href="#"><button class="w3-button w3-black w3-margin-bottom w3-margin-top">Participate</button></a>
+			<a href=""><button class="w3-button w3-black w3-margin-bottom w3-margin-top">Opening Soon</button></a>
 		</div>
 	</div>
 
@@ -58,17 +109,25 @@
 			<p class="w3-large">It&#39;s an enchanting event which makes you recall of your school lullaby days. In this event, you need to showcase your instinctive ideas and improvisations that you opt to suggest in the present constructive sites/or to initiate new constructions by preparing a model of it using various equipments(thermocol,match sticks, colours etc...
 			</p>
 
-			<button class="w3-button w3-margin-bottom w3-margin-top" onclick="document.getElementById('archinovaModal').style.display='block'">Read More...</button>
-			<a href="https://docs.google.com/forms/d/1B6qx9uE4RKyEZYlP8FJCenYgVyu3iWcu3lll7rNzK48/edit?usp=drivesdk"><button class="w3-button w3-margin-bottom w3-margin-top">Participate</button></a>
+			<button class="w3-button w3-margin-bottom w3-margin-top" onclick="document.getElementById('archinovaModal').style.display='block'">Read More..</button>
+			<a href=""><button class="w3-button w3-margin-bottom w3-margin-top">Opening Soon</button></a>
 		</div>
-	</div>
-
-	<div class="w3-container w3-padding-32 w3-card">
-		<p class="w3-large w3-center">Designed by <a href="https://utkarsh914.github.io/">Utkarsh Tiwari</a></p>
 	</div>
 <!-- </div> -->
 
+<div class="section" id="cadecore">
+		<div class="section-content w3-display-middle w3-margin-top w3-center">
+			<h1 class="w3-xxxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-mi w3-card"><b>CADecore</b></span></h1>
+			<p class="w3-large">Tecnoesis 2020 presents you the most awaited event “CADecore” ,which comes under SMART CITY module</p>
+			<p class="w3-large">It is a platform which will justify your designing skills.It is basically based on designing software named AUTOCad,which is used to create the computer aided designs or software applications including drafting.
+			</p>
 
+			<button class="w3-button w3-black w3-margin-bottom w3-margin-top w3-hover-shadow" onclick="document.getElementById('cadecoreModal').style.display='block'">Read More..</button>
+			<a href=""><button class="w3-button w3-black w3-margin-bottom w3-margin-top">Opening Soon</button></a>
+		</div>
+	</div>
+
+		<!-- cadecore wrapper -->
 	<!-- M City My dream Modal -->
 	<div id="myCityModal" class="w3-modal" style="z-index: 500; background: rgba(0,0,0,0.81);">
 		<div class="w3-modal-content w3-animate-top w3-card-4" style="margin-bottom: 50px;">
@@ -127,7 +186,7 @@
 				<h3 class="w3-center">NOTE</h3>
 				<p>If your ideas on Smart cities are found interesting and useful then the smart city team will try their best to implement them in the campus and Silchar</p>
 				
-				<button class="w3-button w3-red w3-section" onclick="document.getElementById('myCityModal').style.display='none'">Close <i class="fa fa-remove"></i></button>
+				<button class="w3-button w3-red w3-section"><a href="./MY CITY MY DREAMS.pdf" target="_blank">Download</button>
 			</div>
 		</div>
 	</div>
@@ -189,24 +248,67 @@
 				<h3 class="w3-center">NOTE</h3>
 				<p>Rules and regulations given are viable to change and the participants will be notified at an appropriate time before the event Via a new iteration.</p>
 				
-				<button class="w3-button w3-red w3-section" onclick="document.getElementById('archinovaModal').style.display='none'">Close <i class="fa fa-remove"></i></button>
+				<button class="w3-button w3-red w3-section"><a href="./ARCHINOVA.pdf" target="_blank">Download</button>
 			</div>
 		</div>
 	</div>
 	<!-- Archinova Modal finish -->
 
 
+	<!-- CADecore Modal -->
+	<div id="cadecoreModal" class="w3-modal" style="z-index: 500; background: rgba(0,0,0,0.81);">
+		<div class="w3-modal-content w3-animate-top w3-card-4" style="margin-bottom: 50px;">
+			<header class="w3-container w3-center w3-padding-24" style="background: rgb(30,30,30); color: rgb(230,230,230);"> 
+				<span onclick="document.getElementById('cadecoreModal').style.display='none'" 
+			 class="w3-button w3-red w3-xlarge w3-display-topright">×</span>
+				<h2 class="w3-wide"><i class="fa fa-suitcase w3-margin-right"></i>CADECORE</h2>
+			</header>
+			<div class="w3-container w3-padding-32">
 
-<!-- <script type="text/javascript" src="assets/fullpage.min.js"></script>
-<script type="text/javascript">
-	new fullpage('#fullpage', {
-		//options here
-		autoScrolling:true,
-		scrollHorizontally: true
-	});
-//methods
-fullpage_api.setAllowScrolling(true);
-</script> -->
+				<h3 class="w3-center">What Is CADecore??</h3>
+				<p>It is a platform which will justify your designing skills.It is basically based on designing software named AUTOCad,which is used to create the computer aided designs or software applications including drafting.</p>
 
+				<h3 class="w3-center">RULES</h3>
+				<p>
+					<ul>
+						<li>There will be two questions that we will provide at the time of the event.</li>
+						<li>You have to bring your laptop with AUTOCad installed in it.</li>
+						<li>Any technical problem in your laptop will be your responsibility.</li>
+						<li>Keep your laptop fully charged and try to bring the mouse with you.</li>
+						<!-- <li>The dress code will be formal.</li> -->
+					</ul>
+				</p>
+
+				<h3 class="w3-center">JUDGING CRITERIA</h3>
+				<p>
+					<ul>
+						<li>The one who submitted the drawing first will get more priority.</li>
+						<li>Dimensions should be same as provided in the question.</li>
+						<li>Accuracy of the participant will be considered.</li>
+					</ul>
+				</p>
+
+				<h3 class="w3-center">ORGANISERS</h3>
+				<p>
+					<ul>
+						<li>Prakhar Mishra(8756078844)</li>
+						<li>Ankit Srivastava(7985177823)</li>
+						<li>Ina Vashishtha(7772939593)</li>
+						<li>Arsh Trikha(9461234633)</li>
+						<li>Shobhit Kumar Soni(9748286248)</li>
+					</ul>
+				</p>
+				<button class="w3-button w3-red w3-section"><a href="./CADecore2.docx" target="_blank">Download</button>
+			</div>
+		</div>
+	</div>
+	<!-- CADecore FINISH -->
+<script>
+
+function stopLoader(){
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("loaderCircle").style.display = "none";
+}
+</script>
 </body>
 </html>
