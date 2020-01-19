@@ -1,0 +1,82 @@
+html { scroll-behavior: smooth; }
+body {padding: 0; margin: 0; text-align: center; font-family: 'Cabin', sans-serif!important; background: rgb(255, 254, 254);}
+a {text-decoration: none;}
+.container-home{ height: 100vh; text-align: center; background-image: url('../images/welcome-bg.png'); background-size: cover; background-position: center;}
+
+.nav-container { display: inline-block; padding: 0px 16px 8px; width: 100%; position: fixed; left: 0; top: 0; background: #00001a ; z-index: 999;}
+.nav-bar {display: inline-block; height: 60px;}
+.bar-item { display: inline-block; height: 60px; float: left; padding: 8px 16px; line-height: 60px; font-size: 18px;}
+#hamburger-toggle {display: none!important;}
+#mySidebar {display: none;}
+@media screen and (max-width: 850px) {
+	.nav-bar {display: none;}
+	#hamburger-toggle {display: block!important;}
+	/*.card {height: 250px!important;}*/
+}
+
+.intro-heading{ display: inline-block; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); color: #fff; }
+#intro-banner { height: 180px; width: 660px; }
+.intro-heading h1 {font-size: 45px;}
+.intro-heading h3 {font-size: 22px; margin-top: -20px; margin-bottom: -10px;}
+.intro-heading p { font-size: 18px; }
+
+@media screen and (min-width: 1000px) {
+	.intro-heading h1 {font-size: 45px;}
+	.intro-heading h3 {font-size: 30px;}
+	.intro-heading p { font-size: 24px; }
+}
+@media screen and (max-width: 670px) {
+	#intro-banner { width: 100%; height: auto;}
+	.intro-heading h3 {margin-top: -10px!important;}
+}
+
+
+.main-header-container { width: 450px; position: relative; left: 50%; transform: translateX(-50%); border-radius: 5px; margin-bottom: 100px; background-image: linear-gradient(120deg , #00004d, #ccccff); color: white;}
+.main-header-container:hover{box-shadow:0 4px 10px 0 rgba(77, 0, 77,0.3),0 4px 20px 0 rgba(77, 0, 77,0.3)}
+@media screen and (max-width: 470px) {
+	.main-header-container {width: 400px;}
+	/*.card {height: 300px!important;}*/
+	.about-text { font-size: 18px!important; }
+	.card-container:hover{ transform: scale(1.01)!important;}
+}
+@media screen and (max-width: 420px) {
+	.intro-heading h1 {font-size: 45px;}
+	.intro-heading h3 {font-size: 20px;}
+	/*.row-container {padding: 0!important;}*/
+	.main-header-container {width: 100%; border-radius: 0px;}
+	.main-header-container>h2 {font-size: 150%!important;}
+	.about-conferenza { padding-left: 8px!important; padding-right: 8px!important; }
+	.contact { padding: 32px 30px!important; }
+}
+
+.row-container {padding: 8px 0px!important;}
+
+
+.about {padding: 100px 16px 50px 16px!important;}
+.about-conferenza { padding-left: 175px; padding-right: 175px; }
+/*.about-img { float: left; width: 55%; background-image: url('images/intro-img.jpg'); background-size: cover; background-repeat: no-repeat; height: 350px;}*/
+.about-text { width: 100%; padding: 0px; color: #444; font-size: 20px; text-align: justify;}
+@media screen and (max-width: 1200px) {
+	.about-conferenza { padding-left: 100px; padding-right: 100px; }
+}
+@media screen and (max-width: 800px) {
+	.about-conferenza { padding-left: 40px; padding-right: 40px; }
+	/*.about-img { width: 100%; }
+	.about-text { width: 100%; padding: 32px 0px 0px;}*/
+}
+
+.sponsors { padding: 130px 16px 50px 16px; }
+.card { width: 100%; background-size: cover; background-repeat: no-repeat; background-position: center; }
+.card img {width: 100%; height: auto;}
+.card-container { position: relative; transition: transform 0.2s linear; }
+.card-info-container { padding: 0.01em 4px; }
+.card-container h3 { font-size: 22px; color: #5b32b4;}
+.card-container p { color: #726a84; margin-top: 0px; }
+.card-container:hover{box-shadow:0 4px 10px 0 rgba(102, 0, 102,0.3),0 4px 20px 0 rgba(102, 0, 102,0.3); transform: scale(1.05);}
+
+.contact { padding: 50px 70px; }
+.contact-container h2 { color: #5b32b4; }
+.contact-container p { color: #454545; }
+i { font-size: 28px; padding-left: 15px; padding-right: 15px;}
+
+footer { background: #00001a; color: white; }

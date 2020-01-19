@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sponsors | Tecnoesis</title>
+	<link rel="icon" href="images/icon.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style type="text/css">
+		#loader{position: fixed; top: 0; left: 0; z-index: 999; background: rgba(0,0,0, 0.9); width: 99.99vw; height: 99.99vh; overflow: hidden;}
+		#loaderCircle {
+  		position: absolute; left: 50%; top: 50%;
+  		transform: translate(-50%, -50%);
+	  	width: 80px; height: 80px;
+  		border: 10px solid #f3f3f3; border-radius: 50%; border-top: 10px solid rgb(254,0,0); border-left: 10px solid rgb(254,0,0); ;
+  		animation: spin 4s linear infinite;
+  		animation-fill-mode: forwards;
+		}
+
+.spinner{
+  width: 80px;
+  height: 80px;
+  border: 2px solid #38dbff;
+  border-top:3px solid #014b5c;
+  border-radius: 100%;
+  position: absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right: 0;
+  margin: auto;
+  animation: spin 1s infinite linear;
+}
+
+.img-inside{
+  position: absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right: 0;
+  margin: auto;
+}
+
+@keyframes spin {
+	0% { transform:rotate(0deg); }
+	100% { transform:rotate(-360deg); }
+}
+
+
+
+	</style>
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="stylesheet" type="text/css" href="style/w3.css">
+	<link href="https://fonts.googleapis.com/css?family=Cabin&display=swap" rel="stylesheet">
+</head>
+<body onload="stopLoader()">
+	<div id="loader">
+		<img src="images/logo white-small.png" style="height: 60px;" class="img-inside">
+		<div class="spinner"></div>
+	</div>
+	<div class="container-home" id="home">
+		<!-- navbar start -->
+<!-- 		<div class="nav-container w3-card-4">
+			<div class="bar-item" style="float: left;"><img src="images/logo_white.png" height="60px" width="220px"></div>
+			<div class="nav-bar w3-text-white">
+				<div class="bar-item"><a href="#home">Home</a></div>
+				<div class="bar-item"><a href="#about">About</a></div>
+				<div class="bar-item"><a href="#sponsors">Sponsors</a></div>
+				<div class="bar-item"><a href="#contact">Contact Us</a></div>
+			</div>
+
+			<button id="hamburger-toggle" class="w3-button w3-xlarge w3-right w3-card-4" onclick="w3_open()" style="background: transparent; color: white;">&#9776;</button>
+			
+			<div class="w3-sidebar w3-bar-block w3-collaps w3-card w3-animate-right" style="width:200px;right:0;" id="mySidebar">
+				<button class="w3-bar-item w3-button w3-large" onclick="w3_close()" style="background: #cc1111; color: white;">Close &times;</button>
+				<a href="#home" class="w3-bar-item w3-button w3-hover-indigo" onclick="w3_close()">Home</a>
+				<a href="#about" class="w3-bar-item w3-button w3-hover-indigo" onclick="w3_close()">About</a>
+				<a href="#sponsors" class="w3-bar-item w3-button w3-hover-indigo" onclick="w3_close()">Sponsors</a>
+				<a href="#contact" class="w3-bar-item w3-button w3-hover-indigo" onclick="w3_close()">Contact</a>
+			</div>
+		</div> -->
+		<!-- navbar end -->
+
+		<div class="intro-heading">
+			<a href="http://tecnoesis.org/" target="_blank"><img id="intro-banner" src="images/logo_white.png"></a>
+			<h1>PARTNERS AND SPONSORS</h1>
+		</div>
+	</div>
+
+	<!--		 sponsors start		 -->
+	<div class="sponsors w3-center w3-content" id="sponsors" style="max-width: 1200px;">
+
+<!-- 		<div class="main-header-container w3-padding w3-card">
+			<h2>OUR SPONSORS</h2>
+		</div> -->
+
+		<div class="row-container w3-container" style="margin-top: 0px!important;">
+
+
+			<div class="w3-quarter w3-padding">
+				<a href="http://www.nie.ac.in/innovation-entrepreneurship-development-celliedc/" target="_blank">
+				<div class="card-container w3-card">
+					<div class="card w3-car"><img src="images/iedc.jpg" width="100%"></div>
+					<div class="card-info-container">
+						<h3>IEDC</h3>
+						<p>Innovation & Entrepreneurship Development Cell</p>
+					</div>
+				</div>
+				</a>
+			</div>
+
+			<div class="w3-quarter w3-padding">
+				<a href="https://www.mic.gov.in/" target="_blank">
+				<div class="card-container w3-card">
+					<div class="card w3-car"><img src="images/iic.jpg" width="100%"></div>
+					<div class="card-info-container">
+						<h3>IIC</h3>
+						<p>Institution's Innovation Council</p>
+					</div>
+				</div>
+				</a>
+			</div>
+
+			<div class="w3-quarter w3-padding">
+				<a href="https://www.comsoc.org/" target="_blank">
+				<div class="card-container w3-card">
+					<div class="card w3-car"><img src="images/ieee.jpg" width="100%"></div>
+					<div class="card-info-container">
+						<h3>IEEE</h3>
+						<p>IEEE Communications Society</p>
+					</div>
+				</div>
+				</a>
+			</div>
+
+			<div class="w3-quarter w3-padding">
+				<a href="http://www.youthincmag.com/" target="_blank">
+				<div class="card-container w3-card">
+					<div class="card w3-car"><img src="images/youth-incorporated.jpg"></div>
+					<div class="card-info-container">
+						<h3>YOUTH INCORPORATED</h3>
+						<p>Youth media partnerr</p>
+					</div>
+				</div>
+				</a>
+			</div>
+
+		</div>
+
+		<div class="row-container w3-container" style="margin-top: 0px!important;">
+
+			<div class="w3-quarter w3-padding">
+				<a href="https://www.thesouledstore.com/" target="_blank">
+				<div class="card-container w3-card">
+					<div class="card w3-card"><img src="images/souled-store.jpg"></div>
+					<div class="card-info-container">
+						<h3>THE SOULED STORE</h3>
+						<p>Gifting partner</p>
+					</div>
+				</div>
+				</a>
+			</div>
+
+			<div class="w3-quarter w3-padding">
+				<a href="https://www.facebook.com/campusbloggers/" target="_blank">
+				<div class="card-container w3-card">
+					<div class="card w3-card"><img src="images/campus-blogger.jpg" width="100%"></div>
+					<div class="card-info-container">
+						<h3>CAMPUS BLOGGER</h3>
+						<p>Campus blogging partner</p>
+					</div>
+				</div>
+				</a>
+			</div>
+
+			<div class="w3-quarter w3-padding">
+				<a href="http://dubeat.com" target="_blank">
+				<div class="card-container w3-card">
+					<div class="card w3-card"><img src="images/du-beats.jpg"></div>
+					<div class="card-info-container">
+						<h3>DU BEATS</h3>
+						<p>Online media partner</p>
+					</div>
+				</div>
+				</a>
+			</div>
+
+			<div class="w3-quarter w3-padding">
+				<a href="http://www.theeducationtree.com/" target="_blank">
+				<div class="card-container w3-card">
+					<div class="card w3-card"><img src="images/education-tree.jpg"></div>
+					<div class="card-info-container">
+						<h3>THE EDUCATION TREE</h3>
+						<p>Youth community partner</p>
+					</div>
+				</div>
+				</a>
+			</div>
+
+		</div>
+
+	</div>
+	<!--		 sponsors end		 -->
+
+	<footer class="w3-container w3-padding-48" style="margin-top: 100px;">
+		<p>TECNOESIS 2020</p>
+		<p>Designed by Utkarsh Tiwari</p>
+	</footer>
+
+<script>
+function w3_open() {
+	document.getElementById("mySidebar").style.display = "block";
+}
+
+function w3_close() {
+	document.getElementById("mySidebar").style.display = "none";
+}
+
+function stopLoader(){
+	document.getElementById("loader").style.display = "none";
+}
+
+</script>
+
+</body>
+</html>

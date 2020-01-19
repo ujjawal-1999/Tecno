@@ -1,0 +1,32 @@
+.home {text-align: center;}
+.home h1 {font-size: 70px!important; color: #eee}
+.home h3 {color: #ccc; margin-top: -15px; margin-bottom: 22px;}
+.army h1, .auto h1, .tech h1 {text-align: center; font-size: 50px; margin-bottom: 30px; color: #efefef}
+
+  .carousel-inner img {
+    height: 78vh; /* Set width to 100% */
+    margin: auto;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .carousel-control-next-icon, .carousel-control-prev-icon {
+    width: 40px!important;
+    height: 40px!important;
+}
+
+.section {
+	background: linear-gradient(to right, #010101, #333, #010101);
+}
+/*.carousel-container-ut {max-width: 1200px!important; position: relative; left: 50%; transform: translateX(-50%);}*/
+@media (orientation: portrait) {
+  .carousel-inner img {
+    width: 100vw;
+    height: auto!important; /* Set width to 100% */
+  }
+  .home h1 {font-size: 50px!important;}
+}
+@media screen and (max-width: 670px) {
+	#intro-banner { width: 100%; height: auto;}
+}
