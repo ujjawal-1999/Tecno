@@ -14,6 +14,7 @@ const caRouter = require('./routers/caRoute');
 const paymentRoute = require('./routers/paymentRoute');
 const workshopRoute = require('./routers/workshopRoute');
 const eventPayment = require('./routers/eventPayment');
+const sparkPayment = require('./routers/sparkPayment');
 
 const app = express() 
 app.use(express.json())
@@ -40,6 +41,7 @@ const port = process.env.PORT || 3000;
 app.use('/tecnoesis',router);
 app.use('/ca', caRouter);
 app.use('/payment/event',eventPayment);
+app.use('/payment/spark',sparkPayment);
 app.use('/payment',paymentRoute);
 app.use('/workshop', workshopRoute);
 const root = require('path').join(__dirname, '../public/form');
