@@ -1,9 +1,7 @@
 html { scroll-behavior: smooth; }
 a { text-decoration: none; }
-#home1 {height: 100vh; width: 100vw; background-image: url('../images/825.jpg'); background-position: center; background-repeat: no-repeat; background-size: cover;}
+#home1 {height: 100vh; width: 100vw; background-image: url('../images/image.jpg'); background-position: center; background-repeat: no-repeat; background-size: cover;}
 .w3-bar-item img {filter: invert(99%);}
-/*#home1 h3 {margin-top: -25px; margin-bottom: 30px;}*/
-/*#home1 h1 {margin-bottom: 30px;}*/
 
 #archinova { background: rgb(20,20,20); }
 #archinova p { color: rgb(230,230,230); }
